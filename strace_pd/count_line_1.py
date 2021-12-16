@@ -7,5 +7,4 @@ for line in file:
         line_count += 1
 
 file.close()
-
 print(line_count)

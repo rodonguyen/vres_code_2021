@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv("dataset_2.csv")
+df = pd.read_csv("dataset_1.csv")
 x_values = df['x'].values
 y_values = df['y'].values
 
