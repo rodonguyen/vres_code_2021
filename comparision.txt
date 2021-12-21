@@ -6,16 +6,8 @@ Method: pandas
 Dataset: 2
 {'push': 1693119, 'pop': 976881, 'ext_pop': 597422, 'stackadjshrink': 63345, 'stackadjgrow': 58}
 
-Method: readline
-Dataset: 1
-{'push': 106441, 'pop': 59652, 'ext_pop': 38697, 'stackadjshrink': 4663, 'stackadjgrow': 0}
-
-Method: readline
-Dataset: 2
-{'push': 106423, 'pop': 59640, 'ext_pop': 38693, 'stackadjshrink': 4662, 'stackadjgrow': 0}
-
 Method: pandas
-Dataset: 1-1
+Dataset: 1-1 (different directory)
 {'push': 1691739, 'pop': 976181, 'ext_pop': 596742, 'stackadjshrink': 63345, 'stackadjgrow': 58}
 
 Method: pandas
@@ -29,6 +21,14 @@ Dataset: 4
 Method: pandas
 Dataset: 5
 {'push': 1691739, 'pop': 976181, 'ext_pop': 596742, 'stackadjshrink': 63345, 'stackadjgrow': 58}
+
+Method: readline
+Dataset: 1
+{'push': 106441, 'pop': 59652, 'ext_pop': 38697, 'stackadjshrink': 4663, 'stackadjgrow': 0}
+
+Method: readline
+Dataset: 2
+{'push': 106423, 'pop': 59640, 'ext_pop': 38693, 'stackadjshrink': 4662, 'stackadjgrow': 0}
 
 Method: readline
 Dataset: 3
