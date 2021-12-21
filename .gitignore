@@ -1,6 +1,7 @@
 # All the stack trace files
-*.txt
-
+stack*.txt
+vpython*.txt
+token.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
