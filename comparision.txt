@@ -22,7 +22,6 @@ Method: pandas
 Dataset: 5
 {'push': 1691739, 'pop': 976181, 'ext_pop': 596742, 'stackadjshrink': 63345, 'stackadjgrow': 58}
 
-
 Method: pandas
 Dataset: 6
 {'push': 1692217, 'pop': 976416, 'ext_pop': 596980, 'stackadjshrink': 63350, 'stackadjgrow': 59}
