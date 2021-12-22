@@ -2,7 +2,7 @@ n = 10
 x_values = []
 y_values = []
 
-with open('../dataset/dataset_5.csv') as f:
+with open('../dataset/dataset_8.csv') as f:
     for i in range(0, n):
         x, y = f.readline().split(",")
         x_values.append(x)

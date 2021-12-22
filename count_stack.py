@@ -24,7 +24,7 @@ def f(dataset, method, file1):
     f.write(str(counter1) + '\n\n')
     f.close()
 
-for i in range(3,6):
+for i in range(6,9):
     dataset = i
     method = 'readline'
     file1 = open("strace_"+ method + "/trace/stack_ds" + str(dataset) + ".txt", "r")

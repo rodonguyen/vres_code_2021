@@ -22,6 +22,19 @@ Method: pandas
 Dataset: 5
 {'push': 1691739, 'pop': 976181, 'ext_pop': 596742, 'stackadjshrink': 63345, 'stackadjgrow': 58}
 
+
+Method: pandas
+Dataset: 6
+{'push': 1692217, 'pop': 976416, 'ext_pop': 596980, 'stackadjshrink': 63350, 'stackadjgrow': 59}
+
+Method: pandas
+Dataset: 7
+{'push': 1692217, 'pop': 976416, 'ext_pop': 596980, 'stackadjshrink': 63350, 'stackadjgrow': 59}
+
+Method: pandas
+Dataset: 8
+{'push': 1692015, 'pop': 976321, 'ext_pop': 596878, 'stackadjshrink': 63345, 'stackadjgrow': 58}
+
 Method: readline
 Dataset: 1
 {'push': 106441, 'pop': 59652, 'ext_pop': 38697, 'stackadjshrink': 4663, 'stackadjgrow': 0}
@@ -41,4 +54,16 @@ Dataset: 4
 Method: readline
 Dataset: 5
 {'push': 106441, 'pop': 59652, 'ext_pop': 38697, 'stackadjshrink': 4663, 'stackadjgrow': 0}
+
+Method: readline
+Dataset: 6
+{'push': 106441, 'pop': 59652, 'ext_pop': 38697, 'stackadjshrink': 4663, 'stackadjgrow': 0}
+
+Method: readline
+Dataset: 7
+{'push': 106441, 'pop': 59652, 'ext_pop': 38697, 'stackadjshrink': 4663, 'stackadjgrow': 0}
+
+Method: readline
+Dataset: 8
+{'push': 106423, 'pop': 59640, 'ext_pop': 38693, 'stackadjshrink': 4662, 'stackadjgrow': 0}
 
