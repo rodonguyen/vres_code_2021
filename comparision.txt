@@ -34,6 +34,36 @@ Method: pandas
 Dataset: 8
 {'push': 1692015, 'pop': 976321, 'ext_pop': 596878, 'stackadjshrink': 63345, 'stackadjgrow': 58}
 
+Method: pandas
+Dataset: 9
+{'push': 1697283, 'pop': 978997, 'ext_pop': 599470, 'stackadjshrink': 63345, 'stackadjgrow': 58}
+
+Method: pandas
+Dataset: 10
+{'push': 1704219, 'pop': 982521, 'ext_pop': 602882, 'stackadjshrink': 63345, 'stackadjgrow': 58}
+
+Method: pandas
+Dataset: 11
+{'push': 1759683, 'pop': 1010697, 'ext_pop': 630170, 'stackadjshrink': 63345, 'stackadjgrow': 58}
+
+Method: pandas
+Dataset: 12
+{'push': 1829211, 'pop': 1046049, 'ext_pop': 664346, 'stackadjshrink': 63345, 'stackadjgrow': 58}
+
+Method: pandas
+Dataset: 13
+{'push': 1691417, 'pop': 976035, 'ext_pop': 596564, 'stackadjshrink': 63347, 'stackadjgrow': 58}
+
+Method: pandas
+Dataset: 14
+{'push': 1691417, 'pop': 976035, 'ext_pop': 596564, 'stackadjshrink': 63347, 'stackadjgrow': 58}
+
+Method: pandas
+Dataset: 15
+{'push': 1691489, 'pop': 976083, 'ext_pop': 596580, 'stackadjshrink': 63351, 'stackadjgrow': 58}
+
+---
+
 Method: readline
 Dataset: 1
 {'push': 106441, 'pop': 59652, 'ext_pop': 38697, 'stackadjshrink': 4663, 'stackadjgrow': 0}
@@ -65,4 +95,32 @@ Dataset: 7
 Method: readline
 Dataset: 8
 {'push': 106423, 'pop': 59640, 'ext_pop': 38693, 'stackadjshrink': 4662, 'stackadjgrow': 0}
+
+Method: readline
+Dataset: 9
+{'push': 107301, 'pop': 59872, 'ext_pop': 39337, 'stackadjshrink': 4663, 'stackadjgrow': 0}
+
+Method: readline
+Dataset: 10
+{'push': 108351, 'pop': 60172, 'ext_pop': 40087, 'stackadjshrink': 4663, 'stackadjgrow': 0}
+
+Method: readline
+Dataset: 11
+{'push': 116751, 'pop': 62572, 'ext_pop': 46087, 'stackadjshrink': 4663, 'stackadjgrow': 0}
+
+Method: readline
+Dataset: 12
+{'push': 127251, 'pop': 65572, 'ext_pop': 53587, 'stackadjshrink': 4663, 'stackadjgrow': 0}
+
+Method: readline
+Dataset: 13
+{'push': 148287, 'pop': 71596, 'ext_pop': 68595, 'stackadjshrink': 4665, 'stackadjgrow': 0}
+
+Method: readline
+Dataset: 14
+{'push': 316449, 'pop': 119704, 'ext_pop': 188631, 'stackadjshrink': 4674, 'stackadjgrow': 0}
+
+Method: readline
+Dataset: 15
+{'push': 3025914, 'pop': 1040904, 'ext_pop': 1936146, 'stackadjshrink': 28134, 'stackadjgrow': 0}
 

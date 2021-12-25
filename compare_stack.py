@@ -32,6 +32,3 @@ print(counter1)
 print(counter2)
 
 
-f = open("comparision.txt", "a")
-f.write("Now the file has more content!")
-f.close()
