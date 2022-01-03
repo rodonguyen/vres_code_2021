@@ -236,14 +236,3 @@ Dataset: 15
 Execution time: 17.398703
 {'push': 2208823, 'pop': 661288, 'ext_pop': 1539157, 'stackadjshrink': 4806, 'stackadjgrow': 0}
 
-
-Method: ./stack.txt
-Dataset: 1
-Execution time: 403.593721 s
-{'push': 7020053, 'pop': 4029882, 'ext_pop': 2741582, 'stackadjshrink': 132785, 'stackadjgrow': 116}
-
-Method: ./stack.txt
-Dataset: 1
-Execution time: 17.256113 s
-{'push': 1691739, 'pop': 976181, 'ext_pop': 596742, 'stackadjshrink': 63345, 'stackadjgrow': 58}
-

@@ -2,6 +2,7 @@ n = 10
 x_values = []
 y_values = []
 
+# v2: has an extra statement below
 dummy = 100
 
 with open('../dataset/dataset_5.csv') as f:
