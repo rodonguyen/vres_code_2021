@@ -12,12 +12,12 @@ def count_old_stack(dataset, method, file1):
         counter1[value1] += 1
     exe_time = (int(end) - int(start))/1000000
     print(counter1)
-    print('Execution time:', exe_time)
+    print('Execution time:', exe_time, 's')
 
     f = open("results.txt", "a")
     f.write("Method: " + method + "\n")
     f.write("Dataset: " + str(dataset) + "\n")
-    f.write('Execution time: ' + str(exe_time) + '\n')
+    f.write('Execution time: ' + str(exe_time) + ' s\n')
     f.write(str(counter1) + '\n\n')
     f.close()
 
@@ -36,22 +36,24 @@ def count_new_stack(dataset, method, file1):
             break
     exe_time = (int(end) - int(start))/1000000
     print(counter)
-    print('Execution time:', exe_time)
+    print('Execution time:', exe_time, 's')
 
     f = open("results.txt", "a")
     f.write("Method: " + method + "\n")
     f.write("Dataset: " + str(dataset) + "\n")
-    f.write('Execution time: ' + str(exe_time) + '\n')
+    f.write('Execution time: ' + str(exe_time) + ' s\n')
     f.write(counter + '\n\n')
     f.close()
 
-# for i in range(1,15+1):
-#     dataset = i
-#     path = 'strace_pandas/trace/'
-#     file = open(path + 'stack_ds' + str(dataset) + '.txt', "r")
-#     count_old_stack(dataset, path, file)
+# Edit the path before running
+for i in range(1,1+1):
+    dataset = i
+    path = './stack.txt'
+    # path = 'strace_pandas/trace/stack_ds'+ str(dataset) + '.txt'
+    file = open(path, "r")
+    count_old_stack(dataset, path, file)
 
 
-path = 'strace_pandas/'
-file = open(path + 'stack.txt', "r")
-count_old_stack(15, path, file)
+# path = 'strace_pandas/'
+# file = open(path + 'stack.txt', "r")
+# count_old_stack(15, path, file)
