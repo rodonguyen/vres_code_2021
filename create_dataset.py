@@ -1,6 +1,7 @@
 # Change variables here
-ends = [50,100,500,1000,2000,10000,100000]
-filenames = [9,10,11,12,13,14,15]
+# ends = [50,100,500,1000,2000,10000,100000]
+ends = [4000,6000,8000]
+filenames = [14,15,16]
 
 # Code
 for i in range(len(ends)):

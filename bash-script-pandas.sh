@@ -1,7 +1,6 @@
 #!/bin/bash
 
 DIR_PANDAS="./strace_pandas/"
-DIR_READLINE="./strace_readline/" 
 
 count=1
 for i in "${DIR_PANDAS}"load_with_pd_ds*.py
@@ -20,4 +19,3 @@ done
 echo "Execute uncommon python codes"
 python3.9 "${DIR_PANDAS}"load_with_pd_v2_ds01.py
 mv vpython.txt vpython_v2_s1.txt
-

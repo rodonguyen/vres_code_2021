@@ -236,3 +236,4 @@ Dataset: 15
 Execution time: 17.398703
 {'push': 2208823, 'pop': 661288, 'ext_pop': 1539157, 'stackadjshrink': 4806, 'stackadjgrow': 0}
 
+
