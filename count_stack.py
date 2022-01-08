@@ -45,13 +45,27 @@ def count_new_stack(dataset, method, file1):
     f.write(counter + '\n\n')
     f.close()
 
+    pop, push, sgrow, sshrink = counter.split(' | ')
+    _, pop = pop.split(' ')
+    _, push = push.split(' ')
+    _, sgrow = sgrow.split(' ')
+    _, sshrink = sshrink.split(' ')
+    csv = open('results.csv', 'a')
+    csv.write('{0},{1},{2},{3},{4},{5},{6}\n'.format(method, str(dataset), str(exe_time), \
+                pop, push, sgrow, sshrink ))
+
+
 # Edit the path before running
-for i in range(1,1+1):
-    dataset = i
-    path = './stack.txt'
-    # path = 'strace_pandas/trace/stack_ds'+ str(dataset) + '.txt'
-    file = open(path, "r")
-    count_old_stack(dataset, path, file)
+paths = ['strace_readline/trace/vpython_ds', \
+        'strace_pandas/trace/vpython_ds', \
+        'strace_numpy/trace/vpython_ds']
+for path in paths:
+    for i in range(1,18+1):
+        dataset = i
+        temp_path = path + '%02d.txt' % dataset
+        file = open(temp_path, "r")
+        count_new_stack(dataset, temp_path, file)
+    
 
 
 # path = 'strace_pandas/'
