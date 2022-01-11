@@ -2,6 +2,8 @@
 stack*.txt
 vpython*.txt
 token.txt
+dataset/dataset_2*.csv
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
