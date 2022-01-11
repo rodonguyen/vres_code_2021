@@ -55,19 +55,21 @@ def count_new_stack(dataset, method, file1):
                 pop, push, sgrow, sshrink ))
 
 
-# Edit the path before running
-paths = ['strace_readline/trace/vpython_ds', \
-        'strace_pandas/trace/vpython_ds', \
-        'strace_numpy/trace/vpython_ds']
-for path in paths:
-    for i in range(1,18+1):
-        dataset = i
-        temp_path = path + '%02d.txt' % dataset
-        file = open(temp_path, "r")
-        count_new_stack(dataset, temp_path, file)
+def run_all():
+    # Edit the path before running
+    paths = ['strace_readline/trace/vpython_ds', \
+            'strace_pandas/trace/vpython_ds', \
+            'strace_numpy/trace/vpython_ds']
+    for path in paths:
+        for i in range(1,18+1):
+            dataset = i
+            temp_path = path + '%02d.txt' % dataset
+            file = open(temp_path, "r")
+            count_new_stack(dataset, temp_path, file)
     
+def run_individual():
+    one_path = 'strace_numpy/trace/vpython_ds00.txt'
+    count_new_stack(0, one_path , open(one_path, 'r'))
 
 
-# path = 'strace_pandas/'
-# file = open(path + 'stack.txt', "r")
-# count_old_stack(15, path, file)
+run_all()
