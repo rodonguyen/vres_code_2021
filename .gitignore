@@ -5,6 +5,9 @@ token.txt
 dataset*/dataset_2*.csv
 !dataset*/dataset_2.csv
 !dataset*/dataset_2_pandas.csv
+dataset/
+
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

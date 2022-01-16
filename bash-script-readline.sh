@@ -4,6 +4,7 @@ DIR_READLINE="./strace_readline/"
 
 # Start from dataset 0
 count=0
+
 for i in "${DIR_READLINE}"load_with_readline_ds*.py
 do
   # Prompt filename and execute the file using vPython / python3.9

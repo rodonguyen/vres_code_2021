@@ -3,7 +3,7 @@
 DIR="./linear_regression_pandas/"
 
 # Start from dataset 1
-count=1
+count=0
 for i in "${DIR}"/code/lr_ds*.py
 do
   # Prompt filename and execute the file using vPython / python3.9
@@ -12,8 +12,7 @@ do
   echo "Executing $i"
   python3.9 $i 
   
-  # Give computer sometime to rest and rename
-  sleep 1
+  # Renaming
   new=$(printf "vpython_ds%02d.txt" "$count")
   mv vpython.txt "$new"
 
