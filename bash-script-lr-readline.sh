@@ -1,10 +1,11 @@
 #!/bin/bash
+rm -f vpython.txt
+rm -f vpython.txt
+
 
 DIR="./linear_regression_readline/"
-
 # Start from dataset 0
-count=0
-
+count=1
 for i in "${DIR}"/code_length_increase/lr_ds*.py
 do
   # Prompt filename and execute the file using vPython / python3.9

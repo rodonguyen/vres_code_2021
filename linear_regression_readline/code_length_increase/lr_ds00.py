@@ -3,7 +3,7 @@ from sklearn import linear_model
 x_values = []
 y_values = []
 
-n = 1
+n = 0
 
 with open('./dataset/dataset_0.csv') as f:
     for i in range(0, n):
@@ -18,5 +18,4 @@ regression = linear_model.LinearRegression()
 # Train the model using the training sets
 regression.fit(x_values, y_values)
 
-print(regression.predict([[1,2]]))
 print("Coefficients: \n", regression.coef_)

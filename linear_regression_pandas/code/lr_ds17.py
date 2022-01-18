@@ -11,5 +11,4 @@ regression = linear_model.LinearRegression()
 # Train the model using the training sets
 regression.fit(x, y)
 
-print(regression.predict([[10000,10000]]))
 print("Coefficients: \n", regression.coef_)

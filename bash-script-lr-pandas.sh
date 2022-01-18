@@ -1,9 +1,11 @@
 #!/bin/bash
+rm -f vpython.txt
+rm -f vpython.txt
+
 
 DIR="./linear_regression_pandas/"
-
 # Start from dataset 1
-count=0
+count=1
 for i in "${DIR}"/code/lr_ds*.py
 do
   # Prompt filename and execute the file using vPython / python3.9

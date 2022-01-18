@@ -1,4 +1,7 @@
 #!/bin/bash
+rm -f vpython.txt
+rm -f vpython.txt
+
 
 DIR_PANDAS="./strace_pandas/"
 
