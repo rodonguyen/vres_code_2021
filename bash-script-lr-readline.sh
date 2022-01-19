@@ -3,10 +3,11 @@ rm -f vpython.txt
 rm -f vpython.txt
 
 
-DIR="./linear_regression_readline/"
 # Start from dataset 0
+# add1
+# negative1
 count=1
-for i in "${DIR}"/code_length_increase/lr_ds*.py
+for i in ./linear_regression_readline/code_length_1/lr_ds*.py
 do
   # Prompt filename and execute the file using vPython / python3.9
   # Make sure the files are in consecutively-numbered ascending order to have the Renaming done correctly. 

@@ -325,7 +325,6 @@ def dataset_length_10_add1_readline():
     info_file = open('./dataset_length_' + str(dataset_length) + '_add1/ds_info.txt', 'w')
     f = open(filename, 'w')
 
-    f.write('x,y\n')
     f.write('0,0\n')
     for j in range(2,dataset_length+1):
         f.write("1,1\n")
@@ -466,7 +465,6 @@ def dataset_length_10_negative1_readline():
     info_file = open('./dataset_length_' + str(dataset_length) + '_negative1/ds_info.txt', 'w')
     f = open(filename, 'w')
 
-    f.write('x,y\n')
     f.write('0,0\n')
     for j in range(2,dataset_length+1):
         f.write("1,1\n")
@@ -590,7 +588,6 @@ def dataset_length_100_add1_readline():
     info_file = open('./dataset_length_' + str(dataset_length) + '_add1/ds_info.txt', 'w')
     f = open(filename, 'w')
 
-    f.write('x,y\n')
     f.write('0,0\n')
     for j in range(2,dataset_length+1):
         f.write("1,1\n")
@@ -693,7 +690,6 @@ def dataset_length_100_negative1_readline():
     info_file = open('./dataset_length_' + str(dataset_length) + '_negative1/ds_info.txt', 'w')
     f = open(filename, 'w')
 
-    f.write('x,y\n')
     f.write('0,0\n')
     for j in range(2,dataset_length+1):
         f.write("1,1\n")
@@ -797,7 +793,6 @@ def dataset_length_10000_add1_readline():
     info_file = open('./dataset_length_' + str(dataset_length) + '_add1/ds_info.txt', 'w')
     f = open(filename, 'w')
 
-    f.write('x,y\n')
     f.write('0,0\n')
     for j in range(2,dataset_length+1):
         f.write("1,1\n")
@@ -899,7 +894,6 @@ def dataset_length_10000_negative1_readline():
     info_file = open('./dataset_length_' + str(dataset_length) + '_negative1/ds_info.txt', 'w')
     f = open(filename, 'w')
 
-    f.write('x,y\n')
     f.write('0,0\n')
     for j in range(2,dataset_length+1):
         f.write("1,1\n")
@@ -938,15 +932,15 @@ def dataset_length_10000_negative1_readline():
 
 ##############################################################
 
-dataset_length_100_add1_pandas()
-dataset_length_100_add1_readline()
-dataset_length_100_negative1_pandas()
-dataset_length_100_negative1_pandas()
+# dataset_length_100_add1_pandas()
+# dataset_length_100_add1_readline()
+# dataset_length_100_negative1_pandas()
+dataset_length_100_negative1_readline()
 
-dataset_length_10000_add1_pandas()
-dataset_length_10000_add1_readline()
-dataset_length_10000_negative1_pandas()
-dataset_length_10000_negative1_readline()
+# dataset_length_10000_add1_pandas()
+# dataset_length_10000_add1_readline()
+# dataset_length_10000_negative1_pandas()
+# dataset_length_10000_negative1_readline()
 
 
 # dataset_length_10_add1_readline()

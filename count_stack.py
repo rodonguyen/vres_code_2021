@@ -79,10 +79,9 @@ def run_individual():
 # Count the linear regression stacks
 def run_all():
     # Edit the path before running
-    paths = ['linear_regression_pandas/trace/']
-            # 'linear_regression_readline/trace/']
-    for path in paths:
-        for dir in os.listdir(path):
+    paths = ['linear_regression_pandas/trace/', 'linear_regression_readline/trace/'] #'linear_regression_pandas/trace/',
+    for path in sorted(paths):
+        for dir in sorted(os.listdir(path)):
             print('\ndir: ' + dir)
             temp_path = path + dir 
             for filename in sorted(os.listdir(temp_path)):
@@ -95,13 +94,17 @@ def count_stack_3(filename):
     max_line = len(nonempty_lines)
     file.close()
 
-    counter = nonempty_lines[-1].split(' ', 1)[1]
     start = nonempty_lines[0].split("->",1)[0]
     for i in reversed(range(max_line)):
         if '->' in nonempty_lines[i]:
             # print(nonempty_lines[i])
             end = nonempty_lines[i].split("->",1)[0]
             break
+    for i in reversed(range(max_line)):
+        if '>>>' in nonempty_lines[i]:
+            counter = nonempty_lines[i].split(' ', 1)[1]
+            break
+
     exe_time = (int(end) - int(start))/1000000
     # print(counter)
     # print('Execution time:', exe_time, 's')

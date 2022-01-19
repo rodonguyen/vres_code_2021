@@ -2,11 +2,9 @@
 rm -f vpython.txt
 rm -f vpython.txt
 
-
-DIR="./linear_regression_pandas/"
 # Start from dataset 1
 count=1
-for i in "${DIR}"/code/lr_ds*.py
+for i in ./linear_regression_pandas/code/lr_ds*.py
 do
   # Prompt filename and execute the file using vPython / python3.9
   # Make sure the files are in consecutively-numbered ascending order to have the renaming done correctly. 

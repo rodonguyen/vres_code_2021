@@ -8,7 +8,7 @@ n = 10
 with open('./dataset_length_10_add1/dataset_1.csv') as f:
     for i in range(0, n):
         x,y = f.readline().replace('\n','').split(',')
-        x, y = float(x), float(y)
+        x,y = float(x), float(y)
         x_values.append([x,y])
         y_values.append(y)
 
