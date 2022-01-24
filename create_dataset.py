@@ -1,28 +1,15 @@
 import random
 
-def dataset_length_increase_pandas():
-    # Change variables here
-    ends = [10**5*5, 10**6, 10**6*5, 10**7, 10**7*5, 10**8]
-    filenames = [20,21, 22,23,24,25]
-    # Data points
-    for i in range(len(ends)):
-        f = open('dataset_length_increase/dataset_' + str(filenames[i]) + "_pandas.csv", "w")
-        f.write('x,y')
-        for j in range(1,ends[i]+1):
-            f.write("\n%d,%d" % (j,j) )
-        f.close()
+# dataset_length_increase version 2
+def dataset_length_increase():
+    for i in range(2,6):
+        for j in range(1,11):
+            f = open('dataset_length_increase/dataset_%02d_%02d.csv' % (i,j), "w")
+            f.write('0,0')
+            for line in range(j*(10**i)-1):
+                f.write("\n1,1")
+            f.close()
 
-def dataset_length_increase_readline():
-    # Change variables here
-    ends = [10**5*5, 10**6, 10**6*5, 10**7, 10**7*5, 10**8]
-    filenames = [20,21, 22,23,24,25]
-    # Data points
-    for i in range(len(ends)):
-        f = open('dataset_length_increase/dataset_' + str(filenames[i]) + ".csv", "w")
-        f.write('1,1')
-        for j in range(2,ends[i]+1):
-            f.write("\n%d,%d" % (j,j) )
-        f.close()
 
 def only_one_value_pandas():
     # Change variables 
@@ -518,8 +505,6 @@ def dataset_length_10_negative1_readline():
         dataset_number += 1
 
 
-####
-
 def dataset_length_100_add1_pandas():
     dataset_number = 1
     dataset_length = 100
@@ -935,7 +920,7 @@ def dataset_length_10000_negative1_readline():
 # dataset_length_100_add1_pandas()
 # dataset_length_100_add1_readline()
 # dataset_length_100_negative1_pandas()
-dataset_length_100_negative1_readline()
+# dataset_length_100_negative1_readline()
 
 # dataset_length_10000_add1_pandas()
 # dataset_length_10000_add1_readline()
@@ -954,4 +939,4 @@ dataset_length_100_negative1_readline()
 # only_one_value()
 # only_one_value()
 # dataset_length_increase_pandas()
-# dataset_length_increase_readline()
+dataset_length_increase()

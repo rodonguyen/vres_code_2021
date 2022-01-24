@@ -16,7 +16,7 @@ do
   python3.9 $i 
   
   # Renaming
-  new=$(printf "vpython_ds%02d.txt" "$count")
+  new=$(printf "vpython_ds_%02d.txt" "$count")
   mv vpython.txt "$new"
 
   # Prompt the new name for easier check
