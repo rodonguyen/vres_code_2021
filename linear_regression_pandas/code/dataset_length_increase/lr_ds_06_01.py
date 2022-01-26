@@ -1,7 +1,7 @@
 import pandas as pd
 from sklearn import linear_model
 
-df = pd.read_csv('./dataset_length_increase/dataset_05_10.csv', header=None)
+df = pd.read_csv('./dataset_length_increase/dataset_06_01.csv', header=None)
 x = df.values
 y = df[0].values
 

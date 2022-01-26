@@ -2,9 +2,9 @@ from sklearn import linear_model
 
 x_values = []
 y_values = []
-n = 0
+n = 1000000
 
-with open('./dataset_length_increase/dataset_05_10.csv') as f:
+with open('./dataset_length_increase/dataset_06_01.csv') as f:
     for i in range(0, n):
         x, y = f.readline().replace('\n','').split(',')
         x, y = float(x), float(y)

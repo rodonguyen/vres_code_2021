@@ -2,7 +2,7 @@ from sklearn import linear_model
 
 x_values = []
 y_values = []
-n = 0
+n = 30000
 
 with open('./dataset_length_increase/dataset_04_03.csv') as f:
     for i in range(0, n):

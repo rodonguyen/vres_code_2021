@@ -4,7 +4,7 @@ rm -f vpython.txt
 
 # Start from dataset 1
 count=1
-for i in ./linear_regression_readline/code_length_1/lr_ds_*.py
+for i in ./linear_regression_readline/code/dataset_length_increase/lr_ds_*.py
 do
   # Prompt filename and execute the file using vPython / python3.9
   # Make sure the files are in consecutively-numbered ascending order to have the Renaming done correctly. 
@@ -21,6 +21,7 @@ do
   echo ""
 
   # Iterate the 'count' to make new name
+  sleep 1
   let count=count+1
 done
 
