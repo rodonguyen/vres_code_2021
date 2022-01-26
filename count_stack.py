@@ -1,3 +1,4 @@
+from datetime import datetime
 import os
 
 
@@ -78,8 +79,11 @@ def run_individual():
 
 # Count the linear regression stacks
 def run_all():
+    csv = open('results.csv', 'a')
+    csv.write('filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink\n')
+
     # Edit the path before running
-    paths = ['linear_regression_pandas/trace/', 'linear_regression_readline/trace/'] #'linear_regression_pandas/trace/',
+    paths = ['linear_regression_pandas/trace/', 'linear_regression_readline/trace/'] 
     for path in sorted(paths):
         for dir in sorted(os.listdir(path)):
             print('\ndir: ' + dir)
@@ -106,8 +110,8 @@ def count_stack_3(filename):
             break
 
     exe_time = (int(end) - int(start))/1000000
-    # print(counter)
-    # print('Execution time:', exe_time, 's')
+    start_time = datetime.datetime.fromtimestamp(int(start)).strftime('%H:%M:%S')
+    end_time = datetime.datetime.fromtimestamp(int(end)).strftime('%H:%M:%S')
 
     # Record stack trace in results.csv
     pop, push, sgrow, sshrink = counter.split(' | ')
@@ -116,7 +120,31 @@ def count_stack_3(filename):
     _, sgrow = sgrow.split(' ')
     _, sshrink = sshrink.split(' ')
     csv = open('results.csv', 'a')
-    csv.write('{0},{1},{2},{3},{4},{5},{6}\n'.format(filename, filename[-6:-4], str(exe_time), \
+    csv.write('{0},{1},{2},{3},{4},{5},{6},{7},{8}\n'.format(
+                filename, filename[-6:-4], str(exe_time),
+                start_time, end_time,
                 pop, push, sgrow, sshrink ))
 
-run_all()
+
+# top -bd 0.5 -o +%MEM | grep "load average" -A 9 > memory_usage.log
+def get_cpu_memory_usage(PID):
+    file = open('memory_usage.log')
+    nonempty_lines = [line.strip("\n") for line in file if line != "\n"]
+    max_line = len(nonempty_lines)
+    file.close()
+
+    for line in nonempty_lines:
+        if 'top -' in line:
+            line = line.split()
+            timestamp = line[2]
+        if str(PID) in line:
+            line = line.split()
+            cpu, memory = line[8], line[9]
+            print(timestamp, cpu,memory)
+            csv = open('cpu_memory_usage.csv', 'a')
+            csv.write('{0},{1},{2}\n'.format(timestamp,cpu,memory))
+
+
+
+get_cpu_memory_usage(1524)
+# run_all()
