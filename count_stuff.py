@@ -80,19 +80,24 @@ import os
 # Count the linear regression stacks
 def identify_vpython():
     # Edit the path before running
-    paths = ['linear_regression_pandas/trace/', 'linear_regression_readline/trace/'] 
+    destination = './count_stuff_results/stack_traces.csv'
+    paths = ['linear_regression_pandas/trace/', 
+    'linear_regression_readline/trace/', 
+    'linear_regression_additional/trace/'] 
+    paths = ['linear_regression_additional/trace/']
+
     for path in sorted(paths):
         for dir in sorted(os.listdir(path)):
             print('\ndir: ' + dir)
             temp_path = path + dir 
             for vpython_name in sorted(os.listdir(temp_path)):
-                count_stack_3(temp_path + '/' + vpython_name)
+                count_stack_3(temp_path + '/' + vpython_name, destination)
 
-    csv = open('./count_stuff_results/stack_traces.csv', 'a')
+    csv = open(destination, 'a')
     csv.write('filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink\n')
 
 
-def count_stack_3(filename):
+def count_stack_3(filename, destination):
     print(filename)
     file = open(filename)
     nonempty_lines = [line.strip("\n") for line in file if line != "\n"]
@@ -120,33 +125,33 @@ def count_stack_3(filename):
     _, push = push.split(' ')
     _, sgrow = sgrow.split(' ')
     _, sshrink = sshrink.split(' ')
-    csv = open('./count_stuff_results/stack_traces.csv', 'a')
+    csv = open(destination, 'a')
     csv.write('{0},{1},{2},{3},{4},{5},{6},{7},{8}\n'.format(
-                filename, filename[-6:-4], str(exe_time),
+                filename, filename[-9:-4], str(exe_time),
                 start_time, end_time,
                 pop, push, sgrow, sshrink ))
 
 
 # top -bd 0.5 -o +%MEM | grep "load average" -A 9 > memory_usage.log
-def get_cpu_memory_usage(PID):
-    file = open('memory_usage.log')
+def get_cpu_memory_usage():
+    file = open('memory_cpu_usage.log')
     nonempty_lines = [line.strip("\n") for line in file if line != "\n"]
-    max_line = len(nonempty_lines)
+    # max_line = len(nonempty_lines)
     file.close()
 
-    csv = open('./count_stuff_results/cpu_memory_usage.csv', 'a')
-    csv.write('timestamp,%cpu,%memory\n')
+    csv = open('./count_stuff_results/cpu_usage.csv', 'a')
+    csv.write('timestamp,%cpu_user,%cpu_system\n')
     for line in nonempty_lines:
         if 'top -' in line:
             line = line.split()
             timestamp = line[2]
-        if str(PID) in line:
+        if 'Cpu(s):' in line:
             line = line.split()
-            cpu, memory = line[8], line[9]
-            print(timestamp, cpu,memory)
-            csv.write('{0},{1},{2}\n'.format(timestamp,cpu,memory))
+            user, system = line[1], line[3]
+            print(timestamp, user, system)
+            csv.write('{0},{1},{2}\n'.format(timestamp,user,system))
 
 
 
-get_cpu_memory_usage(1524)
+# get_cpu_memory_usage()
 identify_vpython()

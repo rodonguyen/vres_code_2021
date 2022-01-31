@@ -18,9 +18,10 @@ do
 
   # Prompt the new name for easier check
   echo "Renamed to $new"
-  echo "Sleep 2s"
+  echo "Kill process and Sleep 2s"
   echo ""
-  sleep 2
+  killall -9 python3.9
+  sleep 3
 
   # Iterate the 'count' to make new name
   let count=count+1
