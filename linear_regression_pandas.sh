@@ -18,15 +18,16 @@ do
 
   # Prompt the new name for easier check
   echo "Renamed to $new"
-  echo "Kill process and Sleep 2s"
+  echo "Kill python3.9 process and Sleep 2s"
   echo ""
   killall -9 python3.9
-  sleep 3
+  sleep 2
 
   # Iterate the 'count' to make new name
   let count=count+1
 done
 
+python3.8 utils/rename.py
 
 spd-say done
 

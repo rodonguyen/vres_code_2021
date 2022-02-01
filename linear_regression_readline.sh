@@ -21,9 +21,11 @@ do
   echo ""
 
   # Iterate the 'count' to make new name
-  sleep 1
+  sleep 2
   let count=count+1
 done
 
+
+python3.8 utils/rename.py
 
 spd-say done
