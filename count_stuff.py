@@ -10,13 +10,16 @@ def identify_vpython(paths):
             print('\ndir: ' + dir)
             temp_path = path + dir 
             for vpython_name in sorted(os.listdir(temp_path)):
-                count_stack_3(temp_path + '/' + vpython_name, destination)
+                count_stack(temp_path + '/' + vpython_name, destination)
+            csv = open(destination, 'a')
+            csv.write('\n\n\n')
+            csv.close()
 
     csv = open(destination, 'a')
     csv.write('filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink\n')
+    csv.close()
 
-
-def count_stack_3(filename, destination):
+def count_stack(filename, destination):
     print(filename)
     file = open(filename)
     nonempty_lines = [line.strip("\n") for line in file if line != "\n"]
@@ -49,10 +52,11 @@ def count_stack_3(filename, destination):
                 filename, filename[-9:-4], str(exe_time),
                 start_time, end_time,
                 pop, push, sgrow, sshrink ))
+    csv.close()
 
 
 # top -bd 0.5 -o +%MEM | grep "load average" -A 9 > memory_usage.log
-def get_cpu_memory_usage(usage_logfiles = ['./cpu_usage.log']):
+def get_cpu_usage(usage_logfiles = ['./cpu_usage.log']):
     for usage_logfile in usage_logfiles:
         file = open(usage_logfile)
         nonempty_lines = [line.strip("\n") for line in file if line != "\n"]
@@ -85,13 +89,16 @@ def get_cpu_memory_usage(usage_logfiles = ['./cpu_usage.log']):
 ##################################
 #         THINGS TO RUN          #
 ##################################
-# usage_logfiles = ['./cpu_usage_pandas_05.log','./cpu_usage_pandas_06.log',
-#                 './cpu_usage_readline_01.log', './cpu_usage_readline_02.log']
-# get_cpu_memory_usage(usage_logfiles)
+
+# usage_logfiles = ['cpu_usage_readline_04.log', 
+#     'cpu_usage_readline_05.log',
+#     'cpu_usage_readline_06.log']
+# get_cpu_usage(usage_logfiles)
 
 
 # paths = ['linear_regression_pandas/trace/', 
 # 'linear_regression_readline/trace/', 
 # 'linear_regression_additional/trace/'] 
-paths = ['temporary_folder_to_count_stack/trace/']
+# paths = ['temporary_folder_for_stacks/trace/']
+paths = ['linear_regression_additional/trace/']
 identify_vpython(paths)

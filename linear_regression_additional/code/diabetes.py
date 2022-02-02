@@ -1,7 +1,6 @@
 # Code source: Jaques Grobler
 # License: BSD 3 clause
 
-from ctypes import sizeof
 import numpy as np
 from sklearn import datasets, linear_model
 from sklearn.metrics import mean_squared_error, r2_score
