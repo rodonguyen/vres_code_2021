@@ -16,6 +16,7 @@ null_percentage = (df[df.columns[df.isna().any()]].isna().sum() * 100 / df.shape
 
 null_data = pd.concat([null_value_count, null_percentage], axis=1, keys=['Count', 'Percentage'])
 
+#drop
 df.drop(columns=null_data[ null_data['Percentage'] > 15].index, inplace=True)
 
 null_data = null_data[null_data['Percentage'] < 15]
@@ -38,6 +39,7 @@ null_value_count = df[df.columns[df.isna().any()]].isna().sum().sort_values(asce
 null_percentage = (df[df.columns[df.isna().any()]].isna().sum() * 100 / df.shape[0]).sort_values(ascending=False)
 null_data = pd.concat([null_value_count, null_percentage], axis=1, keys=['Count', 'Percentage'])
 
+#drop
 df.drop(columns='Street', inplace=True)
 df.drop(columns='Condition2', inplace=True)
 df.drop(columns='RoofMatl', inplace=True)

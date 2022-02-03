@@ -10,16 +10,47 @@ echo "Executing medical.py"
 python3.9 ./linear_regression_additional/code/medical.py
 # Renaming
 mv vpython.txt vpython_medical.txt
-echo "Sleep 2s"
+echo "Kill python3.9 process and Sleep 2s"
 echo ""
+killall -9 python3.9
 sleep 2
 
-echo "Executing medical.py"
+echo "Executing diabetes.py"
 python3.9 ./linear_regression_additional/code/diabetes.py
 # Renaming
 mv vpython.txt vpython_diabetes.txt
-echo "Sleep 2s"
+echo "Kill python3.9 process and Sleep 2s"
 echo ""
+killall -9 python3.9
 sleep 2
+
+echo "Executing car.py"
+python3.9 ./linear_regression_additional/code/car.py
+# Renaming
+mv vpython.txt vpython_car.txt
+echo "Kill python3.9 process and Sleep 2s"
+echo ""
+killall -9 python3.9
+sleep 2
+
+
+echo "Executing energy.py"
+python3.9 ./linear_regression_additional/code/energy.py
+# Renaming
+mv vpython.txt vpython_energy.txt
+echo "Kill python3.9 process and Sleep 2s"
+echo ""
+killall -9 python3.9
+sleep 2
+
+echo "Executing house.py"
+python3.9 ./linear_regression_additional/code/house.py
+# Renaming
+mv vpython.txt vpython_house.txt
+echo "Kill python3.9 process and Sleep 2s"
+echo ""
+killall -9 python3.9
+sleep 2
+
 
 spd-say done
