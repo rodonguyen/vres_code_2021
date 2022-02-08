@@ -12,7 +12,7 @@ def identify_vpython(paths):
             for vpython_name in sorted(os.listdir(temp_path)):
                 count_stack(temp_path + '/' + vpython_name, destination)
             csv = open(destination, 'a')
-            csv.write('\n\n\n')
+            csv.write('\n')
             csv.close()
 
     csv = open(destination, 'a')
@@ -55,7 +55,6 @@ def count_stack(filename, destination):
     csv.close()
 
 
-# top -bd 0.5 -o +%MEM | grep "load average" -A 9 > memory_usage.log
 def get_cpu_usage(usage_logfiles = ['./cpu_usage.log']):
     for usage_logfile in usage_logfiles:
         file = open(usage_logfile)

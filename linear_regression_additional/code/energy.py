@@ -3,7 +3,7 @@ from sklearn import linear_model
 
 df = pd.read_csv('dataset_additional/energy.csv')
 x = df.iloc[:,:-2]
-y = df.iloc[:,8:]
+y = df.iloc[:,-2:]
 
 # Create linear regression object
 regression = linear_model.LinearRegression()

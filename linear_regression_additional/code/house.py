@@ -1,11 +1,9 @@
-
 import pandas as pd
-from pyparsing import col
 from sklearn import linear_model
 
 df = pd.read_csv('dataset_additional/house.csv')
-y = df.pop('SalePrice')
-x = df
+x = df.iloc[:,:-1]
+y = df.iloc[:,-1:]
 
 # Create linear regression object
 regression = linear_model.LinearRegression()
