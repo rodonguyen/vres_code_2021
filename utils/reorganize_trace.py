@@ -1,31 +1,31 @@
 def write_to_csv(table_name):
 
     # DESTINATION
-    csv = open('./count_stuff_results/stack_traces_v2.csv', 'a')
+    csv = open('./count_stuff_results/stack_traces_v2_300.csv', 'a')
     
     # write to csv
     csv.write(table_name+'\n')
     csv.write('car')
     for j in car:
-        csv.write(j+',')
+        csv.write(','+j)
     csv.write('\n')
 
-    csv.write('diabetes,')
+    csv.write('diabetes')
     for j in diabetes:
         csv.write(','+j)
     csv.write('\n')
 
-    csv.write('energy,')
+    csv.write('energy')
     for j in energy:
         csv.write(','+j)
     csv.write('\n')
 
-    csv.write('house,')
+    csv.write('house')
     for j in house:
         csv.write(','+j)
     csv.write('\n')
 
-    csv.write('medical,')
+    csv.write('medical')
     for j in medical:
         csv.write(','+j)
     csv.write('\n\n\n')
