@@ -1,51 +1,52 @@
 def write_to_csv(table_name):
-    csv = open('./count_stuff_results/stack_trace_v2.csv', 'a')
+
+    # DESTINATION
+    csv = open('./count_stuff_results/stack_traces_v2.csv', 'a')
     
     # write to csv
     csv.write(table_name+'\n')
-    csv.write('car,')
+    csv.write('car')
     for j in car:
         csv.write(j+',')
     csv.write('\n')
 
     csv.write('diabetes,')
     for j in diabetes:
-        csv.write(j+',')
+        csv.write(','+j)
     csv.write('\n')
 
     csv.write('energy,')
     for j in energy:
-        csv.write(j+',')
+        csv.write(','+j)
     csv.write('\n')
 
     csv.write('house,')
     for j in house:
-        csv.write(j+',')
+        csv.write(','+j)
     csv.write('\n')
 
     csv.write('medical,')
     for j in medical:
-        csv.write(j+',')
+        csv.write(','+j)
     csv.write('\n\n\n')
 
     csv.close()
 
 
 
-
+# STARTING FILE
 file = open('./count_stuff_results/stack_traces.csv')
+
 nonempty_lines = [line.strip("\n") for line in file if line != "\n"]
 # max_line = len(nonempty_lines)
 file.close()
 
-
-for item in [2,5,6]:
+for item in [5,6,2]:
     car = []
     diabetes = []
     energy = []
     house = []
     medical = []
-
     for i, line in enumerate(nonempty_lines):
         if 'car' in line:
             print('car: ',line)
@@ -68,10 +69,4 @@ for item in [2,5,6]:
             line = line.split(',')
             medical.append(line[item])
 
-    # write to csv
     write_to_csv(['','','execution time','','','pop','push'][item])
-
-
-
-
-
