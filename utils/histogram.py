@@ -16,6 +16,7 @@ for line in nonempty_lines:
         list000 = line.split(',')
         list000.pop(0)
         list000 = sorted(list000)
+        print(str(list000[:10]))
 
         integer_map = map(int, list000)
         integer_list = list(integer_map)
@@ -33,18 +34,41 @@ for line in nonempty_lines:
         print(f"Full range is from {sorted_unique_list[0]} to {sorted_unique_list[-1]}")
         #####################
 
-        # height, bins, patches = plt.hist(list000, alpha=0.8, bins=len(myset)-1)
-        # plt.fill_betweenx([0, height.max()], lower, upper, color='g', alpha=0.2)
 
+        # plt.title('%s dataset: pop count' % (items[count]))
+        # plt.xlabel('value')
+        # plt.ylabel('count')
+
+        # print(plt.hist(list000, alpha=0.8, bins=len(myset)-1))
+        # ymin, ymax = plt.gca().get_ylim() 
+        # print(ymax)
+        # plt.xticks(rotation=60)
+        # plt.show()
+        # plt.close()
+
+
+
+        ##################################
+        fig, ax = plt.subplots()
         plt.title('%s dataset: pop count' % (items[count]))
         plt.xlabel('value')
         plt.ylabel('count')
 
-        plt.hist(list000, alpha=0.8, bins=len(myset)-1)
+        ax.hist(list000, alpha=0.8, bins=len(myset)-1, color='deepskyblue')
+        ymin, ymax = ax.get_ylim() 
+        print('ymax:', ymax)
+        
+        # CI zone
+        str_lower, str_upper = str(int(lower)), str(int(upper))
+        print(str_lower)
+        ax.fill_betweenx([0,ymax],[str_lower, str_lower], [str_upper, str_upper] ,
+                        facecolor ='orange', alpha = 0.2)
+        
+
+        ax.hist(list000, alpha=0.8, bins=len(myset)-1, color='deepskyblue') # Repeat 'hist' to put important columns front
         plt.xticks(rotation=60)
         plt.show()
         # plt.savefig('image'+str(random.randint(1,100000))+'.png')
         plt.close()
 
         count += 1
-
