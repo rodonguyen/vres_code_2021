@@ -1,7 +1,79 @@
 import datetime
 import os
 
-def count_stack_in_an_area(path)
+def count_stack_in_an_area(full_vpython_path, output_file, function_start_name, function_end_name):
+    file = open(full_vpython_path)
+    nonempty_lines = [line.strip("\n") for line in file if line != "\n"]
+    max_line = len(nonempty_lines)
+    file.close()
+
+    # Get memory_op
+    for i in reversed(range(max_line)):
+        if function_start_name in nonempty_lines[i]:
+            if '>>> ' in nonempty_lines[i-1]:
+                memory_op_before_start = nonempty_lines[i-1].split(' ', 1)[1]
+            else: 
+                print('memory_op is not found in previous line.')
+            break
+    
+    for i in reversed(range(max_line)):
+        if function_end_name in nonempty_lines[i]:
+            if '>>> ' in nonempty_lines[i+1]:
+                memory_op_after_end = nonempty_lines[i+1].split(' ', 1)[1]
+            else: 
+                print('memory_op is not found in line after.')
+            break
+    
+    # Get delta pop, push, sgrow, sshrink
+    pop, push, sgrow, sshrink = memory_op_before_start.split(' | ')
+    _, pop1 = pop.split(' ')
+    _, push1 = push.split(' ')
+    _, sgrow1 = sgrow.split(' ')
+    _, sshrink1 = sshrink.split(' ')
+
+    pop, push, sgrow, sshrink = memory_op_after_end.split(' | ')
+    _, pop2 = pop.split(' ')
+    _, push2 = push.split(' ')
+    _, sgrow2 = sgrow.split(' ')
+    _, sshrink2 = sshrink.split(' ')
+
+    pop, push, sgrow, sshrink = int(pop2)-int(pop1), int(push2)-int(push1), int(sgrow2)-int(sgrow1), int(sshrink2)-int(sshrink1)
+
+    # Record delta stuff in a line
+    csv = open(output_file, 'a')
+    csv.write('{0},{1},{2},{3},{4},{5}\n'.format(
+                full_vpython_path, full_vpython_path[-7:-4],
+                pop, push, sgrow, sshrink ))
+    csv.close()
+    # End
+
+def extract_trace_in_path(path, function_start_name, function_end_name):
+    destination1 = './count_stuff_results/stack_traces.csv'
+    csv = open(destination1, 'a')
+    csv.write('filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink\n')
+    csv.close()
+
+    destination2 = './count_stuff_results/stack_traces_in_an_area.csv'
+    csv = open(destination2, 'a')
+    csv.write('filepath, file no., delta_pop, delta_push, delta_sgrow, delta_sshrink\n')
+    csv.close()
+
+    for vpython_name in sorted(os.listdir(path)):
+        full_vpython_path = path + vpython_name
+        print(full_vpython_path)
+
+        # Record all trace
+        count_stack(full_vpython_path, destination1)
+
+        # Record in an area
+        count_stack_in_an_area(full_vpython_path, destination2,
+                                    function_start_name, function_end_name)
+        
+
+
+
+
+
 
 # Count the linear regression stacks
 def identify_vpython(paths):
@@ -51,7 +123,7 @@ def count_stack(filename, destination):
     _, sshrink = sshrink.split(' ')
     csv = open(destination, 'a')
     csv.write('{0},{1},{2},{3},{4},{5},{6},{7},{8}\n'.format(
-                filename, filename[-9:-4], str(exe_time),
+                filename, filename[-7:-4], str(exe_time),
                 start_time, end_time,
                 pop, push, sgrow, sshrink ))
     csv.close()
@@ -101,5 +173,11 @@ def get_cpu_usage(usage_logfiles = ['./cpu_usage.log']):
 # 'linear_regression_readline/trace/', 
 # 'linear_regression_additional/trace/'] 
 # paths = ['temporary_folder_for_stacks/trace/']
-paths = ['linear_regression_additional/trace/']
-identify_vpython(paths)
+
+
+## This one extract all vpython in its sub-dir
+# paths = ['linear_regression_additional/trace/']
+# identify_vpython(paths)
+
+extract_trace_in_path('linear_regression_additional/trace_car_only/', 
+                        'function_start', 'function_end')

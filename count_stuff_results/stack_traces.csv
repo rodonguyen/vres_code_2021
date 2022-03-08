@@ -1800,3 +1800,408 @@ linear_regression_additional/trace/lra_99/vpython_diabetes.txt,betes,5.331545,15
 linear_regression_additional/trace/lra_99/vpython_energy.txt,nergy,4.441722,15:06:29,15:06:33,2331078,4247368,130,158850
 linear_regression_additional/trace/lra_99/vpython_house.txt,house,4.271293,15:06:33,15:06:38,2347970,4283206,126,159687
 linear_regression_additional/trace/lra_99/vpython_medical.txt,dical,4.161267,15:06:19,15:06:23,2329960,4245090,129,158806
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_001.txt,r_001,3.513496,23:12:44,23:12:48,2335697,4256895,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_001.txt,r_001,3.513496,23:12:44,23:12:48,2335697,4256895,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_002.txt,r_002,3.765534,23:12:48,23:12:51,2335667,4256845,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_003.txt,r_003,3.847809,23:12:52,23:12:55,2335688,4256880,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_004.txt,r_004,3.494872,23:12:55,23:12:59,2335706,4256910,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_005.txt,r_005,3.75009,23:12:59,23:13:03,2335679,4256865,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_006.txt,r_006,3.419257,23:13:03,23:13:06,2335706,4256910,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_007.txt,r_007,3.703416,23:13:06,23:13:10,2335676,4256860,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_008.txt,r_008,3.86054,23:13:10,23:13:14,2335685,4256875,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_009.txt,r_009,3.981847,23:13:14,23:13:18,2335685,4256875,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_010.txt,r_010,3.735411,23:13:18,23:13:22,2335685,4256875,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_011.txt,r_011,3.553752,23:13:22,23:13:25,2335691,4256885,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_012.txt,r_012,3.656227,23:13:25,23:13:29,2335676,4256860,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_013.txt,r_013,4.594048,23:13:29,23:13:34,2335697,4256895,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_014.txt,r_014,4.338626,23:13:34,23:13:38,2335682,4256870,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_015.txt,r_015,3.823017,23:13:38,23:13:42,2335697,4256895,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_016.txt,r_016,3.72482,23:13:42,23:13:46,2335676,4256860,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_017.txt,r_017,3.659617,23:13:46,23:13:50,2335688,4256880,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_018.txt,r_018,4.391945,23:13:50,23:13:54,2335679,4256865,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_019.txt,r_019,4.195415,23:13:54,23:13:58,2335682,4256870,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_020.txt,r_020,4.238714,23:13:58,23:14:03,2335688,4256880,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_021.txt,r_021,4.336517,23:14:03,23:14:07,2335682,4256870,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_022.txt,r_022,4.182403,23:14:07,23:14:11,2335670,4256850,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_023.txt,r_023,4.24789,23:14:11,23:14:16,2335673,4256855,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_024.txt,r_024,4.140482,23:14:16,23:14:20,2335688,4256880,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_025.txt,r_025,4.152163,23:14:20,23:14:24,2335715,4256925,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_026.txt,r_026,4.031671,23:14:24,23:14:28,2335694,4256890,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_027.txt,r_027,4.20166,23:14:28,23:14:32,2335682,4256870,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_028.txt,r_028,4.303554,23:14:32,23:14:37,2335685,4256875,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_029.txt,r_029,4.271654,23:14:37,23:14:41,2335679,4256865,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_030.txt,r_030,4.238506,23:14:41,23:14:45,2335700,4256900,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_031.txt,r_031,4.230535,23:14:45,23:14:50,2335697,4256895,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_032.txt,r_032,4.275516,23:14:50,23:14:54,2335685,4256875,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_033.txt,r_033,4.319181,23:14:54,23:14:58,2335679,4256865,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_034.txt,r_034,4.264216,23:14:58,23:15:03,2335679,4256865,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_035.txt,r_035,4.142854,23:15:03,23:15:07,2335667,4256845,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_036.txt,r_036,4.168949,23:15:07,23:15:11,2335682,4256870,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_037.txt,r_037,4.508813,23:15:11,23:15:16,2335670,4256850,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_038.txt,r_038,4.220266,23:15:16,23:15:20,2335721,4256935,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_039.txt,r_039,4.334342,23:15:20,23:15:24,2335679,4256865,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_040.txt,r_040,4.00131,23:15:24,23:15:28,2335685,4256875,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_041.txt,r_041,4.195436,23:15:28,23:15:33,2335679,4256865,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_042.txt,r_042,4.331859,23:15:33,23:15:37,2335682,4256870,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_043.txt,r_043,4.37382,23:15:37,23:15:41,2335676,4256860,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_044.txt,r_044,4.359558,23:15:41,23:15:46,2335694,4256890,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_045.txt,r_045,4.161995,23:15:46,23:15:50,2335685,4256875,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_046.txt,r_046,4.099395,23:15:50,23:15:54,2335673,4256855,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_047.txt,r_047,4.31032,23:15:54,23:15:59,2335679,4256865,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_048.txt,r_048,4.164887,23:15:59,23:16:03,2335673,4256855,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_049.txt,r_049,4.300396,23:16:03,23:16:07,2335691,4256885,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_050.txt,r_050,4.079194,23:16:07,23:16:11,2335670,4256850,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_051.txt,r_051,4.095572,23:16:11,23:16:15,2335670,4256850,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_052.txt,r_052,4.118357,23:16:16,23:16:20,2335673,4256855,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_053.txt,r_053,4.244812,23:16:20,23:16:24,2335673,4256855,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_054.txt,r_054,4.208947,23:16:24,23:16:28,2335673,4256855,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_055.txt,r_055,4.35258,23:16:28,23:16:33,2335697,4256895,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_056.txt,r_056,4.192012,23:16:33,23:16:37,2335670,4256850,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_057.txt,r_057,4.284242,23:16:37,23:16:41,2335682,4256870,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_058.txt,r_058,4.228158,23:16:41,23:16:46,2335670,4256850,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_059.txt,r_059,4.261244,23:16:46,23:16:50,2335673,4256855,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_060.txt,r_060,4.415026,23:16:50,23:16:54,2335676,4256860,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_061.txt,r_061,4.237662,23:16:54,23:16:59,2335673,4256855,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_062.txt,r_062,4.245765,23:16:59,23:17:03,2335685,4256875,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_063.txt,r_063,4.196046,23:17:03,23:17:07,2335676,4256860,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_064.txt,r_064,4.232732,23:17:07,23:17:11,2335673,4256855,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_065.txt,r_065,4.368774,23:17:12,23:17:16,2335667,4256845,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_066.txt,r_066,4.247029,23:17:16,23:17:20,2335688,4256880,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_067.txt,r_067,4.179285,23:17:20,23:17:24,2335670,4256850,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_068.txt,r_068,4.282527,23:17:25,23:17:29,2335673,4256855,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_069.txt,r_069,4.238173,23:17:29,23:17:33,2335679,4256865,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_070.txt,r_070,4.264492,23:17:33,23:17:37,2335667,4256845,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_071.txt,r_071,4.31354,23:17:37,23:17:42,2335712,4256920,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_072.txt,r_072,4.070559,23:17:42,23:17:46,2335676,4256860,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_073.txt,r_073,4.082564,23:17:46,23:17:50,2335685,4256875,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_074.txt,r_074,4.049807,23:17:50,23:17:54,2335676,4256860,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_075.txt,r_075,4.10653,23:17:54,23:17:58,2335679,4256865,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_076.txt,r_076,4.095104,23:17:58,23:18:02,2335670,4256850,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_077.txt,r_077,4.268225,23:18:03,23:18:07,2335685,4256875,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_078.txt,r_078,4.150323,23:18:07,23:18:11,2335685,4256875,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_079.txt,r_079,4.119747,23:18:11,23:18:15,2335682,4256870,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_080.txt,r_080,4.050804,23:18:15,23:18:19,2335679,4256865,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_081.txt,r_081,4.028427,23:18:19,23:18:23,2335676,4256860,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_082.txt,r_082,4.118314,23:18:23,23:18:28,2335694,4256890,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_083.txt,r_083,4.050987,23:18:28,23:18:32,2335667,4256845,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_084.txt,r_084,4.236853,23:18:32,23:18:36,2335676,4256860,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_085.txt,r_085,4.051831,23:18:36,23:18:40,2335697,4256895,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_086.txt,r_086,4.331938,23:18:40,23:18:44,2335688,4256880,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_087.txt,r_087,3.955816,23:18:45,23:18:48,2335682,4256870,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_088.txt,r_088,4.226393,23:18:49,23:18:53,2335679,4256865,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_089.txt,r_089,4.167641,23:18:53,23:18:57,2335691,4256885,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_090.txt,r_090,4.330136,23:18:57,23:19:01,2335682,4256870,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_091.txt,r_091,3.888946,23:19:01,23:19:05,2335685,4256875,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_092.txt,r_092,4.25942,23:19:05,23:19:10,2335688,4256880,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_093.txt,r_093,4.303271,23:19:10,23:19:14,2335673,4256855,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_094.txt,r_094,4.011225,23:19:14,23:19:18,2335682,4256870,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_095.txt,r_095,4.169596,23:19:18,23:19:22,2335682,4256870,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_096.txt,r_096,4.108858,23:19:22,23:19:26,2335691,4256885,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_097.txt,r_097,3.89223,23:19:27,23:19:30,2335673,4256855,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_098.txt,r_098,4.158513,23:19:30,23:19:35,2335670,4256850,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_099.txt,r_099,4.065611,23:19:35,23:19:39,2335682,4256870,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_100.txt,r_100,4.116181,23:19:39,23:19:43,2335673,4256855,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_001.txt,001,3.513496,23:12:44,23:12:48,2335697,4256895,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_002.txt,002,3.765534,23:12:48,23:12:51,2335667,4256845,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_003.txt,003,3.847809,23:12:52,23:12:55,2335688,4256880,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_004.txt,004,3.494872,23:12:55,23:12:59,2335706,4256910,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_005.txt,005,3.75009,23:12:59,23:13:03,2335679,4256865,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_006.txt,006,3.419257,23:13:03,23:13:06,2335706,4256910,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_007.txt,007,3.703416,23:13:06,23:13:10,2335676,4256860,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_008.txt,008,3.86054,23:13:10,23:13:14,2335685,4256875,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_009.txt,009,3.981847,23:13:14,23:13:18,2335685,4256875,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_010.txt,010,3.735411,23:13:18,23:13:22,2335685,4256875,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_011.txt,011,3.553752,23:13:22,23:13:25,2335691,4256885,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_012.txt,012,3.656227,23:13:25,23:13:29,2335676,4256860,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_013.txt,013,4.594048,23:13:29,23:13:34,2335697,4256895,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_014.txt,014,4.338626,23:13:34,23:13:38,2335682,4256870,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_015.txt,015,3.823017,23:13:38,23:13:42,2335697,4256895,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_016.txt,016,3.72482,23:13:42,23:13:46,2335676,4256860,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_017.txt,017,3.659617,23:13:46,23:13:50,2335688,4256880,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_018.txt,018,4.391945,23:13:50,23:13:54,2335679,4256865,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_019.txt,019,4.195415,23:13:54,23:13:58,2335682,4256870,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_020.txt,020,4.238714,23:13:58,23:14:03,2335688,4256880,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_021.txt,021,4.336517,23:14:03,23:14:07,2335682,4256870,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_022.txt,022,4.182403,23:14:07,23:14:11,2335670,4256850,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_023.txt,023,4.24789,23:14:11,23:14:16,2335673,4256855,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_024.txt,024,4.140482,23:14:16,23:14:20,2335688,4256880,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_025.txt,025,4.152163,23:14:20,23:14:24,2335715,4256925,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_026.txt,026,4.031671,23:14:24,23:14:28,2335694,4256890,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_027.txt,027,4.20166,23:14:28,23:14:32,2335682,4256870,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_028.txt,028,4.303554,23:14:32,23:14:37,2335685,4256875,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_029.txt,029,4.271654,23:14:37,23:14:41,2335679,4256865,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_030.txt,030,4.238506,23:14:41,23:14:45,2335700,4256900,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_031.txt,031,4.230535,23:14:45,23:14:50,2335697,4256895,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_032.txt,032,4.275516,23:14:50,23:14:54,2335685,4256875,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_033.txt,033,4.319181,23:14:54,23:14:58,2335679,4256865,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_034.txt,034,4.264216,23:14:58,23:15:03,2335679,4256865,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_035.txt,035,4.142854,23:15:03,23:15:07,2335667,4256845,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_036.txt,036,4.168949,23:15:07,23:15:11,2335682,4256870,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_037.txt,037,4.508813,23:15:11,23:15:16,2335670,4256850,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_038.txt,038,4.220266,23:15:16,23:15:20,2335721,4256935,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_039.txt,039,4.334342,23:15:20,23:15:24,2335679,4256865,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_040.txt,040,4.00131,23:15:24,23:15:28,2335685,4256875,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_041.txt,041,4.195436,23:15:28,23:15:33,2335679,4256865,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_042.txt,042,4.331859,23:15:33,23:15:37,2335682,4256870,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_043.txt,043,4.37382,23:15:37,23:15:41,2335676,4256860,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_044.txt,044,4.359558,23:15:41,23:15:46,2335694,4256890,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_045.txt,045,4.161995,23:15:46,23:15:50,2335685,4256875,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_046.txt,046,4.099395,23:15:50,23:15:54,2335673,4256855,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_047.txt,047,4.31032,23:15:54,23:15:59,2335679,4256865,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_048.txt,048,4.164887,23:15:59,23:16:03,2335673,4256855,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_049.txt,049,4.300396,23:16:03,23:16:07,2335691,4256885,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_050.txt,050,4.079194,23:16:07,23:16:11,2335670,4256850,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_051.txt,051,4.095572,23:16:11,23:16:15,2335670,4256850,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_052.txt,052,4.118357,23:16:16,23:16:20,2335673,4256855,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_053.txt,053,4.244812,23:16:20,23:16:24,2335673,4256855,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_054.txt,054,4.208947,23:16:24,23:16:28,2335673,4256855,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_055.txt,055,4.35258,23:16:28,23:16:33,2335697,4256895,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_056.txt,056,4.192012,23:16:33,23:16:37,2335670,4256850,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_057.txt,057,4.284242,23:16:37,23:16:41,2335682,4256870,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_058.txt,058,4.228158,23:16:41,23:16:46,2335670,4256850,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_059.txt,059,4.261244,23:16:46,23:16:50,2335673,4256855,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_060.txt,060,4.415026,23:16:50,23:16:54,2335676,4256860,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_061.txt,061,4.237662,23:16:54,23:16:59,2335673,4256855,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_062.txt,062,4.245765,23:16:59,23:17:03,2335685,4256875,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_063.txt,063,4.196046,23:17:03,23:17:07,2335676,4256860,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_064.txt,064,4.232732,23:17:07,23:17:11,2335673,4256855,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_065.txt,065,4.368774,23:17:12,23:17:16,2335667,4256845,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_066.txt,066,4.247029,23:17:16,23:17:20,2335688,4256880,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_067.txt,067,4.179285,23:17:20,23:17:24,2335670,4256850,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_068.txt,068,4.282527,23:17:25,23:17:29,2335673,4256855,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_069.txt,069,4.238173,23:17:29,23:17:33,2335679,4256865,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_070.txt,070,4.264492,23:17:33,23:17:37,2335667,4256845,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_071.txt,071,4.31354,23:17:37,23:17:42,2335712,4256920,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_072.txt,072,4.070559,23:17:42,23:17:46,2335676,4256860,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_073.txt,073,4.082564,23:17:46,23:17:50,2335685,4256875,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_074.txt,074,4.049807,23:17:50,23:17:54,2335676,4256860,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_075.txt,075,4.10653,23:17:54,23:17:58,2335679,4256865,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_076.txt,076,4.095104,23:17:58,23:18:02,2335670,4256850,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_077.txt,077,4.268225,23:18:03,23:18:07,2335685,4256875,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_078.txt,078,4.150323,23:18:07,23:18:11,2335685,4256875,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_079.txt,079,4.119747,23:18:11,23:18:15,2335682,4256870,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_080.txt,080,4.050804,23:18:15,23:18:19,2335679,4256865,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_081.txt,081,4.028427,23:18:19,23:18:23,2335676,4256860,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_082.txt,082,4.118314,23:18:23,23:18:28,2335694,4256890,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_083.txt,083,4.050987,23:18:28,23:18:32,2335667,4256845,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_084.txt,084,4.236853,23:18:32,23:18:36,2335676,4256860,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_085.txt,085,4.051831,23:18:36,23:18:40,2335697,4256895,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_086.txt,086,4.331938,23:18:40,23:18:44,2335688,4256880,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_087.txt,087,3.955816,23:18:45,23:18:48,2335682,4256870,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_088.txt,088,4.226393,23:18:49,23:18:53,2335679,4256865,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_089.txt,089,4.167641,23:18:53,23:18:57,2335691,4256885,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_090.txt,090,4.330136,23:18:57,23:19:01,2335682,4256870,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_091.txt,091,3.888946,23:19:01,23:19:05,2335685,4256875,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_092.txt,092,4.25942,23:19:05,23:19:10,2335688,4256880,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_093.txt,093,4.303271,23:19:10,23:19:14,2335673,4256855,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_094.txt,094,4.011225,23:19:14,23:19:18,2335682,4256870,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_095.txt,095,4.169596,23:19:18,23:19:22,2335682,4256870,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_096.txt,096,4.108858,23:19:22,23:19:26,2335691,4256885,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_097.txt,097,3.89223,23:19:27,23:19:30,2335673,4256855,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_098.txt,098,4.158513,23:19:30,23:19:35,2335670,4256850,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_099.txt,099,4.065611,23:19:35,23:19:39,2335682,4256870,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_100.txt,100,4.116181,23:19:39,23:19:43,2335673,4256855,131,159063
+filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink
+linear_regression_additional/trace_car_only/vpython_LRcar_001.txt,001,3.513496,23:12:44,23:12:48,2335697,4256895,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_002.txt,002,3.765534,23:12:48,23:12:51,2335667,4256845,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_003.txt,003,3.847809,23:12:52,23:12:55,2335688,4256880,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_004.txt,004,3.494872,23:12:55,23:12:59,2335706,4256910,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_005.txt,005,3.75009,23:12:59,23:13:03,2335679,4256865,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_006.txt,006,3.419257,23:13:03,23:13:06,2335706,4256910,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_007.txt,007,3.703416,23:13:06,23:13:10,2335676,4256860,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_008.txt,008,3.86054,23:13:10,23:13:14,2335685,4256875,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_009.txt,009,3.981847,23:13:14,23:13:18,2335685,4256875,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_010.txt,010,3.735411,23:13:18,23:13:22,2335685,4256875,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_011.txt,011,3.553752,23:13:22,23:13:25,2335691,4256885,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_012.txt,012,3.656227,23:13:25,23:13:29,2335676,4256860,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_013.txt,013,4.594048,23:13:29,23:13:34,2335697,4256895,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_014.txt,014,4.338626,23:13:34,23:13:38,2335682,4256870,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_015.txt,015,3.823017,23:13:38,23:13:42,2335697,4256895,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_016.txt,016,3.72482,23:13:42,23:13:46,2335676,4256860,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_017.txt,017,3.659617,23:13:46,23:13:50,2335688,4256880,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_018.txt,018,4.391945,23:13:50,23:13:54,2335679,4256865,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_019.txt,019,4.195415,23:13:54,23:13:58,2335682,4256870,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_020.txt,020,4.238714,23:13:58,23:14:03,2335688,4256880,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_021.txt,021,4.336517,23:14:03,23:14:07,2335682,4256870,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_022.txt,022,4.182403,23:14:07,23:14:11,2335670,4256850,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_023.txt,023,4.24789,23:14:11,23:14:16,2335673,4256855,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_024.txt,024,4.140482,23:14:16,23:14:20,2335688,4256880,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_025.txt,025,4.152163,23:14:20,23:14:24,2335715,4256925,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_026.txt,026,4.031671,23:14:24,23:14:28,2335694,4256890,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_027.txt,027,4.20166,23:14:28,23:14:32,2335682,4256870,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_028.txt,028,4.303554,23:14:32,23:14:37,2335685,4256875,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_029.txt,029,4.271654,23:14:37,23:14:41,2335679,4256865,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_030.txt,030,4.238506,23:14:41,23:14:45,2335700,4256900,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_031.txt,031,4.230535,23:14:45,23:14:50,2335697,4256895,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_032.txt,032,4.275516,23:14:50,23:14:54,2335685,4256875,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_033.txt,033,4.319181,23:14:54,23:14:58,2335679,4256865,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_034.txt,034,4.264216,23:14:58,23:15:03,2335679,4256865,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_035.txt,035,4.142854,23:15:03,23:15:07,2335667,4256845,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_036.txt,036,4.168949,23:15:07,23:15:11,2335682,4256870,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_037.txt,037,4.508813,23:15:11,23:15:16,2335670,4256850,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_038.txt,038,4.220266,23:15:16,23:15:20,2335721,4256935,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_039.txt,039,4.334342,23:15:20,23:15:24,2335679,4256865,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_040.txt,040,4.00131,23:15:24,23:15:28,2335685,4256875,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_041.txt,041,4.195436,23:15:28,23:15:33,2335679,4256865,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_042.txt,042,4.331859,23:15:33,23:15:37,2335682,4256870,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_043.txt,043,4.37382,23:15:37,23:15:41,2335676,4256860,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_044.txt,044,4.359558,23:15:41,23:15:46,2335694,4256890,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_045.txt,045,4.161995,23:15:46,23:15:50,2335685,4256875,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_046.txt,046,4.099395,23:15:50,23:15:54,2335673,4256855,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_047.txt,047,4.31032,23:15:54,23:15:59,2335679,4256865,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_048.txt,048,4.164887,23:15:59,23:16:03,2335673,4256855,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_049.txt,049,4.300396,23:16:03,23:16:07,2335691,4256885,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_050.txt,050,4.079194,23:16:07,23:16:11,2335670,4256850,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_051.txt,051,4.095572,23:16:11,23:16:15,2335670,4256850,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_052.txt,052,4.118357,23:16:16,23:16:20,2335673,4256855,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_053.txt,053,4.244812,23:16:20,23:16:24,2335673,4256855,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_054.txt,054,4.208947,23:16:24,23:16:28,2335673,4256855,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_055.txt,055,4.35258,23:16:28,23:16:33,2335697,4256895,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_056.txt,056,4.192012,23:16:33,23:16:37,2335670,4256850,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_057.txt,057,4.284242,23:16:37,23:16:41,2335682,4256870,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_058.txt,058,4.228158,23:16:41,23:16:46,2335670,4256850,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_059.txt,059,4.261244,23:16:46,23:16:50,2335673,4256855,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_060.txt,060,4.415026,23:16:50,23:16:54,2335676,4256860,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_061.txt,061,4.237662,23:16:54,23:16:59,2335673,4256855,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_062.txt,062,4.245765,23:16:59,23:17:03,2335685,4256875,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_063.txt,063,4.196046,23:17:03,23:17:07,2335676,4256860,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_064.txt,064,4.232732,23:17:07,23:17:11,2335673,4256855,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_065.txt,065,4.368774,23:17:12,23:17:16,2335667,4256845,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_066.txt,066,4.247029,23:17:16,23:17:20,2335688,4256880,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_067.txt,067,4.179285,23:17:20,23:17:24,2335670,4256850,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_068.txt,068,4.282527,23:17:25,23:17:29,2335673,4256855,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_069.txt,069,4.238173,23:17:29,23:17:33,2335679,4256865,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_070.txt,070,4.264492,23:17:33,23:17:37,2335667,4256845,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_071.txt,071,4.31354,23:17:37,23:17:42,2335712,4256920,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_072.txt,072,4.070559,23:17:42,23:17:46,2335676,4256860,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_073.txt,073,4.082564,23:17:46,23:17:50,2335685,4256875,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_074.txt,074,4.049807,23:17:50,23:17:54,2335676,4256860,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_075.txt,075,4.10653,23:17:54,23:17:58,2335679,4256865,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_076.txt,076,4.095104,23:17:58,23:18:02,2335670,4256850,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_077.txt,077,4.268225,23:18:03,23:18:07,2335685,4256875,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_078.txt,078,4.150323,23:18:07,23:18:11,2335685,4256875,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_079.txt,079,4.119747,23:18:11,23:18:15,2335682,4256870,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_080.txt,080,4.050804,23:18:15,23:18:19,2335679,4256865,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_081.txt,081,4.028427,23:18:19,23:18:23,2335676,4256860,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_082.txt,082,4.118314,23:18:23,23:18:28,2335694,4256890,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_083.txt,083,4.050987,23:18:28,23:18:32,2335667,4256845,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_084.txt,084,4.236853,23:18:32,23:18:36,2335676,4256860,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_085.txt,085,4.051831,23:18:36,23:18:40,2335697,4256895,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_086.txt,086,4.331938,23:18:40,23:18:44,2335688,4256880,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_087.txt,087,3.955816,23:18:45,23:18:48,2335682,4256870,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_088.txt,088,4.226393,23:18:49,23:18:53,2335679,4256865,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_089.txt,089,4.167641,23:18:53,23:18:57,2335691,4256885,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_090.txt,090,4.330136,23:18:57,23:19:01,2335682,4256870,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_091.txt,091,3.888946,23:19:01,23:19:05,2335685,4256875,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_092.txt,092,4.25942,23:19:05,23:19:10,2335688,4256880,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_093.txt,093,4.303271,23:19:10,23:19:14,2335673,4256855,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_094.txt,094,4.011225,23:19:14,23:19:18,2335682,4256870,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_095.txt,095,4.169596,23:19:18,23:19:22,2335682,4256870,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_096.txt,096,4.108858,23:19:22,23:19:26,2335691,4256885,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_097.txt,097,3.89223,23:19:27,23:19:30,2335673,4256855,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_098.txt,098,4.158513,23:19:30,23:19:35,2335670,4256850,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_099.txt,099,4.065611,23:19:35,23:19:39,2335682,4256870,131,159063
+linear_regression_additional/trace_car_only/vpython_LRcar_100.txt,100,4.116181,23:19:39,23:19:43,2335673,4256855,131,159063
