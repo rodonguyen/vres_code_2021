@@ -1,19 +1,28 @@
 import pandas as pd
 from sklearn import linear_model
 
-df = pd.read_csv('dataset_additional/car.csv')
+def function_start():
+    print('--- start')
 
+def function_end():
+    print('--- end')
+
+############################################
+function_start()
+
+df = pd.read_csv('dataset_additional/car.csv')
 x = df.iloc[:,:-1]
 y = df.iloc[:,-1:]
 
 # Create linear regression object
 regression = linear_model.LinearRegression()
-
 # Train the model using the training sets
 regression.fit(x, y)
 
 print("Dataset shape: \n", df.shape)
 
+function_end()
+############################################
 
 
 
@@ -26,8 +35,7 @@ print("Dataset shape: \n", df.shape)
 
 
 
-
-#################################################################
+########################## INITIAL FULL CODE ###########################
 
 # import warnings
 # warnings.filterwarnings('ignore')

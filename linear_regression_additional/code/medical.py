@@ -27,7 +27,7 @@ print("Dataset shape: \n", df.shape)
 
 
 
-#################################################################
+########################## INITIAL FULL CODE ###########################
 
 # # Import library
 # import pandas  as pd #Data manipulation

@@ -1,6 +1,8 @@
 import datetime
 import os
 
+def count_stack_in_an_area(path)
+
 # Count the linear regression stacks
 def identify_vpython(paths):
     destination = './count_stuff_results/stack_traces.csv'

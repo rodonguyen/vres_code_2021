@@ -27,7 +27,7 @@ print("Dataset shape: \n", X.shape, y.shape)
 
 
 
-###################################################################
+########################## INITIAL FULL CODE ###########################
 
 # # Code source: Jaques Grobler
 # # License: BSD 3 clause
