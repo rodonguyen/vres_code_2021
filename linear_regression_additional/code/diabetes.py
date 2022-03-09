@@ -3,6 +3,15 @@
 from sklearn import datasets, linear_model
 import pandas as pd
 
+def function_start():
+    print('--- start')
+
+def function_end():
+    print('--- end')
+
+############################################
+function_start()
+
 # Load the diabetes dataset
 X, y = datasets.load_diabetes(return_X_y=True)
 
@@ -15,6 +24,8 @@ regression.fit(X, y)
 print("Dataset shape: \n", X.shape, y.shape)
 
 
+function_end()
+############################################
 
 
 

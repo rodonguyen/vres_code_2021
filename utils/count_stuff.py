@@ -1,61 +1,17 @@
 import datetime
 import os
 
-def count_stack_in_an_area(full_vpython_path, output_file, function_start_name, function_end_name):
-    file = open(full_vpython_path)
-    nonempty_lines = [line.strip("\n") for line in file if line != "\n"]
-    max_line = len(nonempty_lines)
-    file.close()
-
-    # Get memory_op
-    for i in reversed(range(max_line)):
-        if function_start_name in nonempty_lines[i]:
-            if '>>> ' in nonempty_lines[i-1]:
-                memory_op_before_start = nonempty_lines[i-1].split(' ', 1)[1]
-            else: 
-                print('memory_op is not found in previous line.')
-            break
-    
-    for i in reversed(range(max_line)):
-        if function_end_name in nonempty_lines[i]:
-            if '>>> ' in nonempty_lines[i+1]:
-                memory_op_after_end = nonempty_lines[i+1].split(' ', 1)[1]
-            else: 
-                print('memory_op is not found in line after.')
-            break
-    
-    # Get delta pop, push, sgrow, sshrink
-    pop, push, sgrow, sshrink = memory_op_before_start.split(' | ')
-    _, pop1 = pop.split(' ')
-    _, push1 = push.split(' ')
-    _, sgrow1 = sgrow.split(' ')
-    _, sshrink1 = sshrink.split(' ')
-
-    pop, push, sgrow, sshrink = memory_op_after_end.split(' | ')
-    _, pop2 = pop.split(' ')
-    _, push2 = push.split(' ')
-    _, sgrow2 = sgrow.split(' ')
-    _, sshrink2 = sshrink.split(' ')
-
-    pop, push, sgrow, sshrink = int(pop2)-int(pop1), int(push2)-int(push1), int(sgrow2)-int(sgrow1), int(sshrink2)-int(sshrink1)
-
-    # Record delta stuff in a line
-    csv = open(output_file, 'a')
-    csv.write('{0},{1},{2},{3},{4},{5}\n'.format(
-                full_vpython_path, full_vpython_path[-7:-4],
-                pop, push, sgrow, sshrink ))
-    csv.close()
-    # End
-
 def extract_trace_in_path(path, function_start_name, function_end_name):
     destination1 = './count_stuff_results/stack_traces.csv'
     csv = open(destination1, 'a')
     csv.write('filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink\n')
     csv.close()
 
-    destination2 = './count_stuff_results/stack_traces_in_an_area.csv'
+    destination2 = './count_stuff_results/stack_traces_in_each_part.csv'
     csv = open(destination2, 'a')
-    csv.write('filepath, file no., delta_pop, delta_push, delta_sgrow, delta_sshrink\n')
+    csv.write('filepath, file no., pop_before_A, push_before_A, sgrow_before_A, sshrink_before_A,' + 
+                'pop_in_A, push_in_A, sgrow_in_A, sshrink_in_A,' + 
+                'pop_after_A, push_after_A, sgrow_after_A, sshrink_after_A\n')
     csv.close()
 
     for vpython_name in sorted(os.listdir(path)):
@@ -63,20 +19,79 @@ def extract_trace_in_path(path, function_start_name, function_end_name):
         print(full_vpython_path)
 
         # Record all trace
-        count_stack(full_vpython_path, destination1)
+        # count_stack(full_vpython_path, destination1)
 
         # Record in an area
-        count_stack_in_an_area(full_vpython_path, destination2,
+        count_stack_in_each_part(full_vpython_path, destination2,
                                     function_start_name, function_end_name)
         
 
+def count_stack_in_each_part(vpython_path, output_file, function_start_name, function_end_name):
+    file = open(vpython_path)
+    nonempty_lines = [line.strip("\n") for line in file if line != "\n"]
+    max_line = len(nonempty_lines)
+    file.close()
 
+    # Get memory_op before and after
+    for i in reversed(range(max_line)):
+        if function_start_name in nonempty_lines[i]:
+            if '>>> ' in nonempty_lines[i-1]:
+                memory_op_before_function_start = nonempty_lines[i-1].split(' ', 1)[1]
+            else: 
+                print('memory_op is not found in previous line.')
+            break
+    
+    for i in reversed(range(max_line)):
+        if function_end_name in nonempty_lines[i]:
+            if '>>> ' in nonempty_lines[i+1]:
+                memory_op_after_function_end = nonempty_lines[i+1].split(' ', 1)[1]
+            else: 
+                print('memory_op is not found in line after.')
+            break
 
+    for i in reversed(range(max_line)):
+        if '>>>' in nonempty_lines[i]:
+            memory_op_last = nonempty_lines[i].split(' ', 1)[1]
+            break
+    
+    # Memory op before A (pop1, ...)
+    pop, push, sgrow, sshrink = memory_op_before_function_start.split(' | ')
+    _, pop1 = pop.split(' ')
+    _, push1 = push.split(' ')
+    _, sgrow1 = sgrow.split(' ')
+    _, sshrink1 = sshrink.split(' ')
 
+    pop, push, sgrow, sshrink = memory_op_after_function_end.split(' | ')
+    _, pop2 = pop.split(' ')
+    _, push2 = push.split(' ')
+    _, sgrow2 = sgrow.split(' ')
+    _, sshrink2 = sshrink.split(' ')
+
+    pop, push, sgrow, sshrink = memory_op_last.split(' | ')
+    _, pop3 = pop.split(' ')
+    _, push3 = push.split(' ')
+    _, sgrow3 = sgrow.split(' ')
+    _, sshrink3 = sshrink.split(' ')
+
+    # Memory op in A
+    pop, push, sgrow, sshrink = int(pop2)-int(pop1), int(push2)-int(push1), int(sgrow2)-int(sgrow1), int(sshrink2)-int(sshrink1)
+    # Memory op after A
+    pop4, push4, sgrow4, sshrink4 = int(pop3)-int(pop2), int(push3)-int(push2), int(sgrow3)-int(sgrow2), int(sshrink3)-int(sshrink2)
+
+    # Record delta stuff in a line
+    csv = open(output_file, 'a')
+    csv.write('{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15},{16},{17}\n'.format(
+                vpython_path, vpython_path[-7:-4],
+                pop1, push1, sgrow1, sshrink1,
+                pop, push, sgrow, sshrink,
+                pop4, push4, sgrow4, sshrink4,
+                pop3, push3, sgrow3, sshrink3))
+    csv.close()
+    # End
 
 
 # Count the linear regression stacks
-def identify_vpython(paths):
+def extract_trace_in_multiple_paths(paths):
     destination = './count_stuff_results/stack_traces.csv'
 
     for path in sorted(paths):
@@ -93,41 +108,40 @@ def identify_vpython(paths):
     csv.write('filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink\n')
     csv.close()
 
-def count_stack(filename, destination):
-    print(filename)
-    file = open(filename)
+def count_stack(vpython_path, output_file):
+    print(vpython_path)
+    file = open(vpython_path)
     nonempty_lines = [line.strip("\n") for line in file if line != "\n"]
     max_line = len(nonempty_lines)
     file.close()
 
-    start = nonempty_lines[0].split("->",1)[0]
+    start_time = nonempty_lines[0].split("->",1)[0]
     for i in reversed(range(max_line)):
         if '->' in nonempty_lines[i]:
             # print(nonempty_lines[i])
-            end = nonempty_lines[i].split("->",1)[0]
+            end_time = nonempty_lines[i].split("->",1)[0]
             break
     for i in reversed(range(max_line)):
         if '>>>' in nonempty_lines[i]:
-            counter = nonempty_lines[i].split(' ', 1)[1]
+            counter_end = nonempty_lines[i].split(' ', 1)[1]
             break
 
-    exe_time = (int(end) - int(start))/1000000
-    start_time = datetime.datetime.fromtimestamp(int(start[:-6])).strftime('%H:%M:%S')
-    end_time = datetime.datetime.fromtimestamp(int(end[:-6])).strftime('%H:%M:%S')
+    exe_time = (int(end_time) - int(start_time))/1000000
+    start_time = datetime.datetime.fromtimestamp(int(start_time[:-6])).strftime('%H:%M:%S')
+    end_time = datetime.datetime.fromtimestamp(int(end_time[:-6])).strftime('%H:%M:%S')
 
     # Record stack trace in results.csv
-    pop, push, sgrow, sshrink = counter.split(' | ')
+    pop, push, sgrow, sshrink = counter_end.split(' | ')
     _, pop = pop.split(' ')
     _, push = push.split(' ')
     _, sgrow = sgrow.split(' ')
     _, sshrink = sshrink.split(' ')
-    csv = open(destination, 'a')
+    csv = open(output_file, 'a')
     csv.write('{0},{1},{2},{3},{4},{5},{6},{7},{8}\n'.format(
-                filename, filename[-7:-4], str(exe_time),
+                vpython_path, vpython_path[-7:-4], str(exe_time),
                 start_time, end_time,
                 pop, push, sgrow, sshrink ))
     csv.close()
-
 
 def get_cpu_usage(usage_logfiles = ['./cpu_usage.log']):
     for usage_logfile in usage_logfiles:
@@ -177,7 +191,7 @@ def get_cpu_usage(usage_logfiles = ['./cpu_usage.log']):
 
 ## This one extract all vpython in its sub-dir
 # paths = ['linear_regression_additional/trace/']
-# identify_vpython(paths)
+# extract_trace_in_multiple_paths(paths)
 
 extract_trace_in_path('linear_regression_additional/trace_car_only/', 
                         'function_start', 'function_end')

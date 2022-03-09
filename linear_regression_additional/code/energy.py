@@ -1,6 +1,15 @@
 import pandas as pd
 from sklearn import linear_model
 
+def function_start():
+    print('--- start')
+
+def function_end():
+    print('--- end')
+
+############################################
+function_start()
+
 df = pd.read_csv('dataset_additional/energy.csv')
 x = df.iloc[:,:-2]
 y = df.iloc[:,-2:]
@@ -13,6 +22,8 @@ regression.fit(x, y)
 
 print("Dataset shape: \n", df.shape)
 
+function_end()
+############################################
 
 
 

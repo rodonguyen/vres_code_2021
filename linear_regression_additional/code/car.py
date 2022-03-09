@@ -33,8 +33,6 @@ function_end()
 
 
 
-
-
 ########################## INITIAL FULL CODE ###########################
 
 # import warnings

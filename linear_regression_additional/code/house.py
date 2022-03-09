@@ -1,6 +1,15 @@
 import pandas as pd
 from sklearn import linear_model
 
+def function_start():
+    print('--- start')
+
+def function_end():
+    print('--- end')
+
+############################################
+function_start()
+
 df = pd.read_csv('dataset_additional/house.csv')
 x = df.iloc[:,:-1]
 y = df.iloc[:,-1:]
@@ -14,6 +23,8 @@ regression.fit(x, y)
 print("Dataset shape: \n", df.shape)
 
 
+function_end()
+############################################
 
 
 
