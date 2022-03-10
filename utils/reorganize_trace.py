@@ -1,45 +1,45 @@
 def write_to_csv(table_name):
 
     # DESTINATION
-    csv = open('./count_stuff_results/stack_traces_v2_300.csv', 'a')
+    v2_trace_file = open('./count_stuff_results/stack_traces_300_v2.csv', 'a')
     
     # write to csv
-    csv.write(table_name+'\n')
-    csv.write('car')
+    v2_trace_file.write(table_name+'\n')
+    v2_trace_file.write('car')
     for j in car:
-        csv.write(','+j)
-    csv.write('\n')
+        v2_trace_file.write(','+j)
+    v2_trace_file.write('\n')
 
-    csv.write('diabetes')
+    v2_trace_file.write('diabetes')
     for j in diabetes:
-        csv.write(','+j)
-    csv.write('\n')
+        v2_trace_file.write(','+j)
+    v2_trace_file.write('\n')
 
-    csv.write('energy')
+    v2_trace_file.write('energy')
     for j in energy:
-        csv.write(','+j)
-    csv.write('\n')
+        v2_trace_file.write(','+j)
+    v2_trace_file.write('\n')
 
-    csv.write('house')
+    v2_trace_file.write('house')
     for j in house:
-        csv.write(','+j)
-    csv.write('\n')
+        v2_trace_file.write(','+j)
+    v2_trace_file.write('\n')
 
-    csv.write('medical')
+    v2_trace_file.write('medical')
     for j in medical:
-        csv.write(','+j)
-    csv.write('\n\n\n')
+        v2_trace_file.write(','+j)
+    v2_trace_file.write('\n\n\n')
 
-    csv.close()
+    v2_trace_file.close()
 
 
 
 # STARTING FILE
-file = open('./count_stuff_results/stack_traces.csv')
+v1_trace_file = open('./count_stuff_results/stack_traces_300.csv')
 
-nonempty_lines = [line.strip("\n") for line in file if line != "\n"]
+nonempty_lines = [line.strip("\n") for line in v1_trace_file if line != "\n"]
 # max_line = len(nonempty_lines)
-file.close()
+v1_trace_file.close()
 
 for item in [5,6,2]:
     car = []
