@@ -41,7 +41,8 @@ nonempty_lines = [line.strip("\n") for line in v1_trace_file if line != "\n"]
 # max_line = len(nonempty_lines)
 v1_trace_file.close()
 
-for item in [5,6,2]:
+my_dict = {'execution time':2,'pop':5,'push':6}
+for item in my_dict.keys():
     car = []
     diabetes = []
     energy = []
@@ -51,22 +52,22 @@ for item in [5,6,2]:
         if 'car' in line:
             print('car: ',line)
             line = line.split(',')
-            car.append(line[item])
+            car.append(line[my_dict[item]])
         if 'diabetes' in line:
             print('diabetes: ',line)
             line = line.split(',')
-            diabetes.append(line[item])
+            diabetes.append(line[my_dict[item]])
         if 'energy' in line:
             print('energy: ',line)
             line = line.split(',')
-            energy.append(line[item])
+            energy.append(line[my_dict[item]])
         if 'house' in line:
             print('house: ',line)
             line = line.split(',')
-            house.append(line[item])
+            house.append(line[my_dict[item]])
         if 'medical' in line:
             print('medical: ',line)
             line = line.split(',')
-            medical.append(line[item])
+            medical.append(line[my_dict[item]])
 
-    write_to_csv(['','','execution time','','','pop','push'][item])
+    write_to_csv(item)

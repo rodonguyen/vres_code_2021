@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy
 
 
-file = open('count_stuff_results/stack_traces_v2_300.csv')
+file = open('count_stuff_results/stack_traces_300_v2.csv')
 nonempty_lines = [line.strip("\n") for line in file if line != "\n"]
 # max_line = len(nonempty_lines)
 file.close()
