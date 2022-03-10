@@ -28,6 +28,7 @@ for line in nonempty_lines:
         myset = set(list000)
         sorted_unique_list = sorted(list(set(list000)))
         print('\n' + str(len(myset)) + ' values') #+' => '+str(sorted(myset)))
+        print(sorted_unique_list)
 
         # Calculate confidence intervals
         lower =  numpy.percentile(integer_list, 5)
@@ -51,6 +52,9 @@ for line in nonempty_lines:
         histogram, a, b = ax.hist(list000, alpha=0.8, bins=len(myset)-1, color='deepskyblue')
         print(histogram)
         csv = open('count_stuff_results/histogram-push-and-pop.csv', 'a')
+        csv.write(items[count]+'\n')
+        csv.write(','.join(sorted_unique_list))
+        csv.write('\n')
         for x in numpy.nditer(histogram):
             csv.write(f"{x},")
         csv.write('\n')
