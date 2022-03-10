@@ -104,6 +104,10 @@ def extract_trace_in_multiple_paths(paths):
             csv = open(destination, 'a')
             csv.write('\n')
             csv.close()
+        csv = open(destination, 'a')
+        csv.write('\n\n\n')
+        csv.close()
+        
 
     csv = open(destination, 'a')
     csv.write('filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink\n')

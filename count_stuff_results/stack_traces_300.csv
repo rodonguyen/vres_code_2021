@@ -602,7 +602,10 @@ linear_regression_additional/trace/lra_99/vpython_car.txt,n_car,5.365598,15:27:2
 linear_regression_additional/trace/lra_99/vpython_diabetes.txt,betes,6.226903,15:27:38,15:27:44,2562465,4627354,124,176722
 linear_regression_additional/trace/lra_99/vpython_energy.txt,nergy,5.09417,15:27:46,15:27:52,2331072,4247358,130,158850
 linear_regression_additional/trace/lra_99/vpython_house.txt,house,5.518472,15:27:54,15:27:59,2348003,4283261,126,159687
-linear_regression_additional/trace/lra_99/vpython_medical.txt,dical,5.246569,15:27:31,15:27:36,2329939,4245055,129,158806linear_regression_additional/trace/lra_01/vpython_car.txt,n_car,4.746683,03:48:40,03:48:45,2335661,4256837,131,159063
+linear_regression_additional/trace/lra_99/vpython_medical.txt,dical,5.246569,15:27:31,15:27:36,2329939,4245055,129,158806
+
+
+linear_regression_additional/trace/lra_01/vpython_car.txt,n_car,4.746683,03:48:40,03:48:45,2335661,4256837,131,159063
 linear_regression_additional/trace/lra_01/vpython_diabetes.txt,betes,4.210106,03:48:49,03:48:53,2562477,4627374,124,176722
 linear_regression_additional/trace/lra_01/vpython_energy.txt,nergy,3.770637,03:48:53,03:48:57,2331060,4247338,130,158850
 linear_regression_additional/trace/lra_01/vpython_house.txt,house,3.866044,03:48:57,03:49:01,2347985,4283231,126,159687
@@ -1201,6 +1204,8 @@ linear_regression_additional/trace/lra_99/vpython_diabetes.txt,betes,5.178088,04
 linear_regression_additional/trace/lra_99/vpython_energy.txt,nergy,4.488699,04:27:49,04:27:53,2331081,4247373,130,158850
 linear_regression_additional/trace/lra_99/vpython_house.txt,house,4.757592,04:27:53,04:27:58,2347994,4283246,126,159687
 linear_regression_additional/trace/lra_99/vpython_medical.txt,dical,4.804475,04:27:39,04:27:44,2329966,4245100,129,158806
+
+
 linear_regression_additional/trace/lra_01/vpython_car.txt,n_car,4.732194,14:28:17,14:28:22,2335658,4256832,131,159063
 linear_regression_additional/trace/lra_01/vpython_diabetes.txt,betes,4.157559,14:28:25,14:28:29,2562453,4627334,124,176722
 linear_regression_additional/trace/lra_01/vpython_energy.txt,nergy,3.485173,14:28:29,14:28:33,2331072,4247358,130,158850
