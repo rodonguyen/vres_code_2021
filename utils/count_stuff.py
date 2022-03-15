@@ -204,10 +204,10 @@ def get_cpu_usage(usage_logfiles = ['./cpu_usage.log']):
 
 # extract_trace_in_path('linear_regression_additional/trace_car_only/', 
 #                         'function_start', 'function_end')
-extract_trace_in_path('linear_regression_additional/trace_diabetes_only/', 
-                        'function_start', 'function_end')
-extract_trace_in_path('linear_regression_additional/trace_energy_only/', 
-                        'function_start', 'function_end')
+# extract_trace_in_path('linear_regression_additional/trace_diabetes_only/', 
+#                         'function_start', 'function_end')
+# extract_trace_in_path('linear_regression_additional/trace_energy_only/', 
+#                         'function_start', 'function_end')
 # extract_trace_in_path('linear_regression_additional/trace_house_only/', 
 #                         'function_start', 'function_end')
 # extract_trace_in_path('linear_regression_additional/trace_medical_only/', 

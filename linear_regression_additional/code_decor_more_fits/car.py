@@ -10,7 +10,7 @@ def function_end():
 ############################################
 function_start()
 
-for i in range(10):
+for i in range(100):
     df = pd.read_csv('dataset_additional/car.csv')
     x = df.iloc[:,:-1]
     y = df.iloc[:,-1:]

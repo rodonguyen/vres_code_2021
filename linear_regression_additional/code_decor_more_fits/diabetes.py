@@ -13,7 +13,7 @@ def function_end():
 function_start()
 
 
-for i in range(10):
+for i in range(100):
 
     # Load the diabetes dataset
     X, y = datasets.load_diabetes(return_X_y=True)

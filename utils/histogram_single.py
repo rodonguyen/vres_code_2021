@@ -29,6 +29,7 @@ def plot(line, type):
 
     # Plot 
     # Configure chart
+    plt.rcParams.update({'font.size': 14})
     fig, ax = plt.subplots()
     plt.rcParams.update({'font.size': 24})
     plt.title(f"'{dataset_name}' dataset: {type} histogram")
@@ -38,7 +39,7 @@ def plot(line, type):
 
     # Plot the histogram 1st time and 
     # Save histogram of each item for later use
-    histogram, a, b = ax.hist(list000, alpha=0.8, bins=len(myset)-1, color='deepskyblue')
+    histogram, a, b = ax.hist(list000, alpha=0.8, bins=len(myset), color='deepskyblue')
     print(histogram)
     csv = open('count_stuff_results/histogram-push-and-pop.csv', 'a')
     csv.write(items[count]+'\n')
@@ -51,7 +52,7 @@ def plot(line, type):
     # numpy.savetxt('myfile.csv', a, delimiter=',')
 
     # Plot fade Confidence Interval 
-    ax.hist(list000, alpha=0.8, bins=len(myset)-1, color='deepskyblue')
+    ax.hist(list000, alpha=0.8, bins=len(myset), color='deepskyblue')
     ymin, ymax = ax.get_ylim() 
     # CI zone
     str_lower, str_upper = str(int(lower)), str(int(upper))
@@ -60,7 +61,7 @@ def plot(line, type):
 
     
     # Plot the histogram 2nd time to overlay the CI layer 
-    ax.hist(list000, alpha=0.8, bins=len(myset)-1, color='deepskyblue') # Repeat 'hist' to put important columns front
+    ax.hist(list000, alpha=0.8, bins=len(myset), color='deepskyblue') # Repeat 'hist' to put histogram columns front
     plt.xticks(rotation=60)
     plt.show()
     # plt.savefig('image'+str(random.randint(1,100000))+'.png')
