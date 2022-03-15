@@ -25,6 +25,10 @@ def extract_trace_in_path(path, function_start_name, function_end_name):
         # Record in an area
         count_stack_in_each_part(full_vpython_path, destination2,
                                     function_start_name, function_end_name)
+
+    csv = open(destination2, 'a')
+    csv.write('\n\n\n')
+    csv.close()
         
 
 def count_stack_in_each_part(vpython_path, output_file, function_start_name, function_end_name):
@@ -198,5 +202,13 @@ def get_cpu_usage(usage_logfiles = ['./cpu_usage.log']):
 # paths = ['linear_regression_additional/trace/']
 # extract_trace_in_multiple_paths(paths)
 
-extract_trace_in_path('linear_regression_additional/trace_car_only/', 
+# extract_trace_in_path('linear_regression_additional/trace_car_only/', 
+#                         'function_start', 'function_end')
+extract_trace_in_path('linear_regression_additional/trace_diabetes_only/', 
                         'function_start', 'function_end')
+extract_trace_in_path('linear_regression_additional/trace_energy_only/', 
+                        'function_start', 'function_end')
+# extract_trace_in_path('linear_regression_additional/trace_house_only/', 
+#                         'function_start', 'function_end')
+# extract_trace_in_path('linear_regression_additional/trace_medical_only/', 
+#                         'function_start', 'function_end')

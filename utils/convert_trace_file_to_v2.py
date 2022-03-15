@@ -1,7 +1,7 @@
 def write_to_csv(table_name):
 
     # DESTINATION
-    v2_trace_file = open('./count_stuff_results/stack_traces_300_v2.csv', 'a')
+    v2_trace_file = open('./count_stuff_results/stack_traces_in_each_part_v2.csv', 'a')
     
     # write to csv
     v2_trace_file.write(table_name+'\n')
@@ -35,13 +35,14 @@ def write_to_csv(table_name):
 
 
 # STARTING FILE
-v1_trace_file = open('./count_stuff_results/stack_traces_300.csv')
+v1_trace_file = open('./count_stuff_results/stack_traces_in_each_part.csv')
 
 nonempty_lines = [line.strip("\n") for line in v1_trace_file if line != "\n"]
 # max_line = len(nonempty_lines)
 v1_trace_file.close()
 
-my_dict = {'execution time':2,'pop':5,'push':6}
+# my_dict = {'execution time':2,'pop':5,'push':6}
+my_dict = {'pop':2, 'push':3}
 for item in my_dict.keys():
     car = []
     diabetes = []
@@ -53,19 +54,19 @@ for item in my_dict.keys():
             print('car: ',line)
             line = line.split(',')
             car.append(line[my_dict[item]])
-        if 'diabetes' in line:
+        elif 'diabetes' in line:
             print('diabetes: ',line)
             line = line.split(',')
             diabetes.append(line[my_dict[item]])
-        if 'energy' in line:
+        elif 'energy' in line:
             print('energy: ',line)
             line = line.split(',')
             energy.append(line[my_dict[item]])
-        if 'house' in line:
+        elif 'house' in line:
             print('house: ',line)
             line = line.split(',')
             house.append(line[my_dict[item]])
-        if 'medical' in line:
+        elif 'medical' in line:
             print('medical: ',line)
             line = line.split(',')
             medical.append(line[my_dict[item]])

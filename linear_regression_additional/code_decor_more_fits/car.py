@@ -10,15 +10,14 @@ def function_end():
 ############################################
 function_start()
 
-
-df = pd.read_csv('dataset_additional/car.csv')
-x = df.iloc[:,:-1]
-y = df.iloc[:,-1:]
-
-# Create linear regression object
-regression = linear_model.LinearRegression()
-# Train the model using the training sets
-regression.fit(x, y)
+for i in range(10):
+    df = pd.read_csv('dataset_additional/car.csv')
+    x = df.iloc[:,:-1]
+    y = df.iloc[:,-1:]
+    # Create linear regression object
+    regression = linear_model.LinearRegression()
+    # Train the model using the training sets
+    regression.fit(x, y)
 
 print("Dataset shape: \n", df.shape)
 
