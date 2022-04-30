@@ -5,18 +5,17 @@ import numpy
 ########################## UTILITY FUNCTIONS ############################
 
 def plot(line, type):
-    # Get all figures of one item 
+    # Get all the numbers
     numbers = line.split(',')
-    dataset_name = numbers.pop(0) # remove the item name
+    dataset_name = numbers.pop(0)
     numbers = sorted(numbers)
-    # print(str(list000[:10]))
 
-    # Get the number of unique values
+    # Mics
     numbers_map = map(int, numbers)
     numbers_list = list(numbers_map)
     numbers_set = set(numbers)
     sorted_unique_list = sorted(list(set(numbers)))
-    print('\n' + str(len(numbers_set)) + ' values') #+' => '+str(sorted(myset)))
+    print('\n' + str(len(numbers_set)) + ' unique values') 
     print(sorted_unique_list)
 
     # Calculate confidence intervals
@@ -27,7 +26,7 @@ def plot(line, type):
     print(f"90% CI:     <{int(lower)},{int(upper)}>")
     print(f"Full range: <{sorted_unique_list[0]},{sorted_unique_list[-1]}>")
 
-    # Plot 
+    # PLOT
     # Configure chart
     plt.rcParams.update({'font.size': 14})
     fig, ax = plt.subplots()
@@ -40,9 +39,8 @@ def plot(line, type):
     # Plot the histogram 1st time and 
     # Save histogram of each item for later use
     histogram, a, b = ax.hist(numbers, alpha=0.8, bins=len(numbers_set), color='deepskyblue')
-    print(histogram)
     csv = open('count_stuff_results/histogram-push-and-pop.csv', 'a')
-    csv.write(items[count]+'\n')
+    csv.write(dataset_name + '\n')
     csv.write(','.join(sorted_unique_list))
     csv.write('\n')
     for x in numpy.nditer(histogram):
@@ -51,16 +49,15 @@ def plot(line, type):
     csv.close()
     # numpy.savetxt('myfile.csv', a, delimiter=',')
 
-    # Plot fade Confidence Interval 
+    # Plot shadow Confidence Interval layer
     ax.hist(numbers, alpha=0.8, bins=len(numbers_set), color='deepskyblue')
     ymin, ymax = ax.get_ylim() 
-    # CI zone
     str_lower, str_upper = str(int(lower)), str(int(upper))
     ax.fill_betweenx([0,ymax],[str_lower, str_lower], [str_upper, str_upper] ,
                     facecolor ='orange', alpha = 0.2)
 
     
-    # Plot the histogram 2nd time to overlay the CI layer 
+    # Plot the histogram again to overlay the CI layer 
     ax.hist(numbers, alpha=0.8, bins=len(numbers_set), color='deepskyblue') # Repeat 'hist' to put histogram columns front
     plt.xticks(rotation=60)
     plt.show()
@@ -70,16 +67,12 @@ def plot(line, type):
 
 ###############################################################
 
-
 file = open('count_stuff_results/stack_traces_in_each_part_v2.csv')
 nonempty_lines = [line.strip("\n") for line in file if line != "\n"]
 # max_line = len(nonempty_lines)
 file.close()
 
-
 items = ['car','diabetes','energy','house','medical']
-type = 'pop'
-
 
 for i,line in enumerate(nonempty_lines):
     if 'pop' in line:
@@ -98,6 +91,54 @@ for i,line in enumerate(nonempty_lines):
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''
 # for line in nonempty_lines:
 #     if any(item in line for item in items):
 #         # Get all figures of one item 
@@ -165,3 +206,4 @@ for i,line in enumerate(nonempty_lines):
 #         if (count == 5): 
 #             count = 0
 #             type = 'push'
+'''

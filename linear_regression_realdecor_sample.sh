@@ -110,6 +110,6 @@ done
 # Move all trace files to a folder
 mv vpython*.txt linear_regression_real/trace_medical_only
 
-
+python3.8 utils/run_script.py
 
 spd-say done
