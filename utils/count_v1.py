@@ -2,12 +2,12 @@ import datetime
 import os
 
 def extract_trace_in_path(path, function_start_name, function_end_name):
-    destination1 = './count_stuff_results/stack_traces.csv'
+    destination1 = './count_result/stack_traces.csv'
     csv = open(destination1, 'a')
     csv.write('filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink\n')
     csv.close()
 
-    destination2 = './count_stuff_results/stack_traces_in_each_part.csv'
+    destination2 = './count_result/stack_trace_multiple_parts.csv'
     csv = open(destination2, 'a')
     csv.write('filepath, file no., pop_before_A, push_before_A, sgrow_before_A, sshrink_before_A,' + 
                 'pop_in_A, push_in_A, sgrow_in_A, sshrink_in_A,' + 
@@ -32,12 +32,21 @@ def extract_trace_in_path(path, function_start_name, function_end_name):
         
 
 def count_stack_in_each_part(vpython_path, output_file, function_start_name, function_end_name):
+    '''
+    The total of memory operations at certain part is the line
+    with '>>>'
+    As we identified the line with memory operations info we want,
+    use .plit function to remove the '>>>', use it again to extract the 
+    number of each operation type
+    
+    '''
     file = open(vpython_path)
     nonempty_lines = [line.strip("\n") for line in file if line != "\n"]
     max_line = len(nonempty_lines)
     file.close()
 
-    # Get memory_op before and after
+    # Get the line we want and remove '>>> '
+    # Get total memory_op right before A area
     for i in reversed(range(max_line)):
         if function_start_name in nonempty_lines[i]:
             if '>>> ' in nonempty_lines[i-1]:
@@ -46,6 +55,7 @@ def count_stack_in_each_part(vpython_path, output_file, function_start_name, fun
                 print('memory_op is not found in previous line.')
             break
     
+    # Get memory_op right after A area
     for i in reversed(range(max_line)):
         if function_end_name in nonempty_lines[i]:
             if '>>> ' in nonempty_lines[i+1]:
@@ -54,24 +64,29 @@ def count_stack_in_each_part(vpython_path, output_file, function_start_name, fun
                 print('memory_op is not found in line after.')
             break
 
+    # Get total memory_op at the end
     for i in reversed(range(max_line)):
         if '>>>' in nonempty_lines[i]:
             memory_op_last = nonempty_lines[i].split(' ', 1)[1]
             break
     
-    # Memory op before A (pop1, ...)
+    # EXTRACT THE NUMBERS OF DIFFERENT MEMORY OPERATIONS 
+    # AT DIFFERNT PART OF THE PROGRAM
+    #   before A
     pop, push, sgrow, sshrink = memory_op_before_function_start.split(' | ')
     _, pop1 = pop.split(' ')
     _, push1 = push.split(' ')
     _, sgrow1 = sgrow.split(' ')
     _, sshrink1 = sshrink.split(' ')
 
+    #   after A
     pop, push, sgrow, sshrink = memory_op_after_function_end.split(' | ')
     _, pop2 = pop.split(' ')
     _, push2 = push.split(' ')
     _, sgrow2 = sgrow.split(' ')
     _, sshrink2 = sshrink.split(' ')
 
+    #   at the end
     pop, push, sgrow, sshrink = memory_op_last.split(' | ')
     _, pop3 = pop.split(' ')
     _, push3 = push.split(' ')
@@ -83,7 +98,7 @@ def count_stack_in_each_part(vpython_path, output_file, function_start_name, fun
     # Memory op after A
     pop4, push4, sgrow4, sshrink4 = int(pop3)-int(pop2), int(push3)-int(push2), int(sgrow3)-int(sgrow2), int(sshrink3)-int(sshrink2)
 
-    # Record delta stuff in a line
+    # Record in a csv line
     csv = open(output_file, 'a')
     csv.write('{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15},{16},{17}\n'.format(
                 vpython_path, vpython_path[-7:-4],
@@ -97,7 +112,7 @@ def count_stack_in_each_part(vpython_path, output_file, function_start_name, fun
 
 # Count the linear regression stacks
 def extract_trace_in_multiple_paths(paths):
-    destination = './count_stuff_results/stack_traces.csv'
+    destination = './count_result/stack_traces.csv'
 
     for path in sorted(paths):
         for dir in sorted(os.listdir(path)):
@@ -159,7 +174,7 @@ def get_cpu_usage(usage_logfiles = ['./cpu_usage.log']):
         # max_line = len(nonempty_lines)
         file.close()
 
-        csv = open('./count_stuff_results/cpu_usage.csv', 'a')
+        csv = open('./count_result/cpu_usage.csv', 'a')
         csv.write('timestamp,%cpu_user,%cpu_system\n')
         for i, line in enumerate(nonempty_lines):
             if 'top -' in line:
@@ -182,9 +197,7 @@ def get_cpu_usage(usage_logfiles = ['./cpu_usage.log']):
 
 
 
-##################################
-#         THINGS TO RUN          #
-##################################
+
 
 # usage_logfiles = ['cpu_usage_readline_04.log', 
 #     'cpu_usage_readline_05.log',
@@ -202,13 +215,3 @@ def get_cpu_usage(usage_logfiles = ['./cpu_usage.log']):
 # paths = ['linear_regression_additional/trace/']
 # extract_trace_in_multiple_paths(paths)
 
-# extract_trace_in_path('linear_regression_additional/trace_car_only/', 
-#                         'function_start', 'function_end')
-# extract_trace_in_path('linear_regression_additional/trace_diabetes_only/', 
-#                         'function_start', 'function_end')
-# extract_trace_in_path('linear_regression_additional/trace_energy_only/', 
-#                         'function_start', 'function_end')
-# extract_trace_in_path('linear_regression_additional/trace_house_only/', 
-#                         'function_start', 'function_end')
-# extract_trace_in_path('linear_regression_additional/trace_medical_only/', 
-#                         'function_start', 'function_end')
