@@ -1,7 +1,7 @@
 import pandas as pd
 from sklearn import linear_model
 
-df = pd.read_csv('dataset_additional/car.csv')
+df = pd.read_csv('dataset_real/car.csv')
 
 x = df.iloc[:,:-1]
 y = df.iloc[:,-1:]

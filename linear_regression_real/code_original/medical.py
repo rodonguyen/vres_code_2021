@@ -1,7 +1,7 @@
 import pandas as pd
 from sklearn import linear_model
 
-df = pd.read_csv('dataset_additional/medical.csv')
+df = pd.read_csv('dataset_real/medical.csv')
 x = df.iloc[:,:-1]
 y = df.iloc[:,-1:]
 

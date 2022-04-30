@@ -10,7 +10,7 @@ def function_end():
 ############################################
 function_start()
 
-df = pd.read_csv('dataset_additional/medical.csv')
+df = pd.read_csv('dataset_real/medical.csv')
 x = df.iloc[:,:-1]
 y = df.iloc[:,-1:]
 

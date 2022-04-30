@@ -12,7 +12,7 @@ function_start()
 
 for i in range(100):
 
-    df = pd.read_csv('dataset_additional/house.csv')
+    df = pd.read_csv('dataset_real/house.csv')
     x = df.iloc[:,:-1]
     y = df.iloc[:,-1:]
 
