@@ -11,8 +11,8 @@ def extract_trace_in_path(path, function_start_name, function_end_name):
     csv = open(destination2, 'a')
     csv.write('filepath, file no., pop_before_A, push_before_A, sgrow_before_A, sshrink_before_A,' + 
                 'pop_in_A, push_in_A, sgrow_in_A, sshrink_in_A,' + 
-                'pop_after_A, push_after_A, sgrow_after_A, sshrink_after_A' +
-                'pop_tota, push_total, sgrow_total, sshrink_total\n')
+                'pop_after_A, push_after_A, sgrow_after_A, sshrink_after_A,' +
+                'pop_total, push_total, sgrow_total, sshrink_total\n')
     csv.close()
 
     for vpython_name in sorted(os.listdir(path)):
