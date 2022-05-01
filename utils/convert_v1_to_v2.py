@@ -1,7 +1,7 @@
 def write_to_csv(table_name, car, diabetes, energy, house, medical):
 
     # DESTINATION
-    v2_file = open('./count_result/stack_traces_multiple_parts_v2.csv', 'a')
+    v2_file = open('./count_result/stack_trace_multiple_parts_v2.csv', 'a')
     
     # write to csv
     v2_file.write(table_name+'\n')
@@ -36,7 +36,7 @@ def write_to_csv(table_name, car, diabetes, energy, house, medical):
 
 def convert_v1_to_v2():
 
-    v1_file = open('./count_result/stack_traces_multiple_parts.csv')
+    v1_file = open('./count_result/stack_trace_multiple_parts.csv')
     nonempty_lines = [line.strip("\n") for line in v1_file if line != "\n"]
     # max_line = len(nonempty_lines)
     v1_file.close()

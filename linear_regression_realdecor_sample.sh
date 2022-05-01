@@ -1,8 +1,9 @@
 #!/bin/bash
 
 
-# Clean vPython.txt in current directory
+# Clean vPython.txt in current directory and traces
 rm -f vpython*.txt
+rm -r linear_regression_real/trace*
 
 # Create directories to store traces
 mkdir linear_regression_real/trace_car_only
@@ -17,7 +18,7 @@ mkdir linear_regression_real/trace_medical_only
 # Otherwise, the renaming will be a mess.
 
 ################################ CAR #################################
-for i in {1..3}
+for i in {1..5}
 do
     begin=$(printf "Executing car.py (%03d)" "$i")
     echo "_____________________"
@@ -36,7 +37,7 @@ mv vpython*.txt linear_regression_real/trace_car_only
 
 
 ############################### DIABETES #################################
-for i in {1..3}
+for i in {1..5}
 do
     begin=$(printf "Executing diabetes.py (%03d)" "$i")
     echo "_____________________"
@@ -55,7 +56,7 @@ mv vpython*.txt linear_regression_real/trace_diabetes_only
 
 
 ################################ ENERGY #################################
-for i in {1..3}
+for i in {1..5}
 do
     begin=$(printf "Executing energy.py (%03d)" "$i")
     echo "_____________________"
@@ -74,7 +75,7 @@ mv vpython*.txt linear_regression_real/trace_energy_only
 
 
 ############################## HOUSE ###################################
-for i in {1..3}
+for i in {1..5}
 do
     begin=$(printf "Executing house.py (%03d)" "$i")
     echo "_____________________"
@@ -93,7 +94,7 @@ mv vpython*.txt linear_regression_real/trace_house_only
 
 
 ############################# MEDICAL ####################################
-for i in {1..3}
+for i in {1..5}
 do
     begin=$(printf "Executing medical.py (%03d)" "$i")
     echo "_____________________"
