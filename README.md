@@ -22,3 +22,6 @@ This repo includes:
 
 # Other useful commands
 - `df -h` to check available storage 
+- `rsync -avzhe ssh Documents/vres_code_2022/localfile.sh  rodo@192.168.10.11:/home/rodo/vres_code_2022/` to copy a local file to RPi. Be mindful about your current dir. Can reverse the 2 parameters to copy RPi file to local dir.
+- `rsync -avzh Documents/vres_code_2022 rodo@192.168.18.21:/home/rodo/` to copy a local dir to RPi dir. Be mindful about your current dir. Can reverse the 2 parameters to copy RPi dir to a local dir to.
+- `top` to view memory dashboard

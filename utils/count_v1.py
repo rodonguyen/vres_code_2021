@@ -1,34 +1,35 @@
 import datetime
 import os
 
-def extract_trace_in_path(path, function_start_name, function_end_name):
-    destination1 = './count_result/stack_traces.csv'
-    csv = open(destination1, 'a')
-    csv.write('filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink\n')
-    csv.close()
+def extract_trace_in_paths_with_function_start_end(paths, function_start_name, function_end_name):
+    for path in paths:
+        destination1 = './count_result/stack_traces.csv'
+        csv = open(destination1, 'a')
+        csv.write('filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink\n')
+        csv.close()
 
-    destination2 = './count_result/stack_trace_multiple_parts.csv'
-    csv = open(destination2, 'a')
-    csv.write('filepath, file no., pop_before_A, push_before_A, sgrow_before_A, sshrink_before_A,' + 
-                'pop_in_A, push_in_A, sgrow_in_A, sshrink_in_A,' + 
-                'pop_after_A, push_after_A, sgrow_after_A, sshrink_after_A,' +
-                'pop_total, push_total, sgrow_total, sshrink_total\n')
-    csv.close()
+        destination2 = './count_result/stack_trace_multiple_parts.csv'
+        csv = open(destination2, 'a')
+        csv.write('filepath, file no., pop_before_A, push_before_A, sgrow_before_A, sshrink_before_A,' + 
+                    'pop_in_A, push_in_A, sgrow_in_A, sshrink_in_A,' + 
+                    'pop_after_A, push_after_A, sgrow_after_A, sshrink_after_A,' +
+                    'pop_total, push_total, sgrow_total, sshrink_total\n')
+        csv.close()
 
-    for vpython_name in sorted(os.listdir(path)):
-        full_vpython_path = path + vpython_name
-        print(full_vpython_path)
+        for vpython_name in sorted(os.listdir(path)):
+            full_vpython_path = path + vpython_name
+            print(full_vpython_path)
 
-        # Record all trace
-        # count_stack(full_vpython_path, destination1)
+            # Record all trace
+            # count_stack(full_vpython_path, destination1)
 
-        # Record in an area
-        count_stack_in_each_part(full_vpython_path, destination2,
-                                    function_start_name, function_end_name)
+            # Record in an area
+            count_stack_in_each_part(full_vpython_path, destination2,
+                                        function_start_name, function_end_name)
 
-    csv = open(destination2, 'a')
-    csv.write('\n\n\n')
-    csv.close()
+        csv = open(destination2, 'a')
+        csv.write('\n\n\n')
+        csv.close()
         
 
 def count_stack_in_each_part(vpython_path, output_file, function_start_name, function_end_name):
@@ -111,30 +112,28 @@ def count_stack_in_each_part(vpython_path, output_file, function_start_name, fun
 
 
 # Count the linear regression stacks
-def extract_trace_in_multiple_paths(paths):
-    destination = './count_result/stack_traces.csv'
-
-    for path in sorted(paths):
-        for dir in sorted(os.listdir(path)):
-            print('\ndir: ' + dir)
-            temp_path = path + dir 
-            for vpython_name in sorted(os.listdir(temp_path)):
-                count_stack(temp_path + '/' + vpython_name, destination)
-            csv = open(destination, 'a')
-            csv.write('\n')
-            csv.close()
-        csv = open(destination, 'a')
-        csv.write('\n\n\n')
-        csv.close()
-        
-
+def extract_trace_in_paths(paths, destination_name):
+    destination = './count_result/'+destination_name+'_v1.csv'
     csv = open(destination, 'a')
     csv.write('filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink\n')
     csv.close()
 
+    for path in sorted(paths):
+        for vpython_name in sorted(os.listdir(path)):
+            count_stack(path + '/' + vpython_name, destination)
+        csv = open(destination, 'a')
+        csv.write('\n')
+        csv.close()
+
+    # Add some empty lines
+    csv = open(destination, 'a')
+    csv.write('\n\n\n')
+    csv.close()
+        
+
 def count_stack(vpython_path, output_file):
     print(vpython_path)
-    file = open(vpython_path)
+    file = open(vpython_path, 'r')
     nonempty_lines = [line.strip("\n") for line in file if line != "\n"]
     max_line = len(nonempty_lines)
     file.close()
@@ -160,12 +159,15 @@ def count_stack(vpython_path, output_file):
     _, push = push.split(' ')
     _, sgrow = sgrow.split(' ')
     _, sshrink = sshrink.split(' ')
+    # Write
     csv = open(output_file, 'a')
     csv.write('{0},{1},{2},{3},{4},{5},{6},{7},{8}\n'.format(
                 vpython_path, vpython_path[-7:-4], str(exe_time),
                 start_time, end_time,
                 pop, push, sgrow, sshrink ))
     csv.close()
+
+
 
 def get_cpu_usage(usage_logfiles = ['./cpu_usage.log']):
     for usage_logfile in usage_logfiles:

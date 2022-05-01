@@ -33,7 +33,6 @@ def write_to_csv(table_name, car, diabetes, energy, house, medical):
     v2_file.close()
 
 
-
 def convert_v1_to_v2():
 
     v1_file = open('./count_result/stack_trace_multiple_parts.csv')
@@ -74,3 +73,39 @@ def convert_v1_to_v2():
                 medical.append(line[my_dict[item]])
 
         write_to_csv(item, car, diabetes, energy, house, medical)
+
+
+
+def convert_v1_to_v2(target_position = {'pop':5, 'push':6}, 
+                    destination_filename = 'stack_trace',
+                    targets = []):
+
+    v1_file = open('./count_result/'+ destination_filename +'_v1.csv')
+    v2_filename = './count_result/'+ destination_filename +'_v2.csv'
+    nonempty_lines = [line.strip("\n") for line in v1_file if line != "\n"]
+    v1_file.close()
+
+    for item in target_position.keys():
+        for target in targets:
+            numbers = []
+            for line in nonempty_lines:
+                if target in line:
+                    line = line.split(',')
+                    numbers.append(line[target_position[item]])
+            
+            print(numbers)
+            write_to_csv(item, target, numbers, v2_filename)
+
+
+def write_to_csv(table_name, target, numbers, destination_filename):
+
+    # DESTINATION
+    v2_file = open(destination_filename, 'a')
+    
+    # Write to CSV
+    v2_file.write(table_name+'\n')
+    v2_file.write(target)
+    for i in numbers:
+        v2_file.write(','+i)
+    v2_file.write('\n')
+    v2_file.close()
