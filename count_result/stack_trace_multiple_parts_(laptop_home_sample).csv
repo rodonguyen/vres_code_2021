@@ -1,0 +1,46 @@
+filepath, file no., pop_before_A, push_before_A, sgrow_before_A, sshrink_before_A,pop_in_A, push_in_A, sgrow_in_A, sshrink_in_A,pop_after_A, push_after_A, sgrow_after_A, sshrink_after_A,pop_total, push_total, sgrow_total, sshrink_total
+filepath, file no., pop_before_A, push_before_A, sgrow_before_A, sshrink_before_A,pop_in_A, push_in_A, sgrow_in_A, sshrink_in_A,pop_after_A, push_after_A, sgrow_after_A, sshrink_after_A,pop_total, push_total, sgrow_total, sshrink_total
+linear_regression_real/trace_car_only/vpython_car_001.txt,001,2306601,4200171,124,157711,28898,56372,7,1334,189,340,0,18,2335688,4256883,131,159063
+linear_regression_real/trace_car_only/vpython_car_002.txt,002,2306601,4200171,124,157711,28898,56372,7,1334,189,340,0,18,2335688,4256883,131,159063
+linear_regression_real/trace_car_only/vpython_car_003.txt,003,2306595,4200161,124,157711,28898,56372,7,1334,189,340,0,18,2335682,4256873,131,159063
+linear_regression_real/trace_car_only/vpython_car_004.txt,004,2306586,4200146,124,157711,28898,56372,7,1334,189,340,0,18,2335673,4256858,131,159063
+linear_regression_real/trace_car_only/vpython_car_005.txt,005,2306589,4200151,124,157711,28898,56372,7,1334,189,340,0,18,2335676,4256863,131,159063
+
+
+
+filepath, file no., pop_before_A, push_before_A, sgrow_before_A, sshrink_before_A,pop_in_A, push_in_A, sgrow_in_A, sshrink_in_A,pop_after_A, push_after_A, sgrow_after_A, sshrink_after_A,pop_total, push_total, sgrow_total, sshrink_total
+linear_regression_real/trace_diabetes_only/vpython_diabetes_001.txt,001,2535668,4565471,124,175363,26614,61554,0,1341,189,340,0,18,2562471,4627365,124,176722
+linear_regression_real/trace_diabetes_only/vpython_diabetes_002.txt,002,2535656,4565451,124,175363,26614,61554,0,1341,189,340,0,18,2562459,4627345,124,176722
+linear_regression_real/trace_diabetes_only/vpython_diabetes_003.txt,003,2535650,4565441,124,175363,26614,61554,0,1341,189,340,0,18,2562453,4627335,124,176722
+linear_regression_real/trace_diabetes_only/vpython_diabetes_004.txt,004,2535689,4565506,124,175363,26614,61554,0,1341,189,340,0,18,2562492,4627400,124,176722
+linear_regression_real/trace_diabetes_only/vpython_diabetes_005.txt,005,2535659,4565456,124,175363,26614,61554,0,1341,189,340,0,18,2562462,4627350,124,176722
+
+
+
+filepath, file no., pop_before_A, push_before_A, sgrow_before_A, sshrink_before_A,pop_in_A, push_in_A, sgrow_in_A, sshrink_in_A,pop_after_A, push_after_A, sgrow_after_A, sshrink_after_A,pop_total, push_total, sgrow_total, sshrink_total
+linear_regression_real/trace_energy_only/vpython_energy_001.txt,001,2306571,4200121,124,157711,24303,46883,6,1121,189,340,0,18,2331063,4247344,130,158850
+linear_regression_real/trace_energy_only/vpython_energy_002.txt,002,2306583,4200141,124,157711,24303,46883,6,1121,189,340,0,18,2331075,4247364,130,158850
+linear_regression_real/trace_energy_only/vpython_energy_003.txt,003,2306574,4200126,124,157711,24303,46883,6,1121,189,340,0,18,2331066,4247349,130,158850
+linear_regression_real/trace_energy_only/vpython_energy_004.txt,004,2306595,4200161,124,157711,24303,46883,6,1121,189,340,0,18,2331087,4247384,130,158850
+linear_regression_real/trace_energy_only/vpython_energy_005.txt,005,2306580,4200136,124,157711,24303,46883,6,1121,189,340,0,18,2331072,4247359,130,158850
+
+
+
+filepath, file no., pop_before_A, push_before_A, sgrow_before_A, sshrink_before_A,pop_in_A, push_in_A, sgrow_in_A, sshrink_in_A,pop_after_A, push_after_A, sgrow_after_A, sshrink_after_A,pop_total, push_total, sgrow_total, sshrink_total
+linear_regression_real/trace_house_only/vpython_house_001.txt,001,2306595,4200161,124,157711,41213,82751,2,1958,189,340,0,18,2347997,4283252,126,159687
+linear_regression_real/trace_house_only/vpython_house_002.txt,002,2306583,4200141,124,157711,41213,82751,2,1958,189,340,0,18,2347985,4283232,126,159687
+linear_regression_real/trace_house_only/vpython_house_003.txt,003,2306583,4200141,124,157711,41213,82751,2,1958,189,340,0,18,2347985,4283232,126,159687
+linear_regression_real/trace_house_only/vpython_house_004.txt,004,2306583,4200141,124,157711,41213,82751,2,1958,189,340,0,18,2347985,4283232,126,159687
+linear_regression_real/trace_house_only/vpython_house_005.txt,005,2306598,4200166,124,157711,41213,82751,2,1958,189,340,0,18,2348000,4283257,126,159687
+
+
+
+filepath, file no., pop_before_A, push_before_A, sgrow_before_A, sshrink_before_A,pop_in_A, push_in_A, sgrow_in_A, sshrink_in_A,pop_after_A, push_after_A, sgrow_after_A, sshrink_after_A,pop_total, push_total, sgrow_total, sshrink_total
+linear_regression_real/trace_medical_only/vpython_medical_001.txt,001,2306583,4200141,124,157711,23182,44600,5,1077,189,340,0,18,2329954,4245081,129,158806
+linear_regression_real/trace_medical_only/vpython_medical_002.txt,002,2306574,4200126,124,157711,23182,44600,5,1077,189,340,0,18,2329945,4245066,129,158806
+linear_regression_real/trace_medical_only/vpython_medical_003.txt,003,2306598,4200166,124,157711,23182,44600,5,1077,189,340,0,18,2329969,4245106,129,158806
+linear_regression_real/trace_medical_only/vpython_medical_004.txt,004,2306583,4200141,124,157711,23182,44600,5,1077,189,340,0,18,2329954,4245081,129,158806
+linear_regression_real/trace_medical_only/vpython_medical_005.txt,005,2306574,4200126,124,157711,23182,44600,5,1077,189,340,0,18,2329945,4245066,129,158806
+
+
+
