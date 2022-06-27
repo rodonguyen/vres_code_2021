@@ -1,5 +1,3 @@
-<!-- @format -->
-
 # vres_code_2021
 
 This repo includes:
@@ -11,7 +9,7 @@ This repo includes:
 - create_dataset.py: help automatically create dataset with consecutively-increasing values
 - /Documents: Analysises and Journals
 
-# Process to get trace statistics
+# Process to get stack_trace analysis
 1. Initiate bash script: `chmod u+x bashscript-name.sh`
 2. Make sure the path and python names are correct in the bashscript
 3. Run the bashscript: `./bashscript-name.sh`

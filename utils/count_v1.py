@@ -197,23 +197,3 @@ def get_cpu_usage(usage_logfiles = ['./cpu_usage.log']):
         
 
 
-
-
-
-
-# usage_logfiles = ['cpu_usage_readline_04.log', 
-#     'cpu_usage_readline_05.log',
-#     'cpu_usage_readline_06.log']
-# get_cpu_usage(usage_logfiles)
-
-
-# paths = ['linear_regression_pandas/trace/', 
-# 'linear_regression_readline/trace/', 
-# 'linear_regression_additional/trace/'] 
-# paths = ['temporary_folder_for_stacks/trace/']
-
-
-## This one extract all vpython in its sub-dir
-# paths = ['linear_regression_additional/trace/']
-# extract_trace_in_multiple_paths(paths)
-
