@@ -9,14 +9,13 @@ def plot(line, type):
     dataset_name = numbers.pop(0)
     numbers = sorted(numbers)
 
-    # Micellenious
+    # Miscellaneous
     numbers_map = map(int, numbers)
     numbers_list = list(numbers_map)
     numbers_set = set(numbers)
     sorted_unique_list = sorted(list(set(numbers)))
     print('\n' + str(len(numbers_set)) + ' unique values') 
     print(sorted_unique_list)
-
 
 
     # Calculate confidence intervals
@@ -47,30 +46,30 @@ def plot(line, type):
     fig.savefig('./count_result/histogram_'+dataset_name+'_'+type+'.png')
 
 
+def plot_histogram_1by1():
+    # file = open('count_result/stack_trace_multiple_parts_v2_(pi_100).csv')
+    file = open('count_result/stack_trace_laptop_v2_first100.csv')
 
-# file = open('count_result/stack_trace_multiple_parts_v2_(pi_100).csv')
-file = open('count_result/stack_trace_laptop_v2_first100.csv')
+    nonempty_lines = [line.strip("\n") for line in file if line != "\n"]
+    # max_line = len(nonempty_lines)
+    file.close()
 
-nonempty_lines = [line.strip("\n") for line in file if line != "\n"]
-# max_line = len(nonempty_lines)
-file.close()
+    items = ['car','diabetes','energy','house','medical']
 
-items = ['car','diabetes','energy','house','medical']
-
-for i,line in enumerate(nonempty_lines):
-    if 'pop' in line:
-        try:
-            for k in range(1,6):
-                plot(nonempty_lines[i+k],'pop')
-        except e:
-            print(e)
-            print(f"Other dataset is not found. Stop at k = {k}.")
-    if 'push' in line:
-        try:
-            for k in range(1,6):
-                plot(nonempty_lines[i+k],'push')
-        except:
-            print(f"Other dataset is not found. Stop at k = {k}.")
+    for i,line in enumerate(nonempty_lines):
+        if 'pop' in line:
+            try:
+                for k in range(1,6):
+                    plot(nonempty_lines[i+k],'pop')
+            except e:
+                print(e)
+                print(f"Other dataset is not found. Stop at k = {k}.")
+        if 'push' in line:
+            try:
+                for k in range(1,6):
+                    plot(nonempty_lines[i+k],'push')
+            except:
+                print(f"Other dataset is not found. Stop at k = {k}.")
 
 
 
