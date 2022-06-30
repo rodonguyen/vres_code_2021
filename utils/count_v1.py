@@ -63,15 +63,16 @@ def extract_trace_v1(traces_dirs,
             csv.close()
 
 
-def count_in_a_part(vpython_path, output_file, function_start_name, function_end_name):
+def count_in_a_part(vpython_path, output_file,
+                    function_start, function_end):
     '''
     The total of memory operations at certain part is the line
     with '>>>'
     As we identified the line with memory operations info we want,
     use .plit function to remove the '>>>', use it again to extract the 
     number of each operation type
-
     '''
+
     file = open(vpython_path)
     nonempty_lines = [line.strip("\n") for line in file if line != "\n"]
     max_line = len(nonempty_lines)
@@ -80,7 +81,7 @@ def count_in_a_part(vpython_path, output_file, function_start_name, function_end
     # Get the line we want and remove '>>> '
     # Get total memory_op right before A area
     for i in reversed(range(max_line)):
-        if function_start_name in nonempty_lines[i]:
+        if function_start in nonempty_lines[i]:
             if '>>> ' in nonempty_lines[i-1]:
                 memory_op_before_function_start = nonempty_lines[i-1].split(' ', 1)[
                     1]
@@ -90,7 +91,7 @@ def count_in_a_part(vpython_path, output_file, function_start_name, function_end
 
     # Get memory_op right after A area
     for i in reversed(range(max_line)):
-        if function_end_name in nonempty_lines[i]:
+        if function_end in nonempty_lines[i]:
             if '>>> ' in nonempty_lines[i+1]:
                 memory_op_after_function_end = nonempty_lines[i+1].split(' ', 1)[
                     1]

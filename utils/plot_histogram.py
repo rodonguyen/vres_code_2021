@@ -1,13 +1,12 @@
 from cmath import e
 import matplotlib.pyplot as plt
 import numpy
+import json
 
 
-def plot(line, type):
+def plot(type, dataset_name, number_list, save_filename):
     # Get all the numbers
-    numbers = line.split(',')
-    dataset_name = numbers.pop(0)
-    numbers = sorted(numbers)
+    numbers = sorted(number_list)
 
     # Miscellaneous
     numbers_map = map(int, numbers)
@@ -42,36 +41,52 @@ def plot(line, type):
     _, ymax = ax.get_ylim()
     str_lower, str_upper = str(int(lower)), str(int(upper))
     ax.fill_betweenx([0, ymax], [str_lower, str_lower], [str_upper, str_upper],
-                     facecolor='orange', alpha=0.2)
+                     facecolor='orange', alpha=0.17)
+
+    # Overlay the bars again
+    ax.bar(labels, counts, align='center', color='#0072BD', alpha=1)
+
     # plt.show()
-    fig.savefig('./count_result/histogram_'+dataset_name+'_'+type+'.png')
+    fig.savefig('./count_result/'+save_filename+dataset_name+'_'+type+'.png')
 
 
-def plot_histogram_1by1():
-    # file = open('count_result/stack_trace_multiple_parts_v2_(pi_100).csv')
-    file = open('count_result/stack_trace_laptop_v2_first100.csv')
+def plot_histogram_1by1(v2_file, save_filename='histogram_'):
 
-    nonempty_lines = [line.strip("\n") for line in file if line != "\n"]
-    # max_line = len(nonempty_lines)
-    file.close()
+    # Opening JSON file
+    f = open(v2_file)
+    # Returns JSON object as a dictionary
+    data = json.load(f)
 
-    items = ['car', 'diabetes', 'energy', 'house', 'medical']
+    for operation in data:
+        for dataset_name in data[operation]:
+            plot(operation, dataset_name,
+                 data[operation][dataset_name], save_filename)
 
-    for i, line in enumerate(nonempty_lines):
-        if 'pop_flag' in line:
-            try:
-                for k in range(1, 6):
-                    plot(nonempty_lines[i+k], 'pop')
-            except e:
-                print(e)
-                print(f"Other dataset is not found. Stop at k = {k}.")
-        if 'push_flag' in line:
-            try:
-                for k in range(1, 6):
-                    plot(nonempty_lines[i+k], 'push')
-            except:
-                print(f"Other dataset is not found. Stop at k = {k}.")
+    # nonempty_lines = [line.strip("\n") for line in file if line != "\n"]
+    # # max_line = len(nonempty_lines)
+    # file.close()
 
+    # items = ['car', 'diabetes', 'energy', 'house', 'medical']
+
+    # for i, line in enumerate(nonempty_lines):
+    #     if 'pop_flag' in line:
+    #         try:
+    #             for k in range(1, 6):
+    #                 plot(nonempty_lines[i+k], 'pop')
+    #         except e:
+    #             print(e)
+    #             print(f"Other dataset is not found. Stop at k = {k}.")
+    #     if 'push_flag' in line:
+    #         try:
+    #             for k in range(1, 6):
+    #                 plot(nonempty_lines[i+k], 'push')
+    #         except:
+    #             print(f"Other dataset is not found. Stop at k = {k}.")
+
+
+plot_histogram_1by1(
+    v2_file='count_result/stack_trace_laptop_first100_v2.json',
+    save_filename='histogram_test_')
 
 '''
 # for line in nonempty_lines:
