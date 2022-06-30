@@ -14,34 +14,35 @@ def plot(line, type):
     numbers_list = list(numbers_map)
     numbers_set = set(numbers)
     sorted_unique_list = sorted(list(set(numbers)))
-    print('\n' + str(len(numbers_set)) + ' unique values') 
+    print('\n' + str(len(numbers_set)) + ' unique values')
     print(sorted_unique_list)
 
-
     # Calculate confidence intervals
-    lower =  numpy.percentile(numbers_list, 5)
-    upper =  numpy.percentile(numbers_list, 95)
-    
+    lower = numpy.percentile(numbers_list, 5)
+    upper = numpy.percentile(numbers_list, 95)
+
     print(f"{dataset_name}:")
     print(f"90% CI:     <{int(lower)},{int(upper)}>")
     print(f"Full range: <{sorted_unique_list[0]},{sorted_unique_list[-1]}>")
 
     # === BETTER HISTOGRAM ===
-    labels, counts = numpy.unique(numbers, return_counts=True)   # Histogram data
-    fig = plt.figure(figsize=[11,12])
+    labels, counts = numpy.unique(
+        numbers, return_counts=True)   # Histogram data
+    fig = plt.figure(figsize=[11, 12])
     fig.tight_layout()
     fig.subplots_adjust(bottom=0.2)
-    ax = fig.add_subplot(1,1,1)
+    ax = fig.add_subplot(1, 1, 1)
     ax.set_title(f"'{dataset_name}' dataset: {type} histogram", fontsize=24)
     ax.set_xlabel(f"{type} value", fontsize=18)
     ax.set_ylabel('Frequency', fontsize=18)
     ax.bar(labels, counts, align='center')
     ax.tick_params(axis='x', labelrotation=60)
+
     # Add confidence interval layer
-    _, ymax = ax.get_ylim() 
+    _, ymax = ax.get_ylim()
     str_lower, str_upper = str(int(lower)), str(int(upper))
-    ax.fill_betweenx([0,ymax],[str_lower, str_lower], [str_upper, str_upper] ,
-                    facecolor ='orange', alpha = 0.2)
+    ax.fill_betweenx([0, ymax], [str_lower, str_lower], [str_upper, str_upper],
+                     facecolor='orange', alpha=0.2)
     # plt.show()
     fig.savefig('./count_result/histogram_'+dataset_name+'_'+type+'.png')
 
@@ -54,71 +55,22 @@ def plot_histogram_1by1():
     # max_line = len(nonempty_lines)
     file.close()
 
-    items = ['car','diabetes','energy','house','medical']
+    items = ['car', 'diabetes', 'energy', 'house', 'medical']
 
-    for i,line in enumerate(nonempty_lines):
-        if 'pop' in line:
+    for i, line in enumerate(nonempty_lines):
+        if 'pop_flag' in line:
             try:
-                for k in range(1,6):
-                    plot(nonempty_lines[i+k],'pop')
+                for k in range(1, 6):
+                    plot(nonempty_lines[i+k], 'pop')
             except e:
                 print(e)
                 print(f"Other dataset is not found. Stop at k = {k}.")
-        if 'push' in line:
+        if 'push_flag' in line:
             try:
-                for k in range(1,6):
-                    plot(nonempty_lines[i+k],'push')
+                for k in range(1, 6):
+                    plot(nonempty_lines[i+k], 'push')
             except:
                 print(f"Other dataset is not found. Stop at k = {k}.")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 '''
