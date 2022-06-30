@@ -10,13 +10,10 @@ def convert_v1_to_v2(
     Convert v1 stack trace file to v2.
     Counts of an operation type are collected and put in 1 lines.
 
-    @params
-      v1_file: string
-        path to v1 stack trace file
-      v2_file: string
-        v2 stack trace file location with .json tail
-      dataset_names: list of dataset name(s) to extract
-        default: ['car', 'diabetes', 'energy', 'house', 'medical']
+    Parameters
+        v1_file (string): Path to v1 stack trace file
+        v2_file (string): v2 stack trace file location with .json tail
+        dataset_names (list): Lists of dataset name(s) to extract. Default: ['car', 'diabetes', 'energy', 'house', 'medical']
     '''
 
     v1_file = open(v1_file)

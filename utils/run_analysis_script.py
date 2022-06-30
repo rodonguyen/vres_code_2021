@@ -7,18 +7,20 @@ from plot_histogram import *
 ##################################
 
 # '''------------ linear_regression_real ------------'''
-# paths = (
-#     'linear_regression_real/trace_car_only/',
-#     'linear_regression_real/trace_diabetes_only/',
-#     'linear_regression_real/trace_energy_only/',
-#     'linear_regression_real/trace_house_only/',
-#     'linear_regression_real/trace_medical_only/'
-# )
-# try:
-#     extract_trace_in_paths_with_function_start_end(
-#         paths, 'function_start', 'function_end')
-# except:
-#     print('Error. MAYBE linear_regression_real trace directories are not found.')
+paths = (
+    'linear_regression_real/trace_car_only/',
+    'linear_regression_real/trace_diabetes_only/',
+    'linear_regression_real/trace_energy_only/',
+    'linear_regression_real/trace_house_only/',
+    'linear_regression_real/trace_medical_only/'
+)
+try:
+    extract_trace_v1(
+        paths,
+        './count_result/stack_trace_laptop_first100.csv',
+        True, 'function_start', 'function_end')
+except:
+    print('Error. MAYBE linear_regression_real trace directories are not found.')
 
 
 convert_v1_to_v2(
