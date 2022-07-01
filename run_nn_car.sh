@@ -5,9 +5,11 @@ rm -f vpython*.txt
 rm -r linear_regression_real/trace*
 
 # Create directories to store traces
-mkdir neural_network/trace_car_noRandom
 
-run_num=40
+dir001="trace_car_noRandomX"
+mkdir neural_network/$dir001
+
+run_num=0
 
 # Prompt filename and execute the file using vPython / python3.9
 # Make sure the files are in consecutively-numbered ascending order to have the renaming done correctly. 
@@ -29,7 +31,7 @@ do
     echo 
 done
 # Move all trace files to a folder
-mv vpython*.txt neural_network/trace_car_noRandom
+mv vpython*.txt neural_network/$dir001
 
 python3.8 neural_network/run_analysis_script.py
 spd-say done
