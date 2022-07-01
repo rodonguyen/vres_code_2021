@@ -1,8 +1,9 @@
 #!/bin/bash
 
 
-# Clean vPython.txt in current directory
+# Clean vPython.txt in current directory and traces
 rm -f vpython*.txt
+rm -r linear_regression_real/trace*
 
 # Create directories to store traces
 mkdir linear_regression_real/trace_car_only
@@ -11,16 +12,16 @@ mkdir linear_regression_real/trace_energy_only
 mkdir linear_regression_real/trace_house_only
 mkdir linear_regression_real/trace_medical_only
 
+run_num=200
 
 # Prompt filename and execute the file using vPython / python3.9
 # Make sure the files are in consecutively-numbered ascending order to have the renaming done correctly. 
 # Otherwise, the renaming will be a mess.
 
 ################################ CAR #################################
-for i in {1..100}
+for (( i=1; i<=$run_num; i++ ))
 do
     begin=$(printf "Executing car.py (%03d)" "$i")
-    echo
     echo "_____________________"
     echo "$begin"
     python3.9 ./linear_regression_real/code_decor/car.py
@@ -37,10 +38,9 @@ mv vpython*.txt linear_regression_real/trace_car_only
 
 
 ############################### DIABETES #################################
-for i in {1..100}
+for (( i=1; i<=$run_num; i++ ))
 do
     begin=$(printf "Executing diabetes.py (%03d)" "$i")
-    echo
     echo "_____________________"
     echo "$begin"
     python3.9 ./linear_regression_real/code_decor/diabetes.py
@@ -57,10 +57,9 @@ mv vpython*.txt linear_regression_real/trace_diabetes_only
 
 
 ################################ ENERGY #################################
-for i in {1..100}
+for (( i=1; i<=$run_num; i++ ))
 do
     begin=$(printf "Executing energy.py (%03d)" "$i")
-    echo
     echo "_____________________"
     echo "$begin"
     python3.9 ./linear_regression_real/code_decor/energy.py
@@ -77,10 +76,9 @@ mv vpython*.txt linear_regression_real/trace_energy_only
 
 
 ############################## HOUSE ###################################
-for i in {1..100}
+for (( i=1; i<=$run_num; i++ ))
 do
     begin=$(printf "Executing house.py (%03d)" "$i")
-    echo
     echo "_____________________"
     echo "$begin"
     python3.9 ./linear_regression_real/code_decor/house.py
@@ -97,10 +95,9 @@ mv vpython*.txt linear_regression_real/trace_house_only
 
 
 ############################# MEDICAL ####################################
-for i in {1..100}
+for (( i=1; i<=$run_num; i++ ))
 do
     begin=$(printf "Executing medical.py (%03d)" "$i")
-    echo
     echo "_____________________"
     echo "$begin"
     python3.9 ./linear_regression_real/code_decor/medical.py
@@ -115,6 +112,6 @@ done
 # Move all trace files to a folder
 mv vpython*.txt linear_regression_real/trace_medical_only
 
-
+python3.8 utils/run_analysis_script.py
 
 spd-say done

@@ -1,8 +1,8 @@
 import json
 
 def convert_v1_to_v2(
-        v1_file,
-        v2_file,
+        v1_file_input,
+        v2_file_output,
         dataset_names=['car', 'diabetes',
                        'energy', 'house',
                        'medical']):
@@ -16,9 +16,9 @@ def convert_v1_to_v2(
         dataset_names (list): Lists of dataset name(s) to extract. Default: ['car', 'diabetes', 'energy', 'house', 'medical']
     '''
 
-    v1_file = open(v1_file)
-    nonempty_lines = [line.strip("\n") for line in v1_file if line != "\n"]
-    v1_file.close()
+    v1_file_input = open(v1_file_input)
+    nonempty_lines = [line.strip("\n") for line in v1_file_input if line != "\n"]
+    v1_file_input.close()
 
     # Because memory operation number BEFORE A area is idempotent, that's the only area we check.
     # Hence, my_dict = {'pop':2, 'push':3} but not {'pop':[2,4,6,8], 'push':[3,5,7,9]}}
@@ -43,7 +43,7 @@ def convert_v1_to_v2(
                     break
         operations_dict[operation] = counts
 
-    with open(v2_file, 'w') as f:
+    with open(v2_file_output, 'w') as f:
         f.write(json.dumps(operations_dict))
 
 

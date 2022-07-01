@@ -3,7 +3,7 @@ import os
 
 
 def extract_trace_v1(traces_dirs,
-                     v1_file,
+                     v1_file_output,
                      with_tag_functions=False,
                      function_start='function_start',
                      function_end='function_end',):
@@ -21,7 +21,7 @@ def extract_trace_v1(traces_dirs,
         for path in traces_dirs:
 
             # Write column names
-            csv = open(v1_file, 'a')
+            csv = open(v1_file_output, 'a')
             csv.write('filepath, file no., pop_before_A, push_before_A, sgrow_before_A, sshrink_before_A,' +
                       'pop_in_A, push_in_A, sgrow_in_A, sshrink_in_A,' +
                       'pop_after_A, push_after_A, sgrow_after_A, sshrink_after_A,' +
@@ -34,10 +34,10 @@ def extract_trace_v1(traces_dirs,
                 print(full_trace_file_path)
 
                 # Record area by area
-                count_in_a_part(full_trace_file_path, v1_file,
+                count_in_a_part(full_trace_file_path, v1_file_output,
                                 function_start, function_end)
 
-            csv = open(v1_file, 'a')
+            csv = open(v1_file_output, 'a')
             csv.write('\n\n\n')
             csv.close()
 
@@ -45,7 +45,7 @@ def extract_trace_v1(traces_dirs,
         for path in traces_dirs:
 
             # Write column names
-            csv = open(v1_file, 'a')
+            csv = open(v1_file_output, 'a')
             csv.write(
                 'filepath, file no., execution time, start time, end time, pop, push, sgrow, sshrink\n')
             csv.close()
@@ -56,9 +56,9 @@ def extract_trace_v1(traces_dirs,
                 print(full_trace_file_path)
 
                 # Record total
-                count_total(full_trace_file_path, v1_file)
+                count_total(full_trace_file_path, v1_file_output)
 
-            csv = open(destination2, 'a')
+            csv = open(v1_file_output, 'a')
             csv.write('\n\n\n')
             csv.close()
 

@@ -50,7 +50,7 @@ def plot(type, dataset_name, number_list, save_filename):
     fig.savefig('./count_result/'+save_filename+dataset_name+'_'+type+'.png')
 
 
-def plot_histogram_1by1(v2_file, save_filename='histogram_'):
+def plot_histogram_1by1(v2_file_input, save_filename='histogram_'):
     '''
     Plot and save histograms to /count_result 
 
@@ -60,7 +60,7 @@ def plot_histogram_1by1(v2_file, save_filename='histogram_'):
     '''
 
     # Opening JSON file
-    f = open(v2_file)
+    f = open(v2_file_input)
     # Returns JSON object as a dictionary
     data = json.load(f)
 

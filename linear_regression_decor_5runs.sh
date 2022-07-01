@@ -19,7 +19,7 @@ run_num=2
 # Otherwise, the renaming will be a mess.
 
 ################################ CAR #################################
-for i in {1..$run_num}
+for (( i=1; i<=$run_num; i++ ))
 do
     begin=$(printf "Executing car.py (%03d)" "$i")
     echo "_____________________"
@@ -38,7 +38,7 @@ mv vpython*.txt linear_regression_real/trace_car_only
 
 
 ############################### DIABETES #################################
-for i in {1..$run_num}
+for (( i=1; i<=$run_num; i++ ))
 do
     begin=$(printf "Executing diabetes.py (%03d)" "$i")
     echo "_____________________"
@@ -57,7 +57,7 @@ mv vpython*.txt linear_regression_real/trace_diabetes_only
 
 
 ################################ ENERGY #################################
-for i in {1..$run_num}
+for (( i=1; i<=$run_num; i++ ))
 do
     begin=$(printf "Executing energy.py (%03d)" "$i")
     echo "_____________________"
@@ -76,7 +76,7 @@ mv vpython*.txt linear_regression_real/trace_energy_only
 
 
 ############################## HOUSE ###################################
-for i in {1..$run_num}
+for (( i=1; i<=$run_num; i++ ))
 do
     begin=$(printf "Executing house.py (%03d)" "$i")
     echo "_____________________"
@@ -95,7 +95,7 @@ mv vpython*.txt linear_regression_real/trace_house_only
 
 
 ############################# MEDICAL ####################################
-for i in {1..$run_num}
+for (( i=1; i<=$run_num; i++ ))
 do
     begin=$(printf "Executing medical.py (%03d)" "$i")
     echo "_____________________"
@@ -112,6 +112,6 @@ done
 # Move all trace files to a folder
 mv vpython*.txt linear_regression_real/trace_medical_only
 
-python3.8 utils/run_script.py
+python3.8 utils/run_analysis_script.py
 
 spd-say done
