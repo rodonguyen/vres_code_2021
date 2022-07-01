@@ -1,3 +1,7 @@
+import sys
+# insert at 1, 0 is the script path (or '' in REPL)
+sys.path.insert(1, './utils')
+
 from count_v1 import *
 from convert_v1_to_v2 import *
 from plot_histogram import *
@@ -7,11 +11,7 @@ from plot_histogram import *
 ########################################################
 
 paths = (
-    'linear_regression_real/trace_car_only/',
-    'linear_regression_real/trace_diabetes_only/',
-    'linear_regression_real/trace_energy_only/',
-    'linear_regression_real/trace_house_only/',
-    'linear_regression_real/trace_medical_only/'
+    'neural_network/trace_car'
 )
 v1_file = './count_result/stack_trace_xxx.csv'
 v2_file = './count_result/stack_trace_xxx_v2.json'

@@ -4,10 +4,10 @@ from sklearn import datasets, linear_model
 import pandas as pd
 
 def function_start():
-    print('--- start')
+    print('---')
 
 def function_end():
-    print('--- end')
+    print('---')
 
 
 ############################################
