@@ -34,6 +34,6 @@
 
 ## Todos
 
-- Now: Run 1 with SVM
-- new data
-- new model: SVM, cknn, RF, bayes
+- Now: Check prediction results if there is randomness, then check traces
+- New data
+- New model: SVM, cknn, RF, bayes (nope, because this is regression problem)

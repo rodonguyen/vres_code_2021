@@ -14,7 +14,7 @@ function_start()
 
 torch.random.manual_seed(42)
 
-data = np.loadtxt('dataset_real/car.csv', dtype=np.float32, delimiter=',', skiprows=1)
+data = np.loadtxt('dataset_real/diabetes.csv', dtype=np.float32, delimiter=',', skiprows=1)
 X = torch.from_numpy(data[:,1:-1])
 y = torch.from_numpy(data[:,-1,None])
 

@@ -7,7 +7,7 @@ rm -r linear_regression_real/trace*
 # Create directories to store traces
 mkdir neural_network/trace_car
 
-run_num=2
+run_num=100
 
 # Prompt filename and execute the file using vPython / python3.9
 # Make sure the files are in consecutively-numbered ascending order to have the renaming done correctly. 
@@ -19,7 +19,7 @@ do
     begin=$(printf "Executing car.py (%03d)" "$i")
     echo "_____________________"
     echo "$begin"
-    python3.9 ./linear_regression_real/code_decor/car.py
+    python3.9 ./neural_network/car.py
     killall -9 python3.9
 
     # Renaming

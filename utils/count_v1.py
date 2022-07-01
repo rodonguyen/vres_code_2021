@@ -19,7 +19,6 @@ def extract_trace_v1(traces_dirs,
 
     if with_tag_functions:
         for path in traces_dirs:
-
             # Write column names
             csv = open(v1_file_output, 'a')
             csv.write('filepath, file no., pop_before_A, push_before_A, sgrow_before_A, sshrink_before_A,' +

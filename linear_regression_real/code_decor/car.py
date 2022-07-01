@@ -10,6 +10,8 @@ def function_end():
 ############################################
 function_start()
 
+# RANDOM_SEED = 42
+
 df = pd.read_csv('dataset_real/car.csv')
 x = df.iloc[:,:-1]
 y = df.iloc[:,-1:]
@@ -19,6 +21,7 @@ regression = linear_model.LinearRegression()
 # Train the model using the training sets
 regression.fit(x, y)
 
+print("Row 1 prediction: " + str(regression.predict(x.iloc[:,0])))
 print("Dataset shape: \n", df.shape)
 
 function_end()

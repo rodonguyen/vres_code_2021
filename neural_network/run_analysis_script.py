@@ -11,10 +11,14 @@ from plot_histogram import *
 ########################################################
 
 paths = (
-    'neural_network/trace_car'
+    'neural_network/trace_car/',
+    'neural_network/trace_car/',
+    'neural_network/trace_car/',
+    'neural_network/trace_car/',
+    'neural_network/trace_car/',
 )
-v1_file = './count_result/stack_trace_xxx.csv'
-v2_file = './count_result/stack_trace_xxx_v2.json'
+v1_file = 'count_result/stack_trace_nn_xx.csv'
+v2_file = 'count_result/stack_trace_nn_xx_v2.json'
 histogram_filename_head = 'histogram_xxx_'
 
 
