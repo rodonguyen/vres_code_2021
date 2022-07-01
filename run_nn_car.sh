@@ -6,17 +6,17 @@ rm -r linear_regression_real/trace*
 
 # Create directories to store traces
 
-dir001="trace_car_noRandomX"
+dir001="trace_car_noRandom"
 mkdir neural_network/$dir001
 
-run_num=0
+run_num=120
 
 # Prompt filename and execute the file using vPython / python3.9
 # Make sure the files are in consecutively-numbered ascending order to have the renaming done correctly. 
 # Otherwise, the renaming will be a mess.
 
 ################################ CAR #################################
-for (( i=1; i<=$run_num; i++ ))
+for (( i=110; i<=$run_num; i++ ))
 do
     begin=$(printf "Executing car.py (%03d)" "$i")
     echo "_____________________"
@@ -33,5 +33,5 @@ done
 # Move all trace files to a folder
 mv vpython*.txt neural_network/$dir001
 
-python3.8 neural_network/run_analysis_script.py
+# python3.8 neural_network/run_analysis_script.py
 spd-say done
