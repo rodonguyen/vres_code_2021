@@ -10,16 +10,15 @@ from plot_histogram import *
 ########################################################
 
 paths = (
-    # 'neural_network/trace_car_noRandom/',
-    'neural_network/trace_car/',
-    # 'neural_network/trace_car/',
-    # 'neural_network/trace_car/',
-    # 'neural_network/trace_car/',
-    # 'neural_network/trace_car/',
+    'linear_regression_real/trace_car_testResult/',
+    # 'linear_regression_real/trace_diabetes_only/',
+    # 'linear_regression_real/trace_energy_only/',
+    # 'linear_regression_real/trace_house_only/',
+    # 'linear_regression_real/trace_medical_only/'
 )
-v1_file = 'count_result/stack_trace_nn_noRandom.csv'
-v2_file = 'count_result/stack_trace_nn_noRandom_v2.json'
-histogram_filename_head = 'histogram_noRandom_'
+v1_file = './count_result/stack_trace_testResult.csv'
+v2_file = './count_result/stack_trace_testResult_v2.json'
+histogram_filename_head = 'histogram_testResult_'
 
 
 ########################################################
