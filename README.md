@@ -30,7 +30,6 @@
 - `top` to view memory dashboard
 
 ## Todos
-
 - Now: Check prediction results if there is randomness, then check traces
 - New data
 - New model: SVM, cknn, RF, bayes (nope, because this is regression problem)
