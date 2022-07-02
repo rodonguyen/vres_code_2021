@@ -10,7 +10,7 @@ from plot_histogram import *
 ########################################################
 
 paths = (
-    # 'neural_network/trace_car_noRandom/',
+    'neural_network/trace_car_noRandom/',
     # 'neural_network/trace_car_withRandom/',
     # 'neural_network/trace_car/',
     # 'neural_network/trace_car/',
