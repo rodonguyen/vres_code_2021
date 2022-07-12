@@ -12,7 +12,7 @@ def function_end():
 ############################################
 function_start()
 
-# torch.random.manual_seed(42)
+torch.random.manual_seed(42)
 
 data = np.loadtxt('dataset_real/car.csv', dtype=np.float32, delimiter=',', skiprows=1)
 X = torch.from_numpy(data[:,1:-1])
@@ -42,7 +42,8 @@ for t in range(100):
     loss.backward()
     optimizer.step()
 
-print('Predict row 1: ' + str(net(X[0])))
+print('Predict:\n' + str(net(X[0:5])))
+print('Actual:\n' + str(y[0:5]))
 print(data.shape, X.shape, y.shape)
 
 function_end()

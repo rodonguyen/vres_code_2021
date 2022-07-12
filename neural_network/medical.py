@@ -12,7 +12,7 @@ def function_end():
 ############################################
 function_start()
 
-# torch.random.manual_seed(42)
+torch.random.manual_seed(42)
 
 data = np.loadtxt('dataset_real/medical.csv', dtype=np.float32, delimiter=',', skiprows=1)
 X = torch.from_numpy(data[:,:-1])
