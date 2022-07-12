@@ -11,8 +11,8 @@ from plot_histogram import *
 
 # Trace directories created in our bash script
 paths = (
-    'neural_network/trace_car_noRandom/',
-    'neural_network/trace_diabetes_noRandom/',
+    # 'neural_network/trace_car_noRandom/',
+    # 'neural_network/trace_diabetes_noRandom/',
     'neural_network/trace_energy_noRandom/',
     'neural_network/trace_house_noRandom/',
     'neural_network/trace_medical_noRandom/',
