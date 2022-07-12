@@ -12,7 +12,7 @@ def function_end():
 ############################################
 function_start()
 
-# torch.random.manual_seed(42)
+torch.random.manual_seed(42)
 
 X, y = datasets.load_diabetes(return_X_y=True)
 X = torch.from_numpy(X).float()
