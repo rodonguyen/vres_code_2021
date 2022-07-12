@@ -42,7 +42,8 @@ for t in range(100):
     loss.backward()
     optimizer.step()
 
-print('Predict row 1: ' + str(net(X[0])))
+print('Predict row 1:\n' + str(net(X[0:5])))
+print('Actual row 1:\n' + str(y[0:5]))
 print(data.shape, X.shape, y.shape)
 
 function_end()

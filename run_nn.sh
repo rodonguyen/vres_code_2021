@@ -16,7 +16,7 @@ mkdir neural_network/$dir003
 mkdir neural_network/$dir004
 mkdir neural_network/$dir005
 
-run_num=1
+run_num=120
 
 # Prompt filename and execute the file using vPython / python3.9
 # Make sure the files are in consecutively-numbered ascending order to have the renaming done correctly. 
