@@ -9,15 +9,17 @@ from plot_histogram import *
 ################# Change these variables ###############
 ########################################################
 
+# Trace directories created in our bash script
 paths = (
     'neural_network/trace_car_noRandom/',
+    'neural_network/trace_diabetes_noRandom/',
+    'neural_network/trace_energy_noRandom/',
+    'neural_network/trace_house_noRandom/',
+    'neural_network/trace_medical_noRandom/',
     # 'neural_network/trace_car_withRandom/',
-    # 'neural_network/trace_car/',
-    # 'neural_network/trace_car/',
-    # 'neural_network/trace_car/',
-    # 'neural_network/trace_car/',
-    # 'neural_network/trace_car/',
 )
+
+# Define filenames to store results
 v1_file = 'count_result/stack_trace_nn_noRandom.csv'
 v2_file = 'count_result/stack_trace_nn_noRandom_v2.json'
 histogram_filename_head = 'histogram_nn_noRandom_'
@@ -36,4 +38,6 @@ convert_v1_to_v2(v1_file_input=v1_file,
                  v2_file_output=v2_file)
 
 plot_histogram_1by1(v2_file, histogram_filename_head)
+
+
 
