@@ -33,7 +33,7 @@ net = Net()
 criterion = nn.MSELoss()
 optimizer = torch.optim.Adam(net.parameters(), lr=0.01)
 
-for t in range(50):
+for t in range(33):
     y_pred = net(X)
     loss = criterion(y_pred, y)
 

@@ -1,4 +1,3 @@
-import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -37,7 +36,6 @@ optimizer = torch.optim.Adam(net.parameters(), lr=0.01)
 for t in range(10):
     y_pred = net(X)
     loss = criterion(y_pred, y)
-    # print(t, loss.item())
 
     optimizer.zero_grad()
     loss.backward()
