@@ -12,7 +12,7 @@ def function_end():
 ############################################
 function_start()
 
-torch.random.manual_seed(42)
+torch.random.manual_seed(40)
 
 data = np.loadtxt('dataset_real/medical.csv', dtype=np.float32, delimiter=',', skiprows=1)
 X = torch.from_numpy(data[:,:-1])
@@ -33,7 +33,7 @@ net = Net()
 criterion = nn.MSELoss()
 optimizer = torch.optim.Adam(net.parameters(), lr=0.01)
 
-for t in range(33):
+for t in range(8):
     y_pred = net(X)
     loss = criterion(y_pred, y)
     # print(t, loss.item())

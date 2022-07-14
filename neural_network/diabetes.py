@@ -12,7 +12,7 @@ def function_end():
 ############################################
 function_start()
 
-torch.random.manual_seed(42)
+torch.random.manual_seed(40)
 
 X, y = datasets.load_diabetes(return_X_y=True)
 X = torch.from_numpy(X).float()
@@ -33,7 +33,7 @@ net = Net()
 criterion = nn.MSELoss()
 optimizer = torch.optim.Adam(net.parameters(), lr=0.01)
 
-for t in range(10):
+for t in range(8):
     y_pred = net(X)
     loss = criterion(y_pred, y)
 

@@ -11,26 +11,28 @@ from plot_histogram import *
 
 # Trace directories created in our bash script
 paths = (
-    # 'neural_network/trace_car_noRandom/',
-    # 'neural_network/trace_diabetes_noRandom/',
-    # 'neural_network/trace_energy_noRandom/',
-    # 'neural_network/trace_house_noRandom/',
-    # 'neural_network/trace_medical_noRandom/',
+    'neural_network/trace_car/',
+    'neural_network/trace_diabetes/',
+    'neural_network/trace_energy/',
+    'neural_network/trace_house/',
+    'neural_network/trace_medical/',
+
     # 'neural_network/trace_car_withRandom/',
     # 'neural_network/trace_diabetes_withRandom/',
     # 'neural_network/trace_energy_withRandom/',
     # 'neural_network/trace_house_withRandom/',
-    'neural_network/trace_medical_withRandom/',
+    # 'neural_network/trace_medical_withRandom/',
 )
 
 # Define filenames to store results
-# v1_file = 'count_result/stack_trace_nn_noRandom.csv'
-# v2_file = 'count_result/stack_trace_nn_noRandom_v2.json'
-# histogram_filename_head = 'histogram_nn_noRandom_'
+topic = 'withRandom_40_forLoop_8'
+v1_file = f"count_result/stack_trace_nn_{topic}.csv"
+v2_file = f"count_result/stack_trace_nn_{topic}_v2.json"
+histogram_filename_head = f"histogram_nn_{topic}_"
 
-v1_file = 'count_result/stack_trace_nn_withRandom.csv'
-v2_file = 'count_result/stack_trace_nn_withRandom_v2.json'
-histogram_filename_head = 'histogram_nn_withRandom_'
+# v1_file = 'count_result/stack_trace_nn_withRandom.csv'
+# v2_file = 'count_result/stack_trace_nn_withRandom_v2.json'
+# histogram_filename_head = 'histogram_nn_withRandom_'
 
 
 ########################################################

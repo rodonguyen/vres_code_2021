@@ -30,6 +30,8 @@
 - `top` to view memory dashboard
 
 ## Todos
-- Now: Check prediction results if there is randomness, then check traces
+- Now: 
+  - No random, random 10, 20, 30, 40
+  - 'for' loop 32, 16, 8 times
 - New data
 - New model: SVM, cknn, RF, bayes (nope, because this is regression problem)
