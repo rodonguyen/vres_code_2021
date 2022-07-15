@@ -4,18 +4,17 @@
 rm -f vpython*.txt
 
 # Create directories to store traces
+dir010="programs/neural_network/trace_car"
+dir020="programs/neural_network/trace_diabetes"
+dir030="programs/neural_network/trace_energy"
+dir040="programs/neural_network/trace_house"
+dir050="programs/neural_network/trace_medical"
 
-dir001="trace_car"
-dir002="trace_diabetes"
-dir003="trace_energy"
-dir004="trace_house"
-dir005="trace_medical"
-
-mkdir neural_network/$dir001
-mkdir neural_network/$dir002
-mkdir neural_network/$dir003
-mkdir neural_network/$dir004
-mkdir neural_network/$dir005
+mkdir $dir010
+mkdir $dir020
+mkdir $dir030
+mkdir $dir040
+mkdir $dir050
 
 run_num=10
 
@@ -29,7 +28,7 @@ do
     begin=$(printf "Executing car.py (%03d)" "$i")
     echo "_____________________"
     echo "$begin"
-    python3.9 ./neural_network/car.py
+    python3.9 ./programs/neural_network/car.py
     killall -9 python3.9
 
     # Renaming
@@ -39,7 +38,7 @@ do
     echo 
 done
 # Move all trace files to a folder
-mv vpython*.txt neural_network/$dir001
+mv vpython*.txt $dir010
 
 
 ############################### DIABETES #################################
@@ -48,7 +47,7 @@ do
     begin=$(printf "Executing diabetes.py (%03d)" "$i")
     echo "_____________________"
     echo "$begin"
-    python3.9 ./neural_network/diabetes.py
+    python3.9 ./programs/neural_network/diabetes.py
     killall -9 python3.9
 
     # Renaming
@@ -58,7 +57,7 @@ do
     echo 
 done
 # Move all trace files to a folder
-mv vpython*.txt neural_network/$dir002
+mv vpython*.txt $dir020
 
 
 ############################### ENERGY #################################
@@ -67,7 +66,7 @@ do
     begin=$(printf "Executing energy.py (%03d)" "$i")
     echo "_____________________"
     echo "$begin"
-    python3.9 ./neural_network/energy.py
+    python3.9 ./programs/neural_network/energy.py
     killall -9 python3.9
 
     # Renaming
@@ -77,7 +76,7 @@ do
     echo 
 done
 # Move all trace files to a folder
-mv vpython*.txt neural_network/$dir003
+mv vpython*.txt $dir030
 
 
 ############################## HOUSE ###################################
@@ -86,7 +85,7 @@ do
     begin=$(printf "Executing house.py (%03d)" "$i")
     echo "_____________________"
     echo "$begin"
-    python3.9 ./neural_network/house.py
+    python3.9 ./programs/neural_network/house.py
     killall -9 python3.9
 
     # Renaming
@@ -96,7 +95,7 @@ do
     echo 
 done
 # Move all trace files to a folder
-mv vpython*.txt neural_network/$dir004
+mv vpython*.txt $dir040
 
 
 
@@ -106,7 +105,7 @@ do
     begin=$(printf "Executing medical.py (%03d)" "$i")
     echo "_____________________"
     echo "$begin"
-    python3.9 ./neural_network/medical.py
+    python3.9 ./programs/neural_network/medical.py
     killall -9 python3.9
 
     # Renaming
@@ -116,7 +115,7 @@ do
     echo 
 done
 # Move all trace files to a folder
-mv vpython*.txt neural_network/$dir005
+mv vpython*.txt $dir050
 
 
 python3.8 neural_network/run_analysis_script.py

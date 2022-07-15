@@ -14,7 +14,8 @@ function_start()
 
 torch.random.manual_seed(40)
 
-data = np.loadtxt('dataset_real/energy.csv', dtype=np.float32, delimiter=',', skiprows=1)
+
+data = np.loadtxt('data/reg/house.csv', dtype=np.float32, delimiter=',', skiprows=1)
 X = torch.from_numpy(data[:,:-1])
 y = torch.from_numpy(data[:,-1:])
 
@@ -22,7 +23,7 @@ class Net(nn.Module):
     def __init__(self):
         super(Net, self).__init__()
         self.fc1 = nn.Linear(X.shape[1], 50)
-        self.fc2 = nn.Linear(50, y.shape[1])
+        self.fc2 = nn.Linear(50, 1)
 
     def forward(self, x):
         x = F.relu(self.fc1(x))
@@ -31,7 +32,7 @@ class Net(nn.Module):
 
 net = Net()
 criterion = nn.MSELoss()
-optimizer = torch.optim.Adam(net.parameters(), lr=0.005)
+optimizer = torch.optim.Adam(net.parameters(), lr=0.01)
 
 for t in range(8):
     y_pred = net(X)

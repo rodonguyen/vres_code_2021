@@ -24,7 +24,7 @@ do
     begin=$(printf "Executing car.py (%03d)" "$i")
     echo "_____________________"
     echo "$begin"
-    python3.9 ./linear_regression_real/code_decor/car.py
+    python3.9 ./programs/linear_regression/ode_decor/car.py
     killall -9 python3.9
 
     # Renaming
@@ -43,7 +43,7 @@ do
     begin=$(printf "Executing diabetes.py (%03d)" "$i")
     echo "_____________________"
     echo "$begin"
-    python3.9 ./linear_regression_real/code_decor/diabetes.py
+    python3.9 ./programs/linear_regression/ode_decor/diabetes.py
     killall -9 python3.9
 
     # Renaming
@@ -62,7 +62,7 @@ do
     begin=$(printf "Executing energy.py (%03d)" "$i")
     echo "_____________________"
     echo "$begin"
-    python3.9 ./linear_regression_real/code_decor/energy.py
+    python3.9 ./programs/linear_regression/ode_decor/energy.py
     killall -9 python3.9
 
     # Renaming
@@ -81,7 +81,7 @@ do
     begin=$(printf "Executing house.py (%03d)" "$i")
     echo "_____________________"
     echo "$begin"
-    python3.9 ./linear_regression_real/code_decor/house.py
+    python3.9 ./programs/linear_regression/ode_decor/house.py
     killall -9 python3.9
 
     # Renaming
@@ -100,7 +100,7 @@ do
     begin=$(printf "Executing medical.py (%03d)" "$i")
     echo "_____________________"
     echo "$begin"
-    python3.9 ./linear_regression_real/code_decor/medical.py
+    python3.9 ./programs/linear_regression/ode_decor/medical.py
     killall -9 python3.9
 
     # Renaming
