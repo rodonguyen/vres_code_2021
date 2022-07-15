@@ -1,0 +1,31 @@
+filepath, file no., pop_before_A, push_before_A, sgrow_before_A, sshrink_before_A,pop_in_A, push_in_A, sgrow_in_A, sshrink_in_A,pop_after_A, push_after_A, sgrow_after_A, sshrink_after_A,pop_total, push_total, sgrow_total, sshrink_total
+filepath, file no., pop_before_A, push_before_A, sgrow_before_A, sshrink_before_A,pop_in_A, push_in_A, sgrow_in_A, sshrink_in_A,pop_after_A, push_after_A, sgrow_after_A, sshrink_after_A,pop_total, push_total, sgrow_total, sshrink_total
+programs/cknn/trace_cancer/vpython1_001.txt,001,2330556,4242210,132,159231,69316,135327,6,3976,189,340,0,18,2400061,4377877,138,163225
+
+
+
+filepath, file no., pop_before_A, push_before_A, sgrow_before_A, sshrink_before_A,pop_in_A, push_in_A, sgrow_in_A, sshrink_in_A,pop_after_A, push_after_A, sgrow_after_A, sshrink_after_A,pop_total, push_total, sgrow_total, sshrink_total
+programs/cknn/trace_wine_bin/vpython2_001.txt,001,2330541,4242185,132,159231,812187,1477623,9,24406,189,340,0,18,3142917,5720148,141,183655
+
+
+
+filepath, file no., pop_before_A, push_before_A, sgrow_before_A, sshrink_before_A,pop_in_A, push_in_A, sgrow_in_A, sshrink_in_A,pop_after_A, push_after_A, sgrow_after_A, sshrink_after_A,pop_total, push_total, sgrow_total, sshrink_total
+programs/cknn/trace_wine_multi/vpython3_001.txt,001,2330532,4242170,132,159231,812183,1477617,9,24406,189,340,0,18,3142904,5720127,141,183655
+
+
+
+filepath, file no., pop_before_A, push_before_A, sgrow_before_A, sshrink_before_A,pop_in_A, push_in_A, sgrow_in_A, sshrink_in_A,pop_after_A, push_after_A, sgrow_after_A, sshrink_after_A,pop_total, push_total, sgrow_total, sshrink_total
+programs/svm/trace_cancer/vpython4_001.txt,001,2306538,4200041,124,157702,22669,45355,4,1182,189,340,0,18,2329396,4245736,128,158902
+
+
+
+filepath, file no., pop_before_A, push_before_A, sgrow_before_A, sshrink_before_A,pop_in_A, push_in_A, sgrow_in_A, sshrink_in_A,pop_after_A, push_after_A, sgrow_after_A, sshrink_after_A,pop_total, push_total, sgrow_total, sshrink_total
+programs/svm/trace_wine_bin/vpython5_001.txt,001,2306553,4200066,124,157702,706593,1275762,7,18643,189,340,0,18,3013335,5476168,131,176363
+
+
+
+filepath, file no., pop_before_A, push_before_A, sgrow_before_A, sshrink_before_A,pop_in_A, push_in_A, sgrow_in_A, sshrink_in_A,pop_after_A, push_after_A, sgrow_after_A, sshrink_after_A,pop_total, push_total, sgrow_total, sshrink_total
+programs/svm/trace_wine_multi/vpython6_001.txt,001,2306562,4200081,124,157702,706591,1275757,7,18641,189,340,0,18,3013342,5476178,131,176361
+
+
+
