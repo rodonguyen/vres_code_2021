@@ -2,8 +2,8 @@
 
 # Clean vPython.txt in current directory and targeted trace dirs
 rm -f vpython*.txt
-# rm -r programs/cknn/trace_*
-# rm -r programs/svm/trace_*
+rm -r programs/cknn/trace_*
+rm -r programs/svm/trace_*
 
 # Create directories to store traces
 dir001="programs/cknn/trace_cancer"
@@ -27,7 +27,7 @@ mkdir $dir004
 mkdir $dir005
 mkdir $dir006
 
-run_num=1
+run_num=10
 
 # Prompt filename and execute the file using vPython / python3.9
 # Make sure the files are in consecutively-numbered ascending order to have the renaming done correctly. 
@@ -36,7 +36,7 @@ run_num=1
 ################################ 1 #################################
 for (( i=1; i<=$run_num; i++ ))
 do
-    begin=$(printf "Executing1 cancer.py (%03d)" "$i")
+    begin=$(printf "Executing $program001 (%03d)" "$i")
     echo "_____________________"
     echo "$begin"
     python3.9 $program001
@@ -51,11 +51,10 @@ done
 # Move all trace files to a folder
 mv vpython*.txt $dir001
 
-
 ############################### 2 #################################
 for (( i=1; i<=$run_num; i++ ))
 do
-    begin=$(printf "Executing 2 cknn wine_bin.py (%03d)" "$i")
+    begin=$(printf "Executing $program002 (%03d)" "$i")
     echo "_____________________"
     echo "$begin"
     python3.9 $program002
@@ -70,11 +69,10 @@ done
 # Move all trace files to a folder
 mv vpython*.txt $dir002
 
-
 ############################### 3 #################################
 for (( i=1; i<=$run_num; i++ ))
 do
-    begin=$(printf "Executing 3 wine_multi.py (%03d)" "$i")
+    begin=$(printf "Executing $program003 (%03d)" "$i")
     echo "_____________________"
     echo "$begin"
     python3.9 $program003
@@ -90,12 +88,10 @@ done
 mv vpython*.txt $dir003
 
 
-
-
 ################################ 4 #################################
 for (( i=1; i<=$run_num; i++ ))
 do
-    begin=$(printf "Executing 4 cancer.py (%03d)" "$i")
+    begin=$(printf "Executing $program004 (%03d)" "$i")
     echo "_____________________"
     echo "$begin"
     python3.9 $program004
@@ -110,11 +106,10 @@ done
 # Move all trace files to a folder
 mv vpython*.txt $dir004
 
-
 ############################### 5 #################################
 for (( i=1; i<=$run_num; i++ ))
 do
-    begin=$(printf "Executing 5 wine_bin.py (%03d)" "$i")
+    begin=$(printf "Executing $program005 (%03d)" "$i")
     echo "_____________________"
     echo "$begin"
     python3.9 $program005
@@ -129,11 +124,10 @@ done
 # Move all trace files to a folder
 mv vpython*.txt $dir005
 
-
 ############################### 6 #################################
 for (( i=1; i<=$run_num; i++ ))
 do
-    begin=$(printf "Executing 6 wine_multi.py (%03d)" "$i")
+    begin=$(printf "Executing $program006 (%03d)" "$i")
     echo "_____________________"
     echo "$begin"
     python3.9 $program006
@@ -148,5 +142,6 @@ done
 # Move all trace files to a folder
 mv vpython*.txt $dir006
 
-# python3.8 cknn/run_analysis_script.py
+
+# python3.8 programs/run_analysis_script.py
 spd-say done

@@ -13,7 +13,7 @@ def function_end():
 ############################################
 function_start()
 
-RANDOM_STATE = 10
+RANDOM_STATE = 40
 KERNEL = 'rbf'
 C = 100
 GAMMA = 0.01
@@ -29,7 +29,7 @@ X = (X - mu) / sigma
 
 
 X_train, X_test, Y_train, Y_test = sklearn.model_selection.train_test_split(
-                                    X, Y, test_size=0.6, random_state=RANDOM_STATE)
+                                    X, Y, test_size=0.6) #, random_state=RANDOM_STATE)
 svm = sklearn.svm.SVC(C=C, gamma=GAMMA, kernel=KERNEL)
 svm.fit(X_train, Y_train)
 

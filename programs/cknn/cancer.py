@@ -13,7 +13,7 @@ def function_end():
 ############################################
 function_start()
 
-RANDOM_STATE = 10
+RANDOM_STATE = 40
 N_NEIGHBORS = 10
 WEIGHTS = 'uniform'
 
@@ -27,7 +27,7 @@ X = (X - mu) / sigma
 
 
 X_train, X_test, Y_train, Y_test = sklearn.model_selection.train_test_split(
-                                    X, Y, test_size=0.6, random_state=RANDOM_STATE)
+                                    X, Y, test_size=0.6) #, random_state=RANDOM_STATE)
 cknn = sklearn.neighbors.KNeighborsClassifier(n_neighbors=N_NEIGHBORS, weights=WEIGHTS)
 cknn.fit(X_train, Y_train)
 
