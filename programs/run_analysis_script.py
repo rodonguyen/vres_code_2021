@@ -9,18 +9,24 @@ from plot_histogram import *
 ########################################################
 
 paths = (
-    'programs/cknn/trace_cancer/',
-    'programs/cknn/trace_wine_bin/',
-    'programs/cknn/trace_wine_multi/',
-    'programs/svm/trace_cancer/',
-    'programs/svm/trace_wine_bin/',
-    'programs/svm/trace_wine_multi/',
+    # 'programs/cknn/trace_cancer/',
+    # 'programs/cknn/trace_wine_bin/',
+    # 'programs/cknn/trace_wine_multi/',
+    # 'programs/svm/trace_cancer/',
+    # 'programs/svm/trace_wine_bin/',
+    # 'programs/svm/trace_wine_multi/',
+
+    'programs/linear_regression/trace_car/',
+    'programs/linear_regression/trace_energy/',
+    'programs/linear_regression/trace_house/',
+    'programs/linear_regression/trace_medical/',
 )
 
-topic = 'noRandom'
-v1_file = f"count_result/stack_trace_cknnsvm_{topic}.csv"
-v2_file = f"count_result/stack_trace_cknnsvm_{topic}_v2.json"
-histogram_filename_head = f"histogram_cknnsvm_{topic}_"
+topic = 'shortenedData'
+program = 'lr'
+v1_file = f"count_result/stack_trace_{program}_{topic}.csv"
+v2_file = f"count_result/stack_trace_{program}_{topic}_v2.json"
+histogram_filename_head = f"histogram_{program}_{topic}_"
 
 
 ########################################################
@@ -32,7 +38,7 @@ extract_trace_v1(traces_dirs=paths, v1_file_output=v1_file,
                  function_start='function_start', 
                  function_end='function_end')
 
-convert_v1_to_v2(v1_file_input=v1_file, 
-                 v2_file_output=v2_file)
+# convert_v1_to_v2(v1_file_input=v1_file, 
+#                  v2_file_output=v2_file)
 
 # plot_histogram_1by1(v2_file, histogram_filename_head)
