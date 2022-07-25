@@ -21,7 +21,7 @@ mkdir $dir002
 mkdir $dir003
 mkdir $dir004
 
-run_num=10
+run_num=2
 
 # Prompt filename and execute the file using vPython / python3.9
 # Make sure the files are in consecutively-numbered ascending order to have the renaming done correctly. 
@@ -45,61 +45,61 @@ done
 # Move all trace files to a folder
 mv vpython*.txt $dir001
 
-############################### 2 #################################
-for (( i=1; i<=$run_num; i++ ))
-do
-    begin=$(printf "Executing $program002 (%03d)" "$i")
-    echo "_____________________"
-    echo "$begin"
-    python3.9 $program002
-    killall -9 python3.9
+# ############################### 2 #################################
+# for (( i=1; i<=$run_num; i++ ))
+# do
+#     begin=$(printf "Executing $program002 (%03d)" "$i")
+#     echo "_____________________"
+#     echo "$begin"
+#     python3.9 $program002
+#     killall -9 python3.9
 
-    # Renaming
-    new=$(printf "vpython2_%03d.txt" "$i")
-    mv vpython.txt "$new"
-    echo "Renamed to $new"
-    echo 
-done
-# Move all trace files to a folder
-mv vpython*.txt $dir002
+#     # Renaming
+#     new=$(printf "vpython2_%03d.txt" "$i")
+#     mv vpython.txt "$new"
+#     echo "Renamed to $new"
+#     echo 
+# done
+# # Move all trace files to a folder
+# mv vpython*.txt $dir002
 
-############################### 3 #################################
-for (( i=1; i<=$run_num; i++ ))
-do
-    begin=$(printf "Executing $program003 (%03d)" "$i")
-    echo "_____________________"
-    echo "$begin"
-    python3.9 $program003
-    killall -9 python3.9
+# ############################### 3 #################################
+# for (( i=1; i<=$run_num; i++ ))
+# do
+#     begin=$(printf "Executing $program003 (%03d)" "$i")
+#     echo "_____________________"
+#     echo "$begin"
+#     python3.9 $program003
+#     killall -9 python3.9
 
-    # Renaming
-    new=$(printf "vpython3_%03d.txt" "$i")
-    mv vpython.txt "$new"
-    echo "Renamed to $new"
-    echo 
-done
-# Move all trace files to a folder
-mv vpython*.txt $dir003
-
-
-################################ 4 #################################
-for (( i=1; i<=$run_num; i++ ))
-do
-    begin=$(printf "Executing $program004 (%03d)" "$i")
-    echo "_____________________"
-    echo "$begin"
-    python3.9 $program004
-    killall -9 python3.9
-
-    # Renaming
-    new=$(printf "vpython4_%03d.txt" "$i")
-    mv vpython.txt "$new"
-    echo "Renamed to $new"
-    echo 
-done
-# Move all trace files to a folder
-mv vpython*.txt $dir004
+#     # Renaming
+#     new=$(printf "vpython3_%03d.txt" "$i")
+#     mv vpython.txt "$new"
+#     echo "Renamed to $new"
+#     echo 
+# done
+# # Move all trace files to a folder
+# mv vpython*.txt $dir003
 
 
-# python3.8 utils/run_analysis_script.py
+# ################################ 4 #################################
+# for (( i=1; i<=$run_num; i++ ))
+# do
+#     begin=$(printf "Executing $program004 (%03d)" "$i")
+#     echo "_____________________"
+#     echo "$begin"
+#     python3.9 $program004
+#     killall -9 python3.9
+
+#     # Renaming
+#     new=$(printf "vpython4_%03d.txt" "$i")
+#     mv vpython.txt "$new"
+#     echo "Renamed to $new"
+#     echo 
+# done
+# # Move all trace files to a folder
+# mv vpython*.txt $dir004
+
+
+python3.8 programs/run_analysis_script.py
 spd-say done

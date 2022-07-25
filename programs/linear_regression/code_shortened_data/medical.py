@@ -10,7 +10,7 @@ def function_end():
 ############################################
 function_start()
 
-df = pd.read_csv('data/reg/medical_shortened_int.csv')
+df = pd.read_csv('data/reg/medical_shortened_int_4.csv')
 x = df.iloc[:,:-1]
 y = df.iloc[:,-1]
 

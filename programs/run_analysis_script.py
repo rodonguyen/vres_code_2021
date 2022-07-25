@@ -22,7 +22,7 @@ paths = (
     'programs/linear_regression/trace_medical/',
 )
 
-topic = 'shortenedDataInteger'
+topic = 'shortenedDataInteger_10'
 program = 'lr'
 v1_file = f"count_result/stack_trace_{program}_{topic}.csv"
 v2_file = f"count_result/stack_trace_{program}_{topic}_v2.json"
