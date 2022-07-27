@@ -6,7 +6,7 @@ dataset*/dataset_2*.csv
 !dataset*/dataset_2.csv
 !dataset*/dataset_2_pandas.csv
 dataset/
-
+/bin
 
 
 # Byte-compiled / optimized / DLL files
