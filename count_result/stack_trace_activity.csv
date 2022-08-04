@@ -1,0 +1,26 @@
+filepgth, file no., pop_before_A, push_before_A, sgrow_before_A, sshrink_before_A,pop_in_A, push_in_A, sgrow_in_A, sshrink_in_A,pop_after_A, push_after_A, sgrow_after_A, sshrink_after_A,pop_total, push_total, sgrow_total, sshrink_total
+programs/activity/v1_svm/trace_pg/vpython1_001.txt,001,2361700,4316796,124,161696,40196,78866,10,1862,186,336,0,17,2402082,4395998,134,163575
+programs/activity/v1_svm/trace_pg/vpython1_002.txt,002,2361700,4316796,124,161696,41381,80177,10,1869,186,336,0,17,2403267,4397309,134,163582
+programs/activity/v1_svm/trace_pg/vpython1_003.txt,003,2361694,4316786,124,161696,52196,91010,10,1870,186,336,0,17,2414076,4408132,134,163583
+programs/activity/v1_svm/trace_pg/vpython1_004.txt,004,2361709,4316811,124,161696,160232,199064,10,1873,186,336,0,17,2522127,4516211,134,163586
+programs/activity/v1_svm/trace_pg/vpython1_005.txt,005,2361757,4316911,124,161699,1241394,1281508,10,1916,186,336,0,17,3603337,5598755,134,163632
+
+filepath, file no., pop_before_A, push_before_A, sgrow_before_A, sshrink_before_A,pop_in_A, push_in_A, sgrow_in_A, sshrink_in_A,pop_after_A, push_after_A, sgrow_after_A, sshrink_after_A,pop_total, push_total, sgrow_total, sshrink_total
+programs/activity/v2_nb/trace_pg/vpython1_001.txt,001,2332699,4265956,124,159735,39120,76008,16,1775,186,336,0,17,2372005,4342300,140,161527
+programs/activity/v2_nb/trace_pg/vpython1_002.txt,002,2332699,4265956,124,159735,40921,78343,18,1796,186,336,0,17,2373806,4344635,142,161548
+programs/activity/v2_nb/trace_pg/vpython1_003.txt,003,2332705,4265966,124,159735,51736,89176,18,1797,186,336,0,17,2384627,4355478,142,161549
+programs/activity/v2_nb/trace_pg/vpython1_004.txt,004,2332693,4265946,124,159735,159772,197230,18,1800,186,336,0,17,2492651,4463512,142,161552
+programs/activity/v2_nb/trace_pg/vpython1_005.txt,005,2332702,4265961,124,159735,1240934,1279674,18,1843,186,336,0,17,3573822,5545971,142,161595
+programs/activity/v2_nb/trace_pg/vpython1_006.txt,006,2332693,4265946,124,159735,12055558,12111424,18,2308,186,336,0,17,14388437,16377706,142,162060
+programs/activity/v2_nb/trace_pg/vpython1_007.txt,007,2332708,4265971,124,159735,120199572,120423482,18,6934,186,336,0,17,122532466,124689789,142,166686
+
+filepath, file no., pop_before_A, push_before_A, sgrow_before_A, sshrink_before_A,pop_in_A, push_in_A, sgrow_in_A, sshrink_in_A,pop_after_A, push_after_A, sgrow_after_A, sshrink_after_A,pop_total, push_total, sgrow_total, sshrink_total
+programs/activity/v3_cknn/trace_pg/vpython1_001.txt,001,2385888,4359213,132,163225,148241,276451,11,5232,186,336,0,17,2534315,4636000,143,168474
+programs/activity/v3_cknn/trace_pg/vpython1_002.txt,002,2385885,4359208,132,163225,43243,83443,11,2096,186,336,0,17,2429314,4442987,143,165338
+programs/activity/v3_cknn/trace_pg/vpython1_003.txt,003,2385903,4359238,132,163225,78358,141256,11,3537,186,336,0,17,2464447,4500830,143,166779
+programs/activity/v3_cknn/trace_pg/vpython1_004.txt,004,2385894,4359223,132,163225,429394,719110,11,17940,186,336,0,17,2815474,5078669,143,181182
+programs/activity/v3_cknn/trace_pg/vpython1_005.txt,005,2385906,4359243,132,163225,3940556,6499554,11,161983,186,336,0,17,6326648,10859133,143,325225
+programs/activity/v3_cknn/trace_pg/vpython1_006.txt,006,2385888,4359213,132,163225,39055180,64311304,11,1602448,186,336,0,17,41441254,68670853,143,1765690
+
+
+

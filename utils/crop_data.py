@@ -12,4 +12,4 @@ for row_num in my_list:
 df = pandas.read_csv('data/activity/Phones_accelerometer.csv')
 for row_num in my_list:
     df_crop = df.sample(n=row_num, axis=0, replace=False, ignore_index=True, random_state=10)
-    df_crop.to_csv(f"data/activity/pg_{row_num}.csv", index=False)
+    df_crop.to_csv(f"data/activity/pa_{row_num}.csv", index=False)

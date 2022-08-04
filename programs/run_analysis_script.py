@@ -21,11 +21,11 @@ paths = (
     # 'programs/linear_regression/trace_house/',
     # 'programs/linear_regression/trace_medical/',
 
-    'programs/activity/trace_pa/',
+    'programs/activity/v2_nb/trace_pg/',
 )
 
-topic = 'activity_pa_svm'
-program = 'lr'
+topic = 'activity'
+program = ''
 v1_file = f"count_result/stack_trace_{program}_{topic}.csv"
 v2_file = f"count_result/stack_trace_{program}_{topic}_v2.json"
 histogram_filename_head = f"histogram_{program}_{topic}_"
