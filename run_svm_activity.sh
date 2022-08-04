@@ -3,19 +3,21 @@
 
 # Clean vPython.txt in current directory and targeted trace dirs
 rm -f vpython*.txt
-rm -r programs/svm_activity/trace_*
+# rm -r programs/activity/trace_*
 
 # Create directories to store traces
-dir001="programs/svm_activity/trace_pa"
-dir002="programs/svm_activity/trace_pg"
+base_dir="programs/activity/v3_cknn/"
 
-program001="./programs/svm_activity/activity_01.py"
-program002="./programs/svm_activity/activity_02.py"
-program003="./programs/svm_activity/activity_03.py"
-program004="./programs/svm_activity/activity_04.py"
-program005="./programs/svm_activity/activity_05.py"
-program006="./programs/svm_activity/activity_06.py"
-program007="./programs/svm_activity/activity_07.py"
+dir001=$base_dir"trace_pa"
+dir002=$base_dir"trace_pg"
+
+program001=$base_dir"activity_01.py"
+program002=$base_dir"activity_02.py"
+program003=$base_dir"activity_03.py"
+program004=$base_dir"activity_04.py"
+program005=$base_dir"activity_05.py"
+program006=$base_dir"activity_06.py"
+program007=$base_dir"activity_07.py"
 
 mkdir $dir001
 mkdir $dir002

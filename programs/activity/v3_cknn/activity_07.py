@@ -1,7 +1,7 @@
 import pandas
 import sklearn
 import sklearn.model_selection
-from sklearn.naive_bayes import GaussianNB
+import sklearn.neighbors
 
 
 def function_start():
@@ -13,9 +13,10 @@ def function_end():
 ############################################
 function_start()
 RANDOM_STATE = 10
+N_NEIGHBORS = 5
+WEIGHTS = 'uniform'
 
-
-df = pandas.read_csv('data/activity/pa_10.csv')
+df = pandas.read_csv('data/activity/pa_10000000.csv')
 # Transform strings to integers
 label_encoder = sklearn.preprocessing.LabelEncoder()
 label_encoder.fit(df.loc[:,'User'])
@@ -36,15 +37,13 @@ Y = df['gt']
 
 # Train
 X_train, X_test, Y_train, Y_test = sklearn.model_selection.train_test_split(
-                                    X, Y, test_size=0.2, random_state=RANDOM_STATE)
-gnb = GaussianNB()
-gnb.fit(X_train, Y_train)
-
+                                        X, Y, test_size=0.2, random_state=RANDOM_STATE)
+cknn = sklearn.neighbors.KNeighborsClassifier(n_neighbors=N_NEIGHBORS, weights=WEIGHTS)
+cknn.fit(X_train, Y_train)
 
 # Evaluate
-pred = gnb.predict(X_test.iloc[0:99,:])
-print(pred)
-# print('Test Set Performance: ' + str(sum(pred == Y_test)/len(Y_test)))
+pred = cknn.predict(X_test)
+print('Test Set Performance: ' + str(sum(pred == Y_test)/len(Y_test)))
 
 
 function_end()

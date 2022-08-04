@@ -137,19 +137,4 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-data/activity/pa_10000000.csv
-data/activity/pa_1000000.csv
-data/activity/pg_10000000.csv
-data/activity/pg_1000000.csv
-data/activity/pg_100000.csv
-data/activity/pg_10000.csv
-data/activity/pg_1000.csv
-data/activity/pa_100000.csv
-data/activity/pa_10000.csv
-data/activity/pa_1000.csv
-data/activity/pa_100.csv
-data/activity/pg_100.csv
-data/activity/Phones_gyroscope.csv
-data/activity/Watch_accelerometer.csv
-data/activity/Phones_accelerometer.csv
-data/activity/Watch_gyroscope.csv
+data/activity

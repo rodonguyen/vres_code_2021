@@ -16,13 +16,15 @@ paths = (
     # 'programs/svm/trace_wine_bin/',
     # 'programs/svm/trace_wine_multi/',
 
-    'programs/linear_regression/trace_car/',
-    'programs/linear_regression/trace_energy/',
-    'programs/linear_regression/trace_house/',
-    'programs/linear_regression/trace_medical/',
+    # 'programs/linear_regression/trace_car/',
+    # 'programs/linear_regression/trace_energy/',
+    # 'programs/linear_regression/trace_house/',
+    # 'programs/linear_regression/trace_medical/',
+
+    'programs/activity/trace_pa/',
 )
 
-topic = 'shortenedDataInteger_10'
+topic = 'activity_pa_svm'
 program = 'lr'
 v1_file = f"count_result/stack_trace_{program}_{topic}.csv"
 v2_file = f"count_result/stack_trace_{program}_{topic}_v2.json"

@@ -1,0 +1,9 @@
+filepgth, file no., pop_before_A, push_before_A, sgrow_before_A, sshrink_before_A,pop_in_A, push_in_A, sgrow_in_A, sshrink_in_A,pop_after_A, push_after_A, sgrow_after_A, sshrink_after_A,pop_total, push_total, sgrow_total, sshrink_total
+programs/activity/trace_pg/vpython1_001.txt,001,2361700,4316796,124,161696,40196,78866,10,1862,186,336,0,17,2402082,4395998,134,163575
+programs/activity/trace_pg/vpython1_002.txt,002,2361700,4316796,124,161696,41381,80177,10,1869,186,336,0,17,2403267,4397309,134,163582
+programs/activity/trace_pg/vpython1_003.txt,003,2361694,4316786,124,161696,52196,91010,10,1870,186,336,0,17,2414076,4408132,134,163583
+programs/activity/trace_pg/vpython1_004.txt,004,2361709,4316811,124,161696,160232,199064,10,1873,186,336,0,17,2522127,4516211,134,163586
+programs/activity/trace_pg/vpython1_005.txt,005,2361757,4316911,124,161699,1241394,1281508,10,1916,186,336,0,17,3603337,5598755,134,163632
+
+
+
