@@ -18,7 +18,7 @@ GAMMA = 0.1
 MAX_ITER = -1
 
 
-df = pandas.read_csv('data/activity/pa_10.csv')
+df = pandas.read_csv('data/activity/pa_100000.csv')
 # Transform strings to integers
 label_encoder = sklearn.preprocessing.LabelEncoder()
 label_encoder.fit(df.loc[:,'User'])
@@ -39,17 +39,18 @@ Y = df['gt']
 X_train, X_test, Y_train, Y_test = sklearn.model_selection.train_test_split(
                                     X, Y, test_size=0.4, random_state=RANDOM_STATE)
 
-# Standardise
-mu = numpy.mean(X_train.loc[:,'x':'z'], axis=1)
-sigma = numpy.std(X_train.loc[:,'x':'z'])
-X_train.loc[:,'x':'z'] = (X_train.loc[:,'x':'z'] - mu) / sigma
-X_test.loc[:,'x':'z'] = (X_test.loc[:,'x':'z'] - mu) / sigma
+# # Standardise
+# mu = numpy.mean(X_train.loc[:,'x':'z'], axis=1)
+# sigma = numpy.std(X_train.loc[:,'x':'z'])
+# X_train.loc[:,'x':'z'] = (X_train.loc[:,'x':'z'] - mu) / sigma
+# X_test.loc[:,'x':'z'] = (X_test.loc[:,'x':'z'] - mu) / sigma
 
 # Train
 X_train, X_test, Y_train, Y_test = sklearn.model_selection.train_test_split(
                                     X, Y, test_size=0.2, random_state=RANDOM_STATE)
 svm = sklearn.svm.SVC(C=1, gamma=GAMMA, kernel=KERNEL,  max_iter=MAX_ITER)
 svm.fit(X_train, Y_train)
+
 
 
 # Evaluate

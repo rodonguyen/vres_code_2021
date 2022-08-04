@@ -4,6 +4,7 @@ import sklearn
 import sklearn.model_selection
 import sklearn.svm
 
+
 def function_start():
     print('---')
 
@@ -17,8 +18,7 @@ KERNEL = 'rbf'
 GAMMA = 0.1
 MAX_ITER = -1
 
-
-df = pandas.read_csv('data/activity/pa_10.csv')
+df = pandas.read_csv('data/activity/pa_10000000.csv')
 # Transform strings to integers
 label_encoder = sklearn.preprocessing.LabelEncoder()
 label_encoder.fit(df.loc[:,'User'])
@@ -39,11 +39,11 @@ Y = df['gt']
 X_train, X_test, Y_train, Y_test = sklearn.model_selection.train_test_split(
                                     X, Y, test_size=0.4, random_state=RANDOM_STATE)
 
-# Standardise
-mu = numpy.mean(X_train.loc[:,'x':'z'], axis=1)
-sigma = numpy.std(X_train.loc[:,'x':'z'])
-X_train.loc[:,'x':'z'] = (X_train.loc[:,'x':'z'] - mu) / sigma
-X_test.loc[:,'x':'z'] = (X_test.loc[:,'x':'z'] - mu) / sigma
+# # Standardise
+# mu = numpy.mean(X_train.loc[:,'x':'z'], axis=1)
+# sigma = numpy.std(X_train.loc[:,'x':'z'])
+# X_train.loc[:,'x':'z'] = (X_train.loc[:,'x':'z'] - mu) / sigma
+# X_test.loc[:,'x':'z'] = (X_test.loc[:,'x':'z'] - mu) / sigma
 
 # Train
 X_train, X_test, Y_train, Y_test = sklearn.model_selection.train_test_split(
@@ -59,3 +59,21 @@ print('Test Set Performance: ' + str(sum(pred == Y_test)/len(Y_test)))
 
 function_end()
 ############################################
+# echo 1 | sudo tee /proc/sys/vm/overcommit_memory
+
+# from sklearn.naive_bayes import GaussianNB
+# gnb = GaussianNB()
+# gnb.fit(X_train, Y_train)
+# # Evaluate
+# pred = svm.predict(X_test)
+# print('Test Set Performance: ' + str(sum(pred == Y_test)/len(Y_test)))
+
+
+# import sklearn.neighbors
+# N_NEIGHBORS = 10
+# WEIGHTS = 'uniform'
+# cknn = sklearn.neighbors.KNeighborsClassifier(n_neighbors=N_NEIGHBORS, weights=WEIGHTS)
+# cknn.fit(X_train, Y_train)
+# # Evaluate
+# pred = cknn.predict(X_test)
+# print('Test Set Performance: ' + str(sum(pred == Y_test)/len(Y_test)))
