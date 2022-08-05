@@ -15,7 +15,7 @@ function_start()
 RANDOM_STATE = 10
 
 
-df = pandas.read_csv('data/activity/pa_10.csv')
+df = pandas.read_csv('data/activity/pg_10.csv')
 # Transform strings to integers
 label_encoder = sklearn.preprocessing.LabelEncoder()
 label_encoder.fit(df.loc[:,'User'])

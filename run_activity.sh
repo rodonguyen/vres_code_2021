@@ -6,13 +6,13 @@ rm -f vpython*.txt
 # rm -r programs/activity/trace_*
 
 # Create directories to store traces
-base_dir="programs/activity/v2_nb/code_pg"
+base_dir="programs/activity/v2_nb/code_pg/"
 
-dir001=$base_dir"trace_pa"
-dir002=$base_dir"trace_pg"
+# dir001="programs/activity/v2_nb/trace_pa"
+# dir002="programs/activity/v2_nb/trace_pg"
 
-mkdir $dir001
-mkdir $dir002
+# mkdir $dir001
+# mkdir $dir002
 
 ###########################################################
 
