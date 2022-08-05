@@ -21,7 +21,7 @@ paths = (
     # 'programs/linear_regression/trace_house/',
     # 'programs/linear_regression/trace_medical/',
 
-    # 'programs/activity/v2_nb/trace_pa/',
+    'programs/activity/v2_nb/trace_pa/',
     'programs/activity/v2_nb/trace_pg/',
 )
 
