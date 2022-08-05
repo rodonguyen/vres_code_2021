@@ -19,7 +19,7 @@ df = pandas.read_csv('data/activity/pg_20.csv')
 
 # Split data
 X = df.iloc[:,:-1]
-Y = df['gt']
+Y = df.iloc[:,-1]
 
 # Train
 X_train, X_test, Y_train, Y_test = sklearn.model_selection.train_test_split(
