@@ -4,6 +4,7 @@ import sklearn.model_selection
 
 # my_list = [10,100,1000,10_000,100_000,1000_000,10_000_000]
 my_list = [10,20,50,75,100,250,500,750,1000,2500,5000,7500,10_000,25_000,50_000,75_000,100_000,250_000,500_000,750_000,1000_000,1250_000,1500_000,1750_000,2000_000]
+my_list = [25]
 
 df = pandas.read_csv('data/activity/Phones_gyroscope.csv')
 # Transform strings to integers

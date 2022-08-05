@@ -3,15 +3,15 @@
 
 # Clean vPython.txt in current directory and targeted trace dirs
 rm -f vpython*.txt
-# rm -r programs/activity/trace_*
+rm -r programs/activity/v2_nb/trace_*
 
 # Create directories to store traces
-base_dir="programs/activity/v2_nb/code_pg/"
+base_dir="programs/activity/v2_nb/code_pa/"
 
-# dir001="programs/activity/v2_nb/trace_pa"
+dir001="programs/activity/v2_nb/trace_pa"
 # dir002="programs/activity/v2_nb/trace_pg"
 
-# mkdir $dir001
+mkdir $dir001
 # mkdir $dir002
 
 ###########################################################
@@ -31,8 +31,8 @@ do
 
     ((i=i+1))
 done
-mv vpython*.txt $dir002
+mv vpython*.txt $dir001
 
 ###########################################################
-# python programs/run_analysis_script.py
+python programs/run_analysis_script.py
 spd-say done

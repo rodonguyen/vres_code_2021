@@ -15,11 +15,11 @@ function_start()
 RANDOM_STATE = 10
 
 
-df = pandas.read_csv('data/activity/pa_5000.csv')
+df = pandas.read_csv('data/activity/pg_20.csv')
 
 # Split data
 X = df.iloc[:,:-1]
-Y = df.iloc[:,-1]
+Y = df['gt']
 
 # Train
 X_train, X_test, Y_train, Y_test = sklearn.model_selection.train_test_split(

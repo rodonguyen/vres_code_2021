@@ -15,7 +15,7 @@ function_start()
 RANDOM_STATE = 10
 
 
-df = pandas.read_csv('data/activity/pa_5000.csv')
+df = pandas.read_csv('data/activity/pa_20.csv')
 
 # Split data
 X = df.iloc[:,:-1]
