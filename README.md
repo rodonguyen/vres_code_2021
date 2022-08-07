@@ -31,9 +31,6 @@
 
 ## Todos
 - Now: 
-  - No random, random 10, 20, 30, 40
-  - 'for' loop 32, 16, 8 times
-  - Run classification
-  - Fix: add dataset names as param
-- New data
-- New model: SVM, cknn, RF, bayes (nope, because this is regression problem)
+  - Sample data
+  - Create python files
+  - 

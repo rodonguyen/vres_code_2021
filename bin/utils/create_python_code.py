@@ -1,34 +1,45 @@
-dataset_length = [0,10,20,11,10,10,10,10,12,50,100,500,1000,\
-    2000,4000,6000,8000,10000,50000,100000,500000,1000000,\
-    5000000,10000000,50000000]
-
 
 def lr_readline(dataset_length, num_files, folder_tail= '', dataset_dir = 'dataset'):
     for i in range(1,num_files+1):
         filename = "./linear_regression_readline/code_length_"+str(dataset_length)+folder_tail+"/lr_ds%02d.py" % (i)
         f = open(filename, "w") 
         f.write(                          
-"""from sklearn import linear_model
+"""
+import pandas
+import sklearn
+import sklearn.model_selection
+from sklearn.naive_bayes import GaussianNB
 
-x_values = []
-y_values = []
 
-n = %d
+def function_start():
+    print('---')
 
-with open('./"""% (dataset_length) + dataset_dir + """/dataset_%d.csv') as f:
-    for i in range(0, n):
-        x,y = f.readline().replace('\\n','').split(',')
-        x, y = float(x), float(y)
-        x_values.append([x,y])
-        y_values.append(y)
+def function_end():
+    print('---')
 
-# Create linear regression object
-regression = linear_model.LinearRegression()
+############################################
+function_start()
+RANDOM_STATE = 10
 
-# Train the model using the training sets
-regression.fit(x_values, y_values)
+df = pandas.read_csv('data/activity/pa_.csv')
 
-print("Coefficients: \\n", regression.coef_)
+# Split data
+X = df.iloc[:,:-1]
+Y = df.iloc[:,-1]
+
+# Train
+X_train, X_test, Y_train, Y_test = sklearn.model_selection.train_test_split(
+                                        X, Y, test_size=0.2, random_state=RANDOM_STATE)
+gnb = GaussianNB()
+gnb.fit(X_train, Y_train)
+
+# Evaluate
+pred = gnb.predict(X_test)
+print('Test Set Performance: ' + str(sum(pred == Y_test)/len(Y_test)))
+
+
+function_end()
+############################################
 """ % (i))
         f.close()
 
