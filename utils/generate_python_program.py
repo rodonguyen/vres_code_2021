@@ -49,8 +49,8 @@ function_end()
         f.close()
 
 
-destination_dir = "programs/activity/v2_nb/code_wa/"
-filename_head = "wa"
+destination_dir = "programs/activity/v2_nb/code_pg_1col/"
+filename_head = "pg_1col"
 row_num = [10,20,50,75,100,250,500,750,1000,2500,5000,7500,
             10_000,25_000,50_000,75_000,100_000,250_000,500_000,750_000,
             1000_000,1250_000,1500_000,1750_000,2000_000]
