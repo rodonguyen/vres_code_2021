@@ -6,16 +6,13 @@ rm -f vpython*.txt
 rm -r programs/activity/v2_nb/trace_*
 
 # Create directories to store traces
-base_dir="programs/activity/v2_nb/code_pa_1col/"
-
 dir001="programs/activity/v2_nb/trace_pa"
 dir002="programs/activity/v2_nb/trace_pg"
-
 mkdir $dir001
 mkdir $dir002
 
 ###########################################################
-
+base_dir="programs/activity/v2_nb/code_pa_1col/"
 i=1
 for file in $base_dir*
 do
@@ -31,8 +28,10 @@ do
 
     ((i=i+1))
 done
-mv vpython*.txt $dir002
+mv vpython*.txt $dir001
 
 ###########################################################
+
+
 python programs/run_analysis_script.py
 spd-say done
