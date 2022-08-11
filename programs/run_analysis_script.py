@@ -22,11 +22,14 @@ paths = (
     # 'programs/linear_regression/trace_medical/',
 
     # 'programs/activity/v2_nb/trace_pa/',
-    'programs/activity/v2_nb/trace_pg/',
+    # 'programs/activity/v2_nb/trace_pg/',
+
+    # 'programs/mushroom/trace/',
+
 )
 
-topic = 'naivebayes'
-program = 'activity_pg'
+topic = 'nb'
+program = 'mushroom'
 v1_file = f"count_result/stack_trace_{program}_{topic}.csv"
 v2_file = f"count_result/stack_trace_{program}_{topic}_v2.json"
 histogram_filename_head = f"histogram_{program}_{topic}_"
