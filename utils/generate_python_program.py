@@ -3,12 +3,13 @@ from tabnanny import filename_only
 
 
 def generate():
-    for num in row_num:
-        filename = f"{filename_head}_{num:08d}.py"
-        dataset_filename = f"{filename_head}_{num}.csv"
-        full_path = destination_dir + filename
-        f = open(full_path, "w") 
-        f.write(
+    for col_num in col_nums:
+        for row_num in row_nums:
+            filename = f"{filename_head}_{col_num}col_{row_num:08d}.py"
+            dataset_filename = f"{filename_head}_{col_num}col_{row_num}.csv"
+            full_path = destination_dir + filename
+            f = open(full_path, "w") 
+            f.write(
 """
 import pandas
 import sklearn
@@ -49,9 +50,12 @@ function_end()
         f.close()
 
 
-destination_dir = "programs/activity/v2_nb/code_pg_1col/"
-filename_head = "pg_1col"
-row_num = [10,20,50,75,100,250,500,750,1000,2500,5000,7500,
+destination_dir = "programs/activity/v2_nb/code_pa/"
+filename_head = "pa"
+row_nums = [10,20,50,75,100,250,500,750,1000,2500,5000,7500,
             10_000,25_000,50_000,75_000,100_000,250_000,500_000,750_000,
             1000_000,1250_000,1500_000,1750_000,2000_000]
+# row_num = [10,100,1000,10_000,100_000,1000_000]
+col_nums = list(range(2,8))
+
 generate()

@@ -24,12 +24,17 @@ paths = (
     # 'programs/activity/v2_nb/trace_pa/',
     # 'programs/activity/v2_nb/trace_pg/',
 
+    'programs/activity/v2_nb/trace_pa_path/',
+
+    # 'programs/activity/v2_nb/trace_pa_integer/',
+    # 'programs/activity/v2_nb/trace_pa_X100integer/',
+
     # 'programs/mushroom/trace/',
 
 )
 
-topic = 'nb'
-program = 'mushroom'
+topic = 'long_and_short_paths'
+program = 'activity'
 v1_file = f"count_result/stack_trace_{program}_{topic}.csv"
 v2_file = f"count_result/stack_trace_{program}_{topic}_v2.json"
 histogram_filename_head = f"histogram_{program}_{topic}_"
