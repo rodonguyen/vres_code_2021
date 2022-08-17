@@ -21,19 +21,18 @@ paths = (
     # 'programs/linear_regression/trace_house/',
     # 'programs/linear_regression/trace_medical/',
 
-    # 'programs/activity/v2_nb/trace_pa/',
+    'programs/activity/v2_nb/trace_pa/',
     # 'programs/activity/v2_nb/trace_pg/',
 
-    'programs/activity/v2_nb/trace_pa_path/',
+    # 'programs/activity/v2_nb/trace_pa_path/',
 
     # 'programs/activity/v2_nb/trace_pa_integer/',
     # 'programs/activity/v2_nb/trace_pa_X100integer/',
 
     # 'programs/mushroom/trace/',
-
 )
 
-topic = 'long_and_short_paths'
+topic = 'pa'
 program = 'activity'
 v1_file = f"count_result/stack_trace_{program}_{topic}.csv"
 v2_file = f"count_result/stack_trace_{program}_{topic}_v2.json"
