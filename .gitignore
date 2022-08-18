@@ -2,10 +2,7 @@
 stack*.txt
 vpython*.txt
 token.txt
-dataset*/dataset_2*.csv
-!dataset*/dataset_2.csv
-!dataset*/dataset_2_pandas.csv
-dataset/
+data/
 
 
 # Byte-compiled / optimized / DLL files
