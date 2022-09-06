@@ -25,7 +25,7 @@ class Net(nn.Module):
         return output
 
 
-def train(args, model, train_loader, optimizer, epoch):
+def train(model, train_loader, optimizer, epoch):
     model.train()
     for batch_idx, (data, target) in enumerate(train_loader):
         optimizer.zero_grad()
@@ -33,11 +33,9 @@ def train(args, model, train_loader, optimizer, epoch):
         loss = F.nll_loss(output, target)
         loss.backward()
         optimizer.step()
-        if batch_idx % args.log_interval == 0:
+        if batch_idx % log_interval == 0:
             print('Train Epoch: {} \tLoss: {:.6f}'.format(
                 epoch, loss.item()))
-            if args.dry_run:
-                break
 
 
 def test(model, test_loader):
@@ -61,24 +59,9 @@ def test(model, test_loader):
 
 
 # Training settings
-parser = argparse.ArgumentParser(description='PyTorch MNIST Example')
-
-parser.add_argument('--epochs', type=int, default=1, metavar='N',
-                    help='number of epochs to train (default: 14)')
-parser.add_argument('--lr', type=float, default=1.0, metavar='LR',
-                    help='learning rate (default: 1.0)')
-parser.add_argument('--gamma', type=float, default=0.7, metavar='M',
-                    help='Learning rate step gamma (default: 0.7)')
-parser.add_argument('--no-cuda', action='store_true', default=False,
-                    help='disables CUDA training')
-parser.add_argument('--dry-run', action='store_true', default=False,
-                    help='quickly check a single pass')
-parser.add_argument('--log-interval', type=int, default=10, metavar='N',
-                    help='how many batches to wait before logging training status')
-
-args = parser.parse_args()
-
 torch.manual_seed(10)
+log_interval = 10
+epochs = 1
 
 transform=transforms.Compose([
     transforms.ToTensor(),
@@ -92,11 +75,11 @@ train_loader = list(torch.utils.data.DataLoader(dataset1))[:10]
 test_loader = list(torch.utils.data.DataLoader(dataset2))[:10]
 
 model = Net()
-optimizer = optim.Adadelta(model.parameters(), lr=args.lr)
+optimizer = optim.Adadelta(model.parameters(), lr=1)
 
-scheduler = StepLR(optimizer, step_size=1, gamma=args.gamma)
-for epoch in range(1, args.epochs + 1):
-    train(args, model, train_loader, optimizer, epoch)
+scheduler = StepLR(optimizer, step_size=1, gamma=0.7)
+for epoch in range(epochs):
+    train(model, train_loader, optimizer, epoch)
     test(model, test_loader)
     scheduler.step()
 
