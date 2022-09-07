@@ -1,3 +1,4 @@
+
 # https://github.com/pytorch/examples/blob/main/mnist/main.py
 
 import torch
@@ -34,16 +35,12 @@ class Net(nn.Module):
 
 def train(model, train_loader, optimizer, epoch):
     model.train()
-    for batch_idx, (data, target) in enumerate(train_loader):
+    for data, target in train_loader:
         optimizer.zero_grad()
         output = model(data)
         loss = F.nll_loss(output, target)
         loss.backward()
         optimizer.step()
-        if batch_idx % log_interval == 0:
-            print('Train Epoch: {} \tLoss: {:.6f}'.format(
-                epoch, loss.item()))
-
 
 def test(model, test_loader):
     model.eval()
@@ -62,7 +59,6 @@ def test(model, test_loader):
         test_loss, correct, len(test_loader),
         100. * correct / len(test_loader)))
 
-
 torch.manual_seed(10)
 
 # Prepare data
@@ -74,7 +70,8 @@ dataset1 = datasets.MNIST('data', train=True, # download=True,
                 transform=transform)
 dataset2 = datasets.MNIST('data', train=False,
                 transform=transform)
-train_loader = list(torch.utils.data.DataLoader(dataset1))[:10]
+print('Train on', int(4000), 'images.')
+train_loader = list(torch.utils.data.DataLoader(dataset1))[:4000]
 test_loader = list(torch.utils.data.DataLoader(dataset2))[:10]
 
 # Initialise and Train
@@ -91,4 +88,3 @@ for epoch in range(epochs):
 test(model, test_loader)
 
 function_end()
-
