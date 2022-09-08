@@ -32,7 +32,6 @@ class Net(nn.Module):
         output = F.log_softmax(x, dim=1)
         return output
 
-
 def train(model, train_loader, optimizer, epoch):
     model.train()
     for data, target in train_loader:

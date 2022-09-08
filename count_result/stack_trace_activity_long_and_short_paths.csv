@@ -1,7 +1,0 @@
-filepath, file no., pop_before_A, push_before_A, sgrow_before_A, sshrink_before_A,pop_in_A, push_in_A, sgrow_in_A, sshrink_in_A,pop_after_A, push_after_A, sgrow_after_A, sshrink_after_A,pop_total, push_total, sgrow_total, sshrink_total
-programs/activity/v2_nb/trace_pa_path/vpython_extralongpath.txt,ath,2332747,4266056,124,159738,29252,56628,10,1388,186,336,0,17,2362185,4323020,134,161143
-programs/activity/v2_nb/trace_pa_path/vpython_longpath.txt,ath,2332765,4266086,124,159738,29252,56628,10,1388,186,336,0,17,2362203,4323050,134,161143
-programs/activity/v2_nb/trace_pa_path/vpython_shortpath.txt,ath,2332765,4266086,124,159738,29252,56628,10,1388,186,336,0,17,2362203,4323050,134,161143
-
-
-

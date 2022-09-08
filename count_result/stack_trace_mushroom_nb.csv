@@ -1,4 +1,0 @@
-filepath, file no., pop_before_A, push_before_A, sgrow_before_A, sshrink_before_A,pop_in_A, push_in_A, sgrow_in_A, sshrink_in_A,pop_after_A, push_after_A, sgrow_after_A, sshrink_after_A,pop_total, push_total, sgrow_total, sshrink_total
-programs/mushroom/trace/vpython_6col.txt,col,2332756,4266071,124,159738,26402,51424,5,1269,186,336,0,17,2359344,4317831,129,161024
-
-
