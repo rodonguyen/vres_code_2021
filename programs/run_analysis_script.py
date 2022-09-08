@@ -37,8 +37,8 @@ paths = (
 
 topic = ''
 program = 'mnist'
-v1_file = f"count_result/stack_trace_{program}_{topic}.csv"
-v2_file = f"count_result/stack_trace_{program}_{topic}_v2.json"
+v1_file = f"count_result/trace_{program}_{topic}.csv"
+v2_file = f"count_result/trace_{program}_{topic}_v2.json"
 histogram_filename_head = f"histogram_{program}_{topic}_"
 
 
