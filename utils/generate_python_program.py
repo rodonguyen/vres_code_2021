@@ -1,6 +1,6 @@
 
 
-def generate(program_content):
+def generate(program_content, row_nums):
     for col_num in col_nums:
         for row_num in row_nums:
             filename = f"{filename_head}_{col_num}col_{row_num:08d}.py"
@@ -10,7 +10,7 @@ def generate(program_content):
             f.write(program_content % (dataset_filename))
         f.close()
 
-def generate_nn_code(program_content):
+def generate_nn_code(program_content, row_nums):
     for row_num in row_nums:
         filename = f"{filename_head}_{row_num}.py"
         full_path = destination_dir + filename
@@ -18,7 +18,7 @@ def generate_nn_code(program_content):
         f.write(program_content % (row_num, row_num))
     f.close()
 
-destination_dir = "programs/neural_network/mnist/code_test/"
+destination_dir = "programs/neural_network/mnist/code/"
 filename_head = 'mnist' # w_IntegerX100Temp # w_Float2DigitsTemp
 # row_nums = [10,20,50,75,100,250,500,750,1000,2500,5000,7500,
 #             10_000,25_000,50_000,75_000,100_000,250_000,500_000,750_000,
@@ -28,9 +28,9 @@ filename_head = 'mnist' # w_IntegerX100Temp # w_Float2DigitsTemp
 # row_nums = (1234,2300,15151,22000,43000,48000,74000,82820,94444)
 # row_nums = [str(i*(10**power)) for power in range(1, 3) 
 #                 for i in range(1, 10)] + [str(i*1000) for i in range(1, 6)]
-# row_nums = [i*(10**power) for power in range(1, 3) 
-#                 for i in range(1, 10)] + [i*1000 for i in range(1, 6)]
-row_nums = [26, 97, 150, 373, 642, 1234, 4880, 4101]
+row_nums = [i*(10**power) for power in range(1, 4) 
+                for i in range(1, 10)] + [i*10000 for i in range(1, 7)]
+# row_nums_test = [26, 97, 150, 373, 642, 1234, 4880, 4101]
 col_nums = (0,)
 
 
@@ -182,7 +182,8 @@ dataset1 = datasets.MNIST('data', train=True, # download=True,
                 transform=transform)
 dataset2 = datasets.MNIST('data', train=False,
                 transform=transform)
-print('Train on', int(%d), 'images.')
+
+print('Train on', int(%d), 'images')
 train_loader = list(torch.utils.data.DataLoader(dataset1))[:%d]
 test_loader = list(torch.utils.data.DataLoader(dataset2))[:10]
 
@@ -204,5 +205,5 @@ function_end()
 
 
 
-generate_nn_code(mnist_program)
+generate_nn_code(mnist_program, row_nums)
 # print(row_nums)

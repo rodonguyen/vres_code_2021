@@ -9,8 +9,9 @@ dir010="programs/neural_network/mnist/trace"
 mkdir $dir010
 
 
-# declare -a StringArray=('10' '20' '30' '40' '50' '60' '70' '80' '90' '100' '200' '300' '400' '500' '600' '700' '800' '900' '1000' '2000' '3000' '4000' '5000')
-declare -a StringArray=('26' '97' '150' '373' '642' '1234' '4101' '4880')
+# declare -a StringArray=('10' '20' '30' '40' '50' '60' '70' '80' '90' '100' '200' '300' '400' '500' '600' '700' '800' '900' '1000' '2000' '3000' '4000' '5000' '6000' '7000' '8000' '9000' '10000' '20000' '30000' '40000' '50000' '60000')
+declare -a StringArray=('70' '80' '90' '100' '200' '300' '400' '500' '600' '700' '800' '900' '1000' '2000' '3000' '4000' '5000' '6000' '7000' '8000' '9000' '10000' '20000' '30000' '40000' '50000' '60000')
+# declare -a StringArray=('26' '97' '150' '373' '642' '1234' '4101' '4880')
 
 ################################# 
 python3.8 utils/record_time.py
@@ -18,10 +19,10 @@ python3.8 utils/record_time.py
 count=0
 for i in "${StringArray[@]}"; do
     count=$((count+1))
-    filename=("programs/neural_network/mnist/code_test/mnist_$i.py")
+    filename=("programs/neural_network/mnist/code/mnist_$i.py")
     echo "$count => $filename"
     python3.9 $filename
-    killall -9 python3.9
+    pkill -9 python3.9
 
     python3.8 utils/record_time.py
 
