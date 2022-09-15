@@ -1,6 +1,4 @@
 
-# https://github.com/pytorch/examples/blob/main/mnist/main.py
-
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -21,14 +19,17 @@ class Net(nn.Module):
     def __init__(self):
         super(Net, self).__init__()
         self.flatten = nn.Flatten()
-        self.linear1 = nn.Linear(784, 32)
-        self.linear2 = nn.Linear(32, 10)
+        self.linear1 = nn.Linear(784, 128)
+        self.linear2 = nn.Linear(128, 32)
+        self.linear3 = nn.Linear(32, 10)
 
     def forward(self, x):
         x = torch.flatten(x, 1)
         x = self.linear1(x)
         x = torch.sigmoid(x)
         x = self.linear2(x)
+        x = torch.sigmoid(x)
+        x = self.linear3(x)
         output = F.log_softmax(x, dim=1)
         return output
 
@@ -71,8 +72,8 @@ dataset1 = datasets.MNIST('data', train=True, # download=True,
 dataset2 = datasets.MNIST('data', train=False,
                 transform=transform)
 
-print('Train on', int(26), 'images')
-train_loader = list(torch.utils.data.DataLoader(dataset1))[:26]
+print('Train on', int(33333), 'images')
+train_loader = list(torch.utils.data.DataLoader(dataset1))[:33333]
 test_loader = list(torch.utils.data.DataLoader(dataset2))[:10]
 
 # Initialise and Train

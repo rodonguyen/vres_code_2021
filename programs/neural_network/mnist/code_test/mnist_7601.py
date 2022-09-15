@@ -70,8 +70,9 @@ dataset1 = datasets.MNIST('data', train=True, # download=True,
                 transform=transform)
 dataset2 = datasets.MNIST('data', train=False,
                 transform=transform)
-print('Train on', int(4101), 'images.')
-train_loader = list(torch.utils.data.DataLoader(dataset1))[:4101]
+
+print('Train on', int(7601), 'images')
+train_loader = list(torch.utils.data.DataLoader(dataset1))[:7601]
 test_loader = list(torch.utils.data.DataLoader(dataset2))[:10]
 
 # Initialise and Train
