@@ -18,7 +18,7 @@ def generate_nn_code(program_content, row_nums):
         f.write(program_content % (row_num, row_num))
     f.close()
 
-destination_dir = "programs/neural_network/mnist/code_test/"
+destination_dir = "programs/neural_network/mnist/code3layers_test/"
 filename_head = 'mnist' # w_IntegerX100Temp # w_Float2DigitsTemp
 # row_nums = [10,20,50,75,100,250,500,750,1000,2500,5000,7500,
 #             10_000,25_000,50_000,75_000,100_000,250_000,500_000,750_000,
@@ -30,7 +30,7 @@ filename_head = 'mnist' # w_IntegerX100Temp # w_Float2DigitsTemp
 #                 for i in range(1, 10)] + [str(i*1000) for i in range(1, 6)]
 # row_nums = [i*(10**power) for power in range(1, 4) 
                 # for i in range(1, 10)] + [i*10000 for i in range(1, 7)]
-row_nums_test = [26, 97, 150, 373, 642, 1234, 4880, 7601, 7899, 11890, 33333, 53011]
+row_nums_test = [26, 97, 150, 373, 642, 1234, 4880, 7601, 7899, 11890, 26090, 33333, 53011]
 col_nums = (0,)
 
 
@@ -299,5 +299,5 @@ function_end()
 """
 
 
-generate_nn_code(mnist_program, row_nums_test)
+generate_nn_code(mnist_program_3layers, row_nums_test)
 # print(row_nums)

@@ -49,7 +49,7 @@ python3.8 utils/record_time.py
 count=0
 for i in "${StringArray[@]}"; do
     count=$((count+1))
-    filename=("programs/neural_network/mnist/code3layers/mnist_$i.py")
+    filename=("programs/neural_network/mnist/code/mnist_$i.py")
     echo "$count => $filename"
     python3.8 $filename
 
