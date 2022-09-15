@@ -1,6 +1,4 @@
 
-# https://github.com/pytorch/examples/blob/main/mnist/main.py
-
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -74,8 +72,8 @@ dataset1 = datasets.MNIST('data', train=True, # download=True,
 dataset2 = datasets.MNIST('data', train=False,
                 transform=transform)
 
-print('Train on', int(10), 'images')
-train_loader = list(torch.utils.data.DataLoader(dataset1))[:10]
+print('Train on', int(400), 'images')
+train_loader = list(torch.utils.data.DataLoader(dataset1))[:400]
 test_loader = list(torch.utils.data.DataLoader(dataset2))[:10]
 
 # Initialise and Train
