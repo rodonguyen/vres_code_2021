@@ -1,26 +1,56 @@
+from locale import D_FMT
 import pandas, numpy
 from sklearn import linear_model
 import get_metrics
 
 # prediction_row = int(sys.argv[1])
 
-prediction_file = open('count_result/predict_trace_mnist.csv', 'w')
-prediction_file.write('actual,prediction')
+# prediction_file = open('count_result/predict_trace_mnist.csv', 'w')
+# prediction_file.write('actual,prediction')
 
-df_original = pandas.read_csv('data/trace/mnist.csv')
+df = pandas.read_csv('count_result/mnist/mnist_trace_2layers.csv')
+actual_trace = pandas.read_csv('count_result/mnist/actual_trace_mnist_2layers.csv')
+prediction = pandas.DataFrame()
 
-df = df_original.copy()
+row_num = [26, 97, 150, 373, 642, 1234, 4880, 7601, 7899, 11890, 26090, 33333, 53011]
+
 x = numpy.array(df.loc[:,'images']).reshape(-1,1)
 y1 = numpy.array(df.loc[:,'pop'])
-y2 = numpy.array(df.loc[:,'shrink'])
-y3 = numpy.array(df.loc[:,'grow'])
+y2 = numpy.array(df.loc[:,'push'])
+y3 = numpy.array(df.loc[:,'shrink'])
+y4 = numpy.array(df.loc[:,'grow'])
+
+# Train a completely new model
+regression = linear_model.LinearRegression().fit(x, y1)
+pred = regression.predict(numpy.array(row_num).reshape(-1, 1)) 
+actual = actual_trace['pop']
+prediction['pred_pop'] = pred
+print(get_metrics.RMSE(pred, actual))
 
 # Train a completely new model
 regression = linear_model.LinearRegression().fit(x, y2)
-pred = numpy.round( regression.predict(numpy.array([26, 97, 150, 373, 642, 1234, 4101, 4880]).reshape(-1, 1)) )
-actual = pandas.read_csv('count_result/mnist_prediction.csv')['actual_shrink']
+# pred = numpy.round( regression.predict(numpy.array(row_rum).reshape(-1, 1)) )
+pred = regression.predict(numpy.array(row_num).reshape(-1, 1)) 
+actual = actual_trace['push']
+prediction['pred_push'] = pred
 print(get_metrics.RMSE(pred, actual))
+
+# Train a completely new model
+regression = linear_model.LinearRegression().fit(x, y4)
+pred = regression.predict(numpy.array(row_num).reshape(-1, 1)) 
+actual = actual_trace['grow']
+prediction['pred_grow'] = pred
+print(get_metrics.RMSE(pred, actual))
+
+# Train a completely new model
+regression = linear_model.LinearRegression().fit(x, y3)
+pred = regression.predict(numpy.array(row_num).reshape(-1, 1)) 
+actual = actual_trace['shrink']
+prediction['pred_shrink'] = pred
+print(get_metrics.RMSE(pred, actual))
+
+
 
 # print(regression.coef_, regression.intercept_)
 # output: [0.00043282] 24877.819753842254
-pandas.DataFrame(pred).to_csv('count_result/mnist_prediction_000.csv', index=False)
+prediction.to_csv('count_result/mnist/prediction_mnist_2layers.csv', index=False)
