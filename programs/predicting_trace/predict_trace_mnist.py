@@ -8,8 +8,8 @@ import get_metrics
 # prediction_file = open('count_result/predict_trace_mnist.csv', 'w')
 # prediction_file.write('actual,prediction')
 
-df = pandas.read_csv('count_result/mnist/mnist_trace_2layers.csv')
-actual_trace = pandas.read_csv('count_result/mnist/actual_trace_mnist_2layers.csv')
+df = pandas.read_csv('count_result/mnist/mnist_trace_3layers.csv')
+actual_trace = pandas.read_csv('count_result/mnist/actual_trace_mnist_3layers.csv')
 prediction = pandas.DataFrame()
 
 row_num = [26, 97, 150, 373, 642, 1234, 4880, 7601, 7899, 11890, 26090, 33333, 53011]
@@ -53,4 +53,4 @@ print(get_metrics.RMSE(pred, actual))
 
 # print(regression.coef_, regression.intercept_)
 # output: [0.00043282] 24877.819753842254
-prediction.to_csv('count_result/mnist/prediction_mnist_2layers.csv', index=False)
+prediction.to_csv('count_result/mnist/prediction_mnist_3layers.csv', index=False)

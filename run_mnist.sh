@@ -5,7 +5,7 @@ rm -f vpython*.txt
 rm -r programs/neural_network/mnist/trace
 
 # Create directories to store traces
-dir010="programs/neural_network/mnist/trace"
+dir010="programs/mnist/trace"
 mkdir $dir010
 
 
@@ -18,7 +18,7 @@ declare -a StringArray=('26' '97' '150' '373' '642' '1234' '4880' '7601' '7899' 
 # count=0
 # for i in "${StringArray[@]}"; do
 #     count=$((count+1))
-#     filename=("programs/neural_network/mnist/code_test/mnist_$i.py")
+#     filename=("programs/mnist/code_test/mnist_$i.py")
 #     echo "$count => $filename"
 #     python3.9 $filename
 #     pkill -9 python3.9
@@ -35,7 +35,7 @@ declare -a StringArray=('26' '97' '150' '373' '642' '1234' '4880' '7601' '7899' 
 #     if [ $((count%3)) == 0 ]; then
 #         mv vpython*.txt $dir010
 #         python3.8 programs/run_analysis_script.py
-#         rm -r programs/neural_network/mnist/trace/vpython*.txt
+#         rm -r programs/mnist/trace/vpython*.txt
 #     fi
 
 # done
@@ -49,7 +49,7 @@ python3.8 utils/record_time.py
 count=0
 for i in "${StringArray[@]}"; do
     count=$((count+1))
-    filename=("programs/neural_network/mnist/code3layers_test/mnist_$i.py")
+    filename=("programs/mnist/code3layers_test/mnist_$i.py")
     echo "$count => $filename"
     python3.8 $filename
 
