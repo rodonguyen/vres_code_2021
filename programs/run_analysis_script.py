@@ -32,7 +32,7 @@ paths = (
     # 'programs/mushroom/trace/',
     # 'programs/weather/trace/',
 
-    'programs/neural_network/mnist/trace/',
+    'programs/mnist/trace/',
 )
 
 topic = ''

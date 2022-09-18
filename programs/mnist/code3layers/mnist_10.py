@@ -34,7 +34,7 @@ class Net(nn.Module):
         return output
 
 
-def train(model, train_loader, optimizer, epoch):
+def train(model, train_loader, optimizer):
     model.train()
     for data, target in train_loader:
         optimizer.zero_grad()
@@ -83,7 +83,7 @@ model = Net()
 optimizer = optim.Adadelta(model.parameters(), lr=1)
 scheduler = StepLR(optimizer, step_size=1, gamma=0.7)
 for epoch in range(epochs):
-    train(model, train_loader, optimizer, epoch)
+    train(model, train_loader, optimizer)
     scheduler.step()
 
 # Test
