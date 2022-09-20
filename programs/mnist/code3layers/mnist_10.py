@@ -1,4 +1,6 @@
 
+# https://github.com/pytorch/examples/blob/main/mnist/main.py
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -19,22 +21,19 @@ class Net(nn.Module):
     def __init__(self):
         super(Net, self).__init__()
         self.flatten = nn.Flatten()
-        self.linear1 = nn.Linear(784, 128)
-        self.linear2 = nn.Linear(128, 32)
-        self.linear3 = nn.Linear(32, 10)
+        self.linear1 = nn.Linear(784, 32)
+        self.linear2 = nn.Linear(32, 10)
 
     def forward(self, x):
         x = torch.flatten(x, 1)
         x = self.linear1(x)
         x = torch.sigmoid(x)
         x = self.linear2(x)
-        x = torch.sigmoid(x)
-        x = self.linear3(x)
         output = F.log_softmax(x, dim=1)
         return output
 
 
-def train(model, train_loader, optimizer):
+def train(model, train_loader, optimizer, epoch):
     model.train()
     for data, target in train_loader:
         optimizer.zero_grad()
@@ -83,7 +82,7 @@ model = Net()
 optimizer = optim.Adadelta(model.parameters(), lr=1)
 scheduler = StepLR(optimizer, step_size=1, gamma=0.7)
 for epoch in range(epochs):
-    train(model, train_loader, optimizer)
+    train(model, train_loader, optimizer, epoch)
     scheduler.step()
 
 # Test
