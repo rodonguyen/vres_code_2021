@@ -9,8 +9,9 @@ dir010="programs/mnist/trace"
 mkdir $dir010
 
 
-declare -a NumArray=('10' '20' '30' '40' '50' '60' '70' '80' '90' '100' '200' '300' '400' '500' '600' '700' '800' '900' '1000' '2000' '3000' '4000' '5000' '6000' '7000' '8000' '9000' '10000' '20000' '30000' '40000' '50000' '60000')
+# declare -a NumArray=('10' '20' '30' '40' '50' '60' '70' '80' '90' '100' '200' '300' '400' '500' '600' '700' '800' '900' '1000' '2000' '3000' '4000' '5000' '6000' '7000' '8000' '9000' '10000' '20000' '30000' '40000' '50000' '60000')
 declare -a NumTestArray=('26' '97' '150' '373' '642' '1234' '4880' '7601' '7899' '11890' '26090' '33333' '53011')
+declare -a NumArray=('400' '500' '600' '700' '800' '900' '1000' '2000' '3000' '4000' '5000' '6000' '7000' '8000' '9000' '10000' '20000' '30000' '40000' '50000' '60000')
 
 
 # ################ VPYTHON ################# 
@@ -53,7 +54,7 @@ declare -a NumTestArray=('26' '97' '150' '373' '642' '1234' '4880' '7601' '7899'
 # count=0
 # for i in "${NumArray[@]}"; do
 #     count=$((count+1))
-#     filename=("programs/mnist/code13layers/mnist_$i.py")
+#     filename=("programs/mnist/code12layers/mnist_$i.py")
 #     echo "$count => $filename"
 #     python3.9 $filename
 #     pkill -9 python3.9
@@ -61,7 +62,7 @@ declare -a NumTestArray=('26' '97' '150' '373' '642' '1234' '4880' '7601' '7899'
 #     python3.8 utils/record_time.py
 
 #     # Renaming
-#     new=$(printf "vpython_mnist_13layers_%08d.txt" "$i")
+#     new=$(printf "vpython_mnist_12layers_%08d.txt" "$i")
 #     mv vpython.txt "$new"
 #     echo "Renamed to $new"
 #     echo 
@@ -120,7 +121,7 @@ declare -a NumTestArray=('26' '97' '150' '373' '642' '1234' '4880' '7601' '7899'
 # count=0
 # for i in "${NumTestArray[@]}"; do
 #     count=$((count+1))
-#     filename=("programs/mnist/code13layers_test/mnist_$i.py")
+#     filename=("programs/mnist/code12layers_test/mnist_$i.py")
 #     echo "$count => $filename"
 #     python3.9 $filename
 #     pkill -9 python3.9
@@ -128,7 +129,7 @@ declare -a NumTestArray=('26' '97' '150' '373' '642' '1234' '4880' '7601' '7899'
 #     python3.8 utils/record_time.py
 
 #     # Renaming
-#     new=$(printf "vpython_mnist_13layers_%08d.txt" "$i")
+#     new=$(printf "vpython_mnist_12layers_%08d.txt" "$i")
 #     mv vpython.txt "$new"
 #     echo "Renamed to $new"
 #     echo 
@@ -169,7 +170,7 @@ declare -a NumTestArray=('26' '97' '150' '373' '642' '1234' '4880' '7601' '7899'
 # count=0
 # for i in "${NumArray[@]}"; do
 #     count=$((count+1))
-#     filename=("programs/mnist/code13layers/mnist_$i.py")
+#     filename=("programs/mnist/code12layers/mnist_$i.py")
 #     echo "$count => $filename"
 #     python3.8 $filename
 
@@ -177,29 +178,27 @@ declare -a NumTestArray=('26' '97' '150' '373' '642' '1234' '4880' '7601' '7899'
 # done
 ##############################################
 
-python utils/record_time.py empty
-python utils/record_time.py
+# python utils/record_time.py empty
+# python utils/record_time.py
 
-count=0
-for i in "${NumArray[@]}"; do
-    count=$((count+1))
-    filename=("programs/mnist/code6layers/mnist_$i.py")
-    echo "$count => $filename"
-    python $filename
+# count=0
+# for i in "${NumArray[@]}"; do
+#     count=$((count+1))
+#     filename=("programs/mnist/code6layers/mnist_$i.py")
+#     echo "$count => $filename"
+#     python $filename
 
-    python utils/record_time.py
-done
+#     python utils/record_time.py
+# done
 
 ##############################################
 python utils/record_time.py empty
-python utils/record_time.py empty
-
 python utils/record_time.py
 
 count=0
 for i in "${NumArray[@]}"; do
     count=$((count+1))
-    filename=("programs/mnist/code13layers/mnist_$i.py")
+    filename=("programs/mnist/code12layers/mnist_$i.py")
     echo "$count => $filename"
     python $filename
 
