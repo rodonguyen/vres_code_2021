@@ -3,15 +3,6 @@ import torch
 import numpy
 from torchvision import datasets, transforms
 
-def function_start():
-    print('-----')
-
-def function_end():
-    print('-----')
-
-############################################
-function_start()
-
 torch.manual_seed(10)
 
 def denorm(x):
@@ -107,26 +98,74 @@ def train_generator():
     generator_optimizer.step()
     return g_loss, fake_images
 
-###############################################################################
+
+######################################################################################
+# Training the Model
+
+# sample_dir = 'programs/gan_mnist/samples'
+# if not os.path.exists(sample_dir):
+#     os.makedirs(sample_dir)
+
+# # Save some real images
+# for images, _ in data_loader:
+#     images = images.reshape(images.size(0), 1, 28, 28)
+#     utils.save_image(denorm(images), os.path.join(sample_dir, 'real_images.png'), nrow=10)
+#     break
+# Image(os.path.join(sample_dir, 'real_images.png'))
+
+
+# sample_vectors = torch.randn(batch_size, latent_size).to(device)
+# def save_fake_images(index):
+#     fake_images = Generator(sample_vectors)
+#     fake_images = fake_images.reshape(fake_images.size(0), 1, 28, 28)
+#     fake_fname = 'fake_images_{0:0=4d}.png'.format(index)
+#     print('Saving', fake_fname)
+#     utils.save_image(denorm(fake_images), os.path.join(sample_dir, fake_fname), nrow=10)
+
+
+######################################################################################
+# # Before training
+# save_fake_images(0)
+
 # Training
 num_epochs = 1      # 100 originally
 total_step = len(data_loader)
+d_losses, g_losses, real_scores, fake_scores = [], [], [], []
 
 for epoch in range(num_epochs):
     for i, (images, _) in enumerate(data_loader):
         # Load a batch & transform to vectors
+        print(numpy.shape(images))
         images = images.reshape(batch_size, -1).to(device)
+        print(numpy.shape(images))
         # Train the discriminator and generator
         d_loss, real_score, fake_score = train_discriminator(images)
         g_loss, fake_images = train_generator()
         
         # Inspect the losses
+        d_losses.append(d_loss.item())
+        g_losses.append(g_loss.item())
+        real_scores.append(real_score.mean().item())
+        fake_scores.append(fake_score.mean().item())
         print('Epoch [{}/{}], Step [{}/{}], d_loss: {:.4f}, g_loss: {:.4f}, D(x): {:.2f}, D(G(z)): {:.2f}' 
                 .format(epoch, num_epochs, i+1, total_step, d_loss.item(), g_loss.item(), 
                         real_score.mean().item(), fake_score.mean().item()))
         break
 
-function_end()
+    # # Sample and save images
+    # if epoch+1 % 10 == 0:
+    #     save_fake_images(epoch+1)
+
+# # Save the model checkpoints 
+# torch.save(Generator.state_dict(), 'G.ckpt')
+# torch.save(Discriminator.state_dict(), 'D.ckpt')
+
+
+
+
+
+
+
 
 
 

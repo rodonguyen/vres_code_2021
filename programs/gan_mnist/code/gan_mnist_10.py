@@ -1,4 +1,4 @@
-# adapted from https://jovian.ai/aakashns/06-mnist-gan
+
 import torch
 import numpy
 from torchvision import datasets, transforms
@@ -127,11 +127,3 @@ for epoch in range(num_epochs):
         break
 
 function_end()
-
-
-
-
-
-
-
-

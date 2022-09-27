@@ -1,4 +1,4 @@
-# adapted from https://jovian.ai/aakashns/06-mnist-gan
+
 import torch
 import numpy
 from torchvision import datasets, transforms
@@ -28,7 +28,7 @@ mnist = datasets.MNIST(root='data',
                 # download=True,
                 transform=transform)
 
-batch_size = 10
+batch_size = 800
 data_loader = torch.utils.data.DataLoader(mnist, batch_size)
 device = torch.device('cpu')    #'cuda'
 
@@ -127,11 +127,3 @@ for epoch in range(num_epochs):
         break
 
 function_end()
-
-
-
-
-
-
-
-

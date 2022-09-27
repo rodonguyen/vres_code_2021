@@ -30,13 +30,14 @@ paths = (
     # 'programs/activity/v2_nb/trace_pa_X100integer/',
 
     # 'programs/mushroom/trace/',
-    'programs/weather/trace/',
+    # 'programs/weather/trace/',
 
     # 'programs/mnist/trace/',
+    'programs/gan_mnist/trace/',
 )
 
 topic = ''
-program = 'weather'
+program = 'ganMNIST'
 v1_file = f"count_result/trace_{program}_{topic}.csv"
 v2_file = f"count_result/trace_{program}_{topic}_v2.json"
 histogram_filename_head = f"histogram_{program}_{topic}_"

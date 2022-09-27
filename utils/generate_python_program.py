@@ -17,11 +17,12 @@ def generate_nn_code(program_content, row_nums):
         filename = f"{filename_head}_{row_num}.py"
         full_path = destination_dir + filename
         f = open(full_path, "w") 
-        f.write(program_content % (row_num, row_num))
+        f.write(program_content % (row_num))
     f.close()
 
-destination_dir = "programs/mnist/code3layers_test/"
-filename_head = 'mnist' # w_IntegerX100Temp # w_Float2DigitsTemp
+# destination_dir = "programs/mnist/code3layers_test/"
+destination_dir = "programs/gan_mnist/code/"
+filename_head = 'gan_mnist' # w_IntegerX100Temp # w_Float2DigitsTemp
 # row_nums = [10,20,50,75,100,250,500,750,1000,2500,5000,7500,
 #             10_000,25_000,50_000,75_000,100_000,250_000,500_000,750_000,
 #             1000_000,1250_000,1500_000,1750_000,2000_000]
@@ -35,8 +36,8 @@ row_nums = [i*(10**power) for power in range(1, 4)
 row_nums_test = [26, 97, 150, 373, 642, 1234, 4880, 7601, 7899, 11890, 26090, 33333, 53011]
 col_nums = (0,)
 
-generate_nn_code(program_text.mnist_3layers, row_nums_test)
-destination_dir = "programs/mnist/code3layers/"
-generate_nn_code(program_text.mnist_3layers, row_nums)
+generate_nn_code(program_text.program_gan_mnist, row_nums)
+destination_dir = "programs/gan_mnist/code_test/"
+generate_nn_code(program_text.program_gan_mnist, row_nums_test)
 
 # print(row_nums)
