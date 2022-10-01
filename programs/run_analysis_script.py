@@ -34,6 +34,7 @@ paths = (
 
     # 'programs/mnist/trace/',
     'programs/gan_mnist/trace/',
+
 )
 
 topic = ''

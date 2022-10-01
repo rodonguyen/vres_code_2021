@@ -1,6 +1,5 @@
 
 import torch
-import numpy
 from torchvision import datasets, transforms
 
 def function_start():
@@ -109,7 +108,7 @@ def train_generator():
 
 ###############################################################################
 # Training
-num_epochs = 1      # 100 originally
+num_epochs = 10  
 total_step = len(data_loader)
 
 for epoch in range(num_epochs):
@@ -122,7 +121,7 @@ for epoch in range(num_epochs):
         
         # Inspect the losses
         print('Epoch [{}/{}], Step [{}/{}], d_loss: {:.4f}, g_loss: {:.4f}, D(x): {:.2f}, D(G(z)): {:.2f}' 
-                .format(epoch, num_epochs, i+1, total_step, d_loss.item(), g_loss.item(), 
+                .format(epoch+1, num_epochs, i+1, total_step, d_loss.item(), g_loss.item(), 
                         real_score.mean().item(), fake_score.mean().item()))
         break
 

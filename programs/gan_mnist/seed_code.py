@@ -1,6 +1,5 @@
 # adapted from https://jovian.ai/aakashns/06-mnist-gan
 import torch
-import numpy
 from torchvision import datasets, transforms
 
 def function_start():
@@ -109,7 +108,7 @@ def train_generator():
 
 ###############################################################################
 # Training
-num_epochs = 1      # 100 originally
+num_epochs = 50      # 100 originally
 total_step = len(data_loader)
 
 for epoch in range(num_epochs):

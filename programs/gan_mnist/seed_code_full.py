@@ -128,7 +128,7 @@ def train_generator():
 # save_fake_images(0)
 
 # Training
-num_epochs = 1      # 100 originally
+num_epochs = 50      # 100 originally
 total_step = len(data_loader)
 d_losses, g_losses, real_scores, fake_scores = [], [], [], []
 
