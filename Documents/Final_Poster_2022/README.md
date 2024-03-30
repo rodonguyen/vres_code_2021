@@ -2,7 +2,7 @@
 
 ![poster](VRES_poster.png)
 
-Acknowledgement: Thank you Nhi Kieu for your feedback and assistance. This poster cannot be as aesthetic without it.
+Acknowledgement: Thank you Nhi Kieu for your feedback. This poster cannot be as aesthetic without you.
 
 # Best Research Poster Award
 
